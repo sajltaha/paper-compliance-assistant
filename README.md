@@ -35,8 +35,8 @@ Specified: Vue 3, TypeScript, Tailwind CSS, Pinia, Go, REST/JSON, OpenAI API, Gi
 Open prototype/index.html in a current browser; no installation, API key or network is required. Choose Load demo, confirm criteria, run the mock and inspect evidence. This is a synthetic UX demonstration; selected file contents are not parsed or sent externally. There are no setup/run/test commands for a real backend yet; they will be added with implemented code.
 
 ## Documentation and tracking
-Start with docs/01_proposal.md and docs/SUBMISSION_CHECKLIST.md. Report sections are in docs/01_*.md through docs/11_*.md; references are in docs/references.md. The report DOCX/PDF is provided in the preparation package.
-YouTrack: pending workspace creation; docs/youtrack_tasks.csv contains proposed tasks, not actual issue IDs.
+Start with docs/01_proposal.md and docs/SUBMISSION_CHECKLIST.md. Report sections are in docs/01_*.md through docs/11_*.md; references are in docs/references.md. The report DOCX/PDF is provided in the preparation package. These source documents and the UX prototype are uploaded on checkpoint-preparation for team review; main remains the reviewed baseline.
+YouTrack workspace: https://paper-compliance-assistant.youtrack.cloud/ (created). Live project, board and issues are pending; docs/youtrack_tasks.csv contains proposed tasks, not actual issue IDs.
 Submission tag: pending final reviewed revision; this form requires prob-period-1.
 
 ## Evaluation
