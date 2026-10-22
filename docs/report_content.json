@@ -1,0 +1,991 @@
+[
+  [
+    "1 Project proposal",
+    [
+      [
+        "p",
+        "Development of an Intelligent Web System for Analyzing Scientific Articles for Compliance with Scientific Conference Requirements and Generating Recommendations. This report prepares the first probationary-period submission due on 24 October 2026 at 18:00 Asia/Almaty. The project assists authors in checking a manuscript against explicitly supplied conference requirements and produces evidence-linked recommendations."
+      ],
+      [
+        "p",
+        "The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. The relevance analysis uses public conference policies and published screening data. Supervisor feedback and measured system performance remain outstanding."
+      ],
+      [
+        "h",
+        "Problem and intended users"
+      ],
+      [
+        "p",
+        "Conference requirements combine document structure, measurable limits and qualitative expectations. Authors must locate these rules, inspect a PDF or DOCX and explain what needs revision. The working problem hypothesis is that a reusable, criterion-level checking workflow can reduce missed requirements and make revision more systematic. Its local relevance still requires direct user evidence; literature and product pages alone do not establish demand among our intended users."
+      ],
+      [
+        "p",
+        "Primary users are students and early-career researchers preparing conference submissions. A supervisor may inspect the exported results, but the MVP does not require a separate supervisor account or conference-administration role. Initially, validation focuses on English-language, text-based manuscripts and explicit criteria; support for Russian or Kazakh is a later evaluation decision."
+      ],
+      [
+        "h",
+        "Aim and objectives"
+      ],
+      [
+        "p",
+        "The aim is to design and evaluate a locally runnable web system that identifies supported formal and semantic mismatches between a manuscript and user-confirmed requirements, explains findings with source evidence, and recommends concrete revisions. Objectives are to specify requirements; compare related approaches; normalize documents and criteria; implement deterministic and LLM-assisted checks; preserve evidence and run versions; and measure accuracy, coverage, latency and usefulness against declared baselines."
+      ],
+      [
+        "table",
+        [
+          "In scope",
+          "Out of scope"
+        ],
+        [
+          [
+            "One paper per run; PDF/DOCX; editable requirements; source anchors; criterion-level findings; saved runs; local Docker deployment.",
+            "Autonomous accept/reject decisions, replacement of peer review, plagiarism certification, guarantees of novelty or scientific correctness."
+          ],
+          [
+            "Supported counts, section checks and semantic reporting requirements; explicit unsupported/uncertain states.",
+            "Universal font/margin verification from plain text, arbitrary scanned handwritten PDFs, external conference submission and multi-tenant production hosting."
+          ]
+        ],
+        [
+          3.25,
+          3.25
+        ]
+      ],
+      [
+        "table",
+        [
+          "Member",
+          "Roles",
+          "Planned responsibility"
+        ],
+        [
+          [
+            "Сайлаубеков Талғат Ерханұлы\nSE-2429 | sajltaha",
+            "Frontend, Backend, DevOps",
+            "Vue 3/TypeScript/Tailwind/Pinia, Go REST API, database and file storage, integration, local Docker Compose and functional tests."
+          ],
+          [
+            "Нұрышев Қайсар Серікұлы\nSE-2413 | stqnlee",
+            "UI/UX, document processing, AI/LLM, QA",
+            "UX scenarios, PDF/DOCX conversion, criterion interpretation, OpenAI integration, prompt design and AI quality evaluation."
+          ]
+        ],
+        [
+          2,
+          1.6,
+          2.9
+        ]
+      ],
+      [
+        "p",
+        "Supervisor: Солтан Гульжан Жексенбаевна. Expected outcomes are a functioning local web application in the implementation phase, a traceable evaluation dataset and protocol, and documentation explaining limitations. The team justification fixes Vue 3 and Go; detailed parser, storage and model decisions below are engineering proposals pending review."
+      ]
+    ]
+  ],
+  [
+    "2 Evidence of relevance",
+    [
+      [
+        "p",
+        "The relevance method is secondary-data analysis. The full study is versioned in docs/DATA_ANALYSIS.md, including references [A]-[N], five conference rule sets, six submission profiles, published CHI screening statistics and six recent research sources."
+      ],
+      [
+        "p",
+        "The observations support configurable submission profiles, section-aware counting, explicit rule modality, evidence-linked findings, conversion-quality gates and qualified recommendations. User demand, local error rates and system performance remain unmeasured."
+      ],
+      [
+        "p",
+        "The CHI report records 495 desk rejections among 5,014 complete submissions. Anonymization, template and length account for 229 reported cases. These are source statistics, not a measured preventable fraction or a forecast of this system's impact."
+      ]
+    ]
+  ],
+  [
+    "3 Critical literature review",
+    [
+      [
+        "p",
+        "The review uses 16 sources: 12 research publications or research reports from 2023-2025 and 4 primary technical/product sources. Preprints and technical reports are explicitly labelled. Search terms combined manuscript evaluation, conference compliance, rubric-based evaluation, LLM-as-a-Judge, PDF parsing, attribution, document understanding and retrieval-augmented generation. Primary publication pages, author repositories and official documentation were consulted on 22 October 2026."
+      ],
+      [
+        "p",
+        "Selection favoured work that affects one of four decisions: the reliability of AI feedback, criterion-level evaluation, document conversion, or evidence selection. Vendor pages were used only for documented features. This is a focused engineering review, not a systematic review; it does not claim exhaustive retrieval or a meta-analysis."
+      ],
+      [
+        "h",
+        "Scientific feedback and evaluation validity"
+      ],
+      [
+        "p",
+        "Liang et al. [S01] support the potential usefulness of generated manuscript feedback, whereas Zhou et al. [S02] show why helpfulness must not be confused with reliable technical judgment. SEA [S03] offers a staged scientific-review framework; Li et al. [S12] further motivate evaluation of contextual grounding and criticism. For this project, the resulting design choice is to verify bounded criteria and show evidence rather than issue an overall scientific acceptance score."
+      ],
+      [
+        "h",
+        "Rubrics and evidence"
+      ],
+      [
+        "p",
+        "MT-Bench [S04], G-Eval [S05] and Prometheus [S06] motivate explicit criteria and structured judgments, while exposing transfer and bias concerns. Their tasks are different from conference compliance; their reported performance cannot be reused as our accuracy. Attribute or Abstain [S08] motivates inspectable evidence and abstention. A source anchor must therefore be both structurally valid and semantically supportive; JSON validity alone [D04] cannot demonstrate either correctness or usefulness."
+      ],
+      [
+        "h",
+        "Document conversion and long context"
+      ],
+      [
+        "p",
+        "Nougat [S09], Docling [S10] and GROBID [D03] provide different routes to structured scholarly text. The project must measure conversion errors separately, because a missed section in extraction can become a false compliance failure. Lost in the Middle [S07] motivates positional sensitivity tests. Self-RAG [S11] illustrates retrieval-based self-reflection, but retrieval can omit evidence needed for exhaustive checking. A vector database is therefore an option to test, not an assumed requirement."
+      ],
+      [
+        "h",
+        "Structured publication analysis"
+      ],
+      [
+        "table",
+        [
+          "Source and method",
+          "Limitation",
+          "Design implication"
+        ],
+        [
+          [
+            "S01 | Liang et al. (2023)\nLLM manuscript feedback can be useful, but utility is not equivalent to correct conference compliance.",
+            "Retrospective review overlap and researcher perceptions do not validate an arbitrary checklist.",
+            "Use feedback as assistance and validate every criterion on an independently annotated set."
+          ],
+          [
+            "S02 | Zhou, Chen and Yu (2024)\nReview generation and score prediction expose limitations in critical and long-document reasoning.",
+            "Scores and fluent reviews can conceal factual mistakes.",
+            "Separate formal checks from semantic judgments; permit insufficient_evidence and human review."
+          ],
+          [
+            "S03 | Yu et al. (2024)\nSEA separates standardization, evaluation and consistency analysis in scientific reviewing.",
+            "Its training and review-generation setting differs from user-supplied conference criteria.",
+            "Use a staged pipeline and check consistency between a finding and the cited manuscript text."
+          ],
+          [
+            "S04 | Zheng et al. (2023)\nLLM judges approximate some human preferences but have position, verbosity and self-enhancement biases.",
+            "Chat-assistant preference agreement is not manuscript-compliance accuracy.",
+            "Evaluate criterion order sensitivity, repeated-run stability and agreement with human labels."
+          ],
+          [
+            "S05 | Liu et al. (2023)\nExplicit evaluation criteria and structured judging can improve alignment in NLG tasks.",
+            "Summarization and dialogue findings do not establish validity for scientific paper assessment.",
+            "Use an explicit rubric and structured outputs; retain a separate human reference."
+          ],
+          [
+            "S06 | Kim et al. (2024)\nCustom rubrics support fine-grained feedback and evaluation.",
+            "Rubric-conditioned response evaluation and reference answers differ from checking unseen conference rules.",
+            "Store criterion definitions and rubric versions; benchmark a fixed rubric rather than one global score."
+          ],
+          [
+            "S07 | Liu et al. (2024)\nPerformance can depend on the location of relevant evidence in a long input.",
+            "The experiments study retrieval tasks, not this project or every future model.",
+            "Preserve section anchors; test evidence moved to the beginning, middle and end."
+          ],
+          [
+            "S08 | Buchmann, Liu and Gurevych (2024)\nAttribution makes long-document responses more verifiable; evidence quality remains task dependent.",
+            "A citation alone does not guarantee support for a complex claim.",
+            "Validate quoted spans and ask human annotators whether evidence supports each finding."
+          ],
+          [
+            "S09 | Blecher et al. (2023)\nVisual document recognition converts academic PDF content into structured markup.",
+            "A neural parser may introduce recognition errors; reliable formatting checks require retained layout data.",
+            "Compare layout-aware conversion with plain extraction and explicitly flag unsupported scanned files."
+          ],
+          [
+            "S10 | Auer et al. (2024)\nLayout and table models support structured local PDF conversion.",
+            "The v1 report does not validate the current package on our PDF/DOCX corpus.",
+            "Pilot Docling as a parser adapter; measure heading and reading-order accuracy on representative files."
+          ],
+          [
+            "S11 | Asai et al. (2024)\nRetrieval decisions and critique can improve grounded generation in studied tasks.",
+            "The trained retrieval-reflection framework is not equivalent to merely adding a vector database.",
+            "Treat retrieval as an experimental extension; start with explicit section evidence and compare baselines."
+          ],
+          [
+            "S12 | Li et al. (2025)\nStructured and descriptive reviews can coexist with weak critical reasoning and contextual grounding.",
+            "Review-generation benchmarks differ from deterministic and semantic compliance checks.",
+            "Evaluate correctness, unsupported claims and actionable feedback separately from writing quality."
+          ]
+        ],
+        [
+          2.5,
+          1.9,
+          2.1
+        ]
+      ],
+      [
+        "p",
+        "The project gap is an engineering combination to be validated: author-confirmed conference criteria, explicit formal/semantic check boundaries, traceable PDF/DOCX evidence and reproducible local evaluation. Existing products already cover configurable checks and critique, so universal novelty or superiority is not claimed. The complete source matrix and URLs are provided in the repository."
+      ]
+    ]
+  ],
+  [
+    "4 Existing system comparison",
+    [
+      [
+        "p",
+        "Four relevant systems are compared across the same eight criteria: Penelope.ai [D01], Paperpal Preflight [D02], SEA [S03] and the Liang et al. scientific-feedback pipeline [S01]. The last two are research systems rather than equivalent commercial products. This distinction is necessary when interpreting reproducibility and feature coverage."
+      ],
+      [
+        "table",
+        [
+          "Criterion",
+          "Penelope",
+          "Paperpal Preflight",
+          "SEA",
+          "Scientific feedback pipeline"
+        ],
+        [
+          [
+            "Primary purpose",
+            "Journal technical compliance [D01]",
+            "Journal readiness and critique [D02]",
+            "Scientific review generation [S03]",
+            "Manuscript feedback [S01]"
+          ],
+          [
+            "Configurable criteria",
+            "Journal-specific configuration documented",
+            "Partner-journal configuration documented",
+            "Review framework; arbitrary checklist not established",
+            "Paper feedback pipeline; editable checklist not established"
+          ],
+          [
+            "Formal structure checks",
+            "Required sections and counts documented",
+            "Technical compliance documented",
+            "Not established in reviewed source",
+            "Not established in reviewed source"
+          ],
+          [
+            "Semantic feedback",
+            "Scope limited to documented checks",
+            "AI critique advertised",
+            "Central capability",
+            "Central capability"
+          ],
+          [
+            "Evidence transparency",
+            "Marked-up sections documented",
+            "Evidence-based recommendations advertised",
+            "Consistency analysis described",
+            "Generated feedback compared with reviewers"
+          ],
+          [
+            "Input workflow",
+            "Publishing-platform integration",
+            "Manuscript upload",
+            "Research PDF/parser pipeline",
+            "Full-PDF feedback pipeline"
+          ],
+          [
+            "Local reproducibility",
+            "Self-hosting not established",
+            "Self-hosting not established",
+            "Research code available",
+            "Research code available"
+          ],
+          [
+            "Main limitation for this project",
+            "Not evidence of arbitrary author-defined conference rubrics",
+            "Partner settings differ from editable conference criteria",
+            "Fine-tuning/evaluation differs from compliance",
+            "User-perceived utility differs from per-criterion validity"
+          ]
+        ],
+        [
+          1.15,
+          1.33,
+          1.34,
+          1.34,
+          1.34
+        ]
+      ],
+      [
+        "p",
+        "These are source-based comparisons, not hands-on tests. Not established means the reviewed source does not substantiate a capability; it does not prove that capability is absent. The proposed system should be justified by the local user need and evaluated implementation, not by unsupported negative claims about competitors. A promising design emphasis is an author-editable conference rubric with criterion-level provenance and explicit uncertainty."
+      ]
+    ]
+  ],
+  [
+    "5 Technology comparison and decisions",
+    [
+      [
+        "p",
+        "Six technical decisions are compared with three reasonable alternatives each. Vue 3, TypeScript, Tailwind CSS, Pinia, Go, REST and Docker Compose are already specified in the team justification. Storage, parsing, model choice and evidence selection remain proposals until the team and supervisor review them."
+      ],
+      [
+        "table",
+        [
+          "Decision",
+          "Alternative A",
+          "Alternative B",
+          "Alternative C"
+        ],
+        [
+          [
+            "Backend",
+            "Go net/http or Gin",
+            "Python FastAPI",
+            "Node.js with TypeScript"
+          ],
+          [
+            "Data storage",
+            "PostgreSQL",
+            "SQLite",
+            "MongoDB"
+          ],
+          [
+            "Document conversion",
+            "Docling adapter",
+            "GROBID plus DOCX parser",
+            "Plain PDF text plus DOCX parser"
+          ],
+          [
+            "Evaluation strategy",
+            "Rules plus schema-validated LLM",
+            "Rules only",
+            "Single unconstrained LLM prompt"
+          ],
+          [
+            "Component interaction",
+            "REST and JSON",
+            "gRPC",
+            "Direct in-process library calls"
+          ],
+          [
+            "Evidence selection",
+            "Section/block selection",
+            "Whole document context",
+            "Vector retrieval"
+          ]
+        ],
+        [
+          1.3,
+          1.75,
+          1.75,
+          1.7
+        ]
+      ],
+      [
+        "p",
+        "Backend: Go selected in team justification; keep orchestration, storage and validation here. Python remains a possible internal parser adapter, not a replacement backend."
+      ],
+      [
+        "p",
+        "Data storage: Propose PostgreSQL for relational versioned runs; SQLite is a simpler local alternative. Decision requires pilot and supervisor review; no database implemented yet."
+      ],
+      [
+        "p",
+        "Document conversion: Propose Docling pilot for layout; compare GROBID on scholarly PDFs. Plain text baseline cannot verify fonts/margins. [S09,S10,D03]"
+      ],
+      [
+        "p",
+        "Evaluation strategy: Propose hybrid checks: deterministic for counts/structure, LLM for semantic criteria; compare both baselines. [S02,S05,D04]"
+      ],
+      [
+        "p",
+        "Component interaction: REST/JSON selected in justification; easier boundary inspection and language-independent parser interface. No latency advantage claimed."
+      ],
+      [
+        "p",
+        "Evidence selection: Start with section/block selection and explicit limits; compare full-context baseline; vector retrieval only if tests show need. [S07,S08,S11]"
+      ],
+      [
+        "h",
+        "Model and deployment boundary"
+      ],
+      [
+        "p",
+        "The OpenAI model identifier is configured through the server environment and recorded in every run. Select an available model that supports the chosen structured-output workflow after a small pilot; this report does not lock a model, token price or context limit. There is no paid model call in the prototype and no purchased cloud hosting. Local deployment still requires internet and an API key for external AI analysis; local startup does not mean the AI model runs offline."
+      ],
+      [
+        "p",
+        "Parser dependencies should remain behind a stable interface. A Python adapter is a proposed implementation route for Docling, while Go remains the application backend. Keep a rules-only mode for baseline evaluation and for checks supported without an LLM. A pilot must establish extraction quality before adding OCR or retrieval complexity."
+      ]
+    ]
+  ],
+  [
+    "6 Requirements specification",
+    [
+      [
+        "p",
+        "Requirements use Must, Should and Could priorities. The current MVP has 12 functional and 8 non-functional requirements. Every requirement has a test identifier and an acceptance criterion. Numerical limits below are proposed engineering targets, not measured achievements, and require review against stakeholder evidence."
+      ],
+      [
+        "table",
+        [
+          "ID and priority",
+          "Requirement",
+          "Acceptance criterion"
+        ],
+        [
+          [
+            "FR01\nMust",
+            "Upload a scientific paper in PDF or DOCX",
+            "A valid supported file at or below 20 MB creates a document ID; unsupported, malformed, encrypted or oversize files return an explicit error."
+          ],
+          [
+            "FR02\nMust",
+            "Extract document text and retain provenance",
+            "Text blocks have stable block IDs, reading order, section labels and PDF pages where available; DOCX uses paragraph/table anchors, not fabricated page numbers."
+          ],
+          [
+            "FR03\nMust",
+            "Enter or attach conference requirements",
+            "A user can paste criteria or attach PDF/DOCX; original wording and source identifiers are retained."
+          ],
+          [
+            "FR04\nMust",
+            "Confirm normalized criteria before analysis",
+            "User can edit criterion wording, category, threshold, priority and applicability; analysis uses the confirmed version."
+          ],
+          [
+            "FR05\nMust",
+            "Run a criterion-based analysis",
+            "Every applicable criterion returns pass, fail or insufficient_evidence; excluded criteria return not_applicable with a reason. No criterion silently disappears."
+          ],
+          [
+            "FR06\nMust",
+            "Show grounded findings and recommendations",
+            "Each evaluable finding includes criterion ID, explanation, valid source anchors and an actionable recommendation when appropriate; invalid anchors are rejected."
+          ],
+          [
+            "FR07\nMust",
+            "Keep formal and semantic checks distinct",
+            "Results identify engine=rule or engine=llm and state unsupported layout checks; plain text is never used to certify font size or margins."
+          ],
+          [
+            "FR08\nMust",
+            "Save and retrieve analysis history",
+            "Restarting the local system preserves document metadata, criterion versions, results and run configuration; a run can be reopened."
+          ],
+          [
+            "FR09\nShould",
+            "Export a structured result",
+            "An analysis can be downloaded as JSON with document hash, criterion version and model/prompt configuration; PDF export is a later enhancement."
+          ],
+          [
+            "FR10\nMust",
+            "Recheck a revised manuscript",
+            "A new manuscript creates a new document version and run; the earlier result remains identifiable."
+          ],
+          [
+            "FR11\nMust",
+            "Handle external AI failures",
+            "Timeout, refusal, invalid JSON and provider errors produce a retryable failure state; no successful assessment is invented."
+          ],
+          [
+            "FR12\nMust",
+            "Explain processing and deletion controls",
+            "Before external analysis, UI explains that extracted content goes to the configured provider; user can delete stored files and results."
+          ],
+          [
+            "NFR01\nMust",
+            "Reproducible evaluation",
+            "Each run records document hash, confirmed criteria, parser/model ID and version, prompt/schema version, sampling settings and timestamp."
+          ],
+          [
+            "NFR02\nMust",
+            "Validate structured data",
+            "All accepted results satisfy the shared JSON schema; each criterion occurs once; all cited block IDs exist and quoted text matches source text after documented whitespace normalization."
+          ],
+          [
+            "NFR03\nMust",
+            "Protect secrets and local files",
+            "API keys only in server environment; examples contain placeholders; uploads use generated paths and size/type validation; external content cannot execute instructions or tools."
+          ],
+          [
+            "NFR04\nMust",
+            "Reproduce local setup",
+            "On a documented supported Docker environment, one Docker Compose command starts the implemented services after environment setup; smoke checks are documented. Target for implementation stage."
+          ],
+          [
+            "NFR05\nShould",
+            "Measure user-visible latency and cost",
+            "Report p50/p95 latency, provider tokens and estimated cost per run on specified hardware and corpus; proposed target p95 <= 120 s for <= 10 text-PDF pages and <= 10 criteria, to be revised after pilot."
+          ],
+          [
+            "NFR06\nMust",
+            "Assess correctness against human labels",
+            "Evaluate >= 20 rights-cleared manuscripts with 8-12 criteria each using a frozen test split; report macro-F1, abstention coverage and supported-evidence rate. These are planned measurements, not achieved results."
+          ],
+          [
+            "NFR07\nShould",
+            "Make key flows accessible",
+            "Core controls support keyboard navigation, visible focus and labeled error/status messages on desktop and narrow screens."
+          ],
+          [
+            "NFR08\nMust",
+            "Expose unsupported capabilities honestly",
+            "UI and reports distinguish unavailable OCR/layout checks from checked failures, and demonstrate that unknown evidence is not treated as a pass."
+          ]
+        ],
+        [
+          0.9,
+          1.8,
+          3.8
+        ]
+      ],
+      [
+        "p",
+        "Four result states avoid conflating absent evidence with compliance: pass, fail, insufficient_evidence and not_applicable. A document with no extractable text must fail the extraction stage rather than receive a compliant result. Criteria that require unsupported visual metadata remain explicitly unverified. Ambiguous requirements must be confirmed by the user before being treated as executable rules."
+      ],
+      [
+        "p",
+        "The versioned result contract requires criterion_id, status, engine, explanation, evidence and recommendation. Evidence contains a block_id and a matching quote; page numbers are nullable and derived from the PDF parser, while DOCX uses stable paragraph/table anchors. The backend checks completeness, uniqueness, schema conformance and anchor validity before presenting a result."
+      ]
+    ]
+  ],
+  [
+    "7 Architecture and diagrams",
+    [
+      [
+        "p",
+        "The context, use-case and component diagrams describe the same local single-user system. The author operates a Vue client; the Go application coordinates storage, document parsing, rule checks and external LLM requests. The parser and judge are replaceable adapters. The external AI provider is outside the local trust boundary. No separate admin system or multi-user authentication is assumed for the first local MVP."
+      ],
+      [
+        "image",
+        "01_context",
+        "Figure 1 System context and external processing boundary"
+      ],
+      [
+        "image",
+        "02_use_cases",
+        "Figure 2 User scenarios in the compliance checking system"
+      ],
+      [
+        "image",
+        "03_components",
+        "Figure 3 Proposed components and interfaces"
+      ],
+      [
+        "h",
+        "Processing flow and data model"
+      ],
+      [
+        "p",
+        "The backend validates an upload and computes its content hash, stores the file under a generated path, extracts structured blocks, and displays extraction warnings. The user confirms normalized criteria. A versioned analysis run then executes supported rules and semantic checks, validates results and evidence, persists the outcome and returns it for inspection. A provider failure yields an explicit failed run. Rechecking a revision creates a separate run."
+      ],
+      [
+        "table",
+        [
+          "Entity",
+          "Key data",
+          "Relationship"
+        ],
+        [
+          [
+            "Document",
+            "ID, hash, media type, file path, parser version, extraction status",
+            "Has many blocks and analysis runs."
+          ],
+          [
+            "Block",
+            "Document ID, block ID, section, text, nullable page, anchor",
+            "Referenced by result evidence."
+          ],
+          [
+            "CriteriaSet and Criterion",
+            "Version, original source, confirmed wording, type, threshold, priority",
+            "A run references one immutable confirmed version."
+          ],
+          [
+            "AnalysisRun",
+            "Document ID, criterion-set version, prompt/schema/model IDs, settings, status, timestamps",
+            "Has one finding per criterion and measured token/latency metadata."
+          ],
+          [
+            "Finding",
+            "Criterion ID, status, engine, explanation, source anchors, recommendation",
+            "Belongs to one run; valid source references are checked."
+          ]
+        ],
+        [
+          1.4,
+          2.7,
+          2.4
+        ]
+      ],
+      [
+        "p",
+        "Proposed REST resources are POST /api/documents, POST /api/criteria-sets, POST /api/analyses, GET /api/analyses/{id}, GET /api/analyses and DELETE /api/documents/{id}. Runs may expose queued, processing, completed and failed states; the first implementation can use a local worker without a separate distributed queue. Schema examples and data-model notes are included as editable repository files."
+      ],
+      [
+        "h",
+        "Reliability boundaries"
+      ],
+      [
+        "p",
+        "Uploaded article and requirement text are untrusted data: instructions embedded in them must not change the system prompt, trigger tools or override the rubric. Do not execute document macros. Validate model-generated anchors against extraction output; keep unsupported checks visible. Store keys server-side and exclude raw private manuscripts from Git. These controls are requirements to implement and test, not security guarantees already achieved."
+      ]
+    ]
+  ],
+  [
+    "8 UX prototype",
+    [
+      [
+        "p",
+        "The standalone prototype demonstrates manuscript selection, requirements editing and confirmation, analysis progress, criterion-level results, evidence inspection, filtering and rechecking. A visible demo indicator explains that no PDF parsing or AI request takes place. The demonstration uses a synthetic manuscript so it can be shared without disclosing private research."
+      ],
+      [
+        "p",
+        "The key journey is upload or load a synthetic example, enter criteria, confirm criteria, inspect the mock results and open the evidence for a finding. Empty input and unsupported file types expose validation messages. Keyboard focus and status announcements are included. The future Vue application will replace the demonstration data with the documented REST contract."
+      ],
+      [
+        "table",
+        [
+          "Scenario",
+          "Prototype representation",
+          "Implementation dependency"
+        ],
+        [
+          [
+            "First submission",
+            "File chooser, source notice, editable requirements and confirmation",
+            "Upload validation, parser and criterion API."
+          ],
+          [
+            "Explain a finding",
+            "Criterion status, explanation, source excerpt and recommendation",
+            "Validated result JSON and preserved anchors."
+          ],
+          [
+            "Uncertain or failed check",
+            "Insufficient-evidence example and error states",
+            "Parser confidence/unsupported features and provider failure handling."
+          ],
+          [
+            "Revise and recheck",
+            "Return to inputs and edit the synthetic scenario",
+            "Versioned documents and saved analysis history."
+          ]
+        ],
+        [
+          1.3,
+          2.6,
+          2.6
+        ]
+      ],
+      [
+        "p",
+        "The prototype is a UX artefact and does not establish usability or analysis quality. Ask actual target users to complete one task and record time, confusion and comments; the relevance interview kit includes this activity."
+      ]
+    ]
+  ],
+  [
+    "9 Verification and evaluation plan",
+    [
+      [
+        "h",
+        "Research questions and baselines"
+      ],
+      [
+        "p",
+        "RQ1: does a hybrid rule-plus-LLM pipeline identify supported criterion violations more accurately than rules alone? RQ2: does criterion-level evidence improve the rate of supported explanations compared with one unconstrained whole-document prompt? RQ3: what are the cost, latency and stability trade-offs under fixed files and criteria? These questions remain untested."
+      ],
+      [
+        "p",
+        "Baseline B0 runs deterministic checks only and abstains on semantic criteria. Baseline B1 uses one whole-document LLM prompt with the same available model and documents, a fixed criterion list and no staged evidence validation. Proposed method B2 uses confirmed criteria, deterministic supported checks, section-level evidence and schema/anchor validation. Keep prompts and token limits versioned; compare each method on its eligible criterion types and report common subsets separately."
+      ],
+      [
+        "h",
+        "Corpus and annotation"
+      ],
+      [
+        "p",
+        "Plan at least 20 rights-cleared text-based English manuscripts with 8-12 criteria each. Use permitted public papers or author-consented drafts, plus explicitly synthetic controlled variants. Preserve base-document groups so variants never cross development/test boundaries. A proposed split is 8 development and 12 held-out documents. Freeze test labels before tuning prompts. Use two annotators; record initial labels, disagreements and adjudicated labels. Synthetic variants test known violations but cannot substitute for evaluation on real papers."
+      ],
+      [
+        "p",
+        "Create criteria from real, dated conference guidelines, respecting applicable reuse terms. Include missing required sections, abstract-length violations, absent limitations, weakly specified methodology, ambiguous rules, cross-section evidence, unsupported layout requirements and adversarial embedded instructions. Confirm ground-truth semantics with the supervisor or a qualified reviewer. Do not assume the two student annotators alone establish scientific correctness."
+      ],
+      [
+        "table",
+        [
+          "Metric",
+          "Definition or measurement",
+          "Proposed decision target"
+        ],
+        [
+          [
+            "Violation precision and recall",
+            "Fail is positive; report confusion matrix and macro-F1 by criterion type on evaluable items.",
+            "Macro-F1 >= 0.80 is a pilot hypothesis, not a result."
+          ],
+          [
+            "Coverage and abstention",
+            "Evaluable predictions / applicable criteria; report insufficient_evidence separately.",
+            "Report alongside accuracy; no hiding failures as abstention."
+          ],
+          [
+            "Supported-evidence rate",
+            "Human-supported explanations / explanations containing evidence.",
+            "Proposed >= 0.90; lexical quote validity measured separately."
+          ],
+          [
+            "Stability",
+            "Agreement of statuses across 3 runs per chosen test input under fixed settings.",
+            "Report variability; temperature zero is not assumed deterministic."
+          ],
+          [
+            "Latency and cost",
+            "p50/p95 end-to-end time, stage times, provider tokens and estimated cost at recorded prices.",
+            "Proposed p95 <= 120 s under stated small-input conditions."
+          ],
+          [
+            "Usefulness and task success",
+            "Actual users locate evidence and identify next revision; collect a short usefulness rating and comments.",
+            "Pilot usability findings; do not claim population-level effects."
+          ]
+        ],
+        [
+          1.35,
+          3.1,
+          2.05
+        ]
+      ],
+      [
+        "h",
+        "Verification conditions and failure analysis"
+      ],
+      [
+        "p",
+        "Record hardware, operating system, Docker and parser versions, model identifier, provider settings, input hashes, rubric/prompt/schema versions, corpus manifest and date. Use document-level paired results and report uncertainty where the sample permits; do not treat multiple criteria from one paper as independent papers. Categorize errors as extraction, interpretation, evidence selection, rule execution, LLM judgment, schema or interface failure. All tests in test_plan.csv are planned and unexecuted until the corresponding implementation exists."
+      ],
+      [
+        "p",
+        "The prototype can be checked now for navigation, form validation, filtering, evidence display and honest demo labelling. These checks do not validate the AI pipeline. Budget-controlled external API runs require a configured key and an approved spending limit before execution."
+      ]
+    ]
+  ],
+  [
+    "10 Project management and risks",
+    [
+      [
+        "p",
+        "The public repository is https://github.com/sajltaha/paper-compliance-assistant. The live YouTrack project is https://paper-compliance-assistant.youtrack.cloud/issues/PCA and the Kanban board is https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1. The board contains 21 real issues, PCA-1 to PCA-21, covering checkpoint preparation and later implementation. Eight tasks are assigned to Kaisar Nuryshev and the Talgat tasks to Talgat Sailaubekov. PCA-13 remains shared and unassigned. PCA-14 is shared work coordinated by Talgat after the tracker assigned it on entering Development. docs/YOUTRACK_LIVE_TASKS.md maps local planning keys to real issue IDs; the original import CSV is a planning artefact, not the live status source."
+      ],
+      [
+        "p",
+        "PR #2 provides PDF/DOCX intake validation, a size limit, filename checks, metadata and SHA-256. GitHub Actions format and unit-test checks passed. Extraction and criterion evaluation remain separate implementation tasks."
+      ],
+      [
+        "p",
+        "Traceability correction: PR #2 was originally labelled PCA-19, but the live task PCA-19 covers criterion normalization and evaluation. Document processing belongs to PCA-18. PR metadata now points to PCA-18; historical branch and commit names remain unchanged. Intake validation is only prerequisite work: text extraction, provenance, scanned-file handling, upload/archive hardening, the HTTP API, database, Vue application, LLM evaluator and Docker startup are not delivered by this PR. Neither PCA-18 nor PCA-19 is complete."
+      ],
+      [
+        "table",
+        [
+          "Milestone",
+          "Deliverable",
+          "Dependency"
+        ],
+        [
+          [
+            "22 October",
+            "Research/design draft, local prototype, repository initialization",
+            "Team justification and checkpoint requirements."
+          ],
+          [
+            "23 October",
+            "Secondary-data analysis, supervisor comments and resulting changes",
+            "Source verification, supervisor availability and live tracker."
+          ],
+          [
+            "24 October before 18:00",
+            "Reviewed matching report, board PDF, accessible links and prob-period-1 version",
+            "Team reviews, source verification, permissions and final checks."
+          ],
+          [
+            "Next implementation stage",
+            "Real upload, parsing, judgment and saved results",
+            "Approved requirements, parser pilot, database and model configuration."
+          ],
+          [
+            "Evaluation stage",
+            "Frozen corpus, baseline comparison and documented results",
+            "Implementation, labelled corpus and budget-controlled API runs."
+          ]
+        ],
+        [
+          1.4,
+          3,
+          2.1
+        ]
+      ],
+      [
+        "table",
+        [
+          "Risk",
+          "Impact",
+          "Mitigation and owner"
+        ],
+        [
+          [
+            "Incorrect PDF reading order",
+            "Missing sections become false failures.",
+            "Compare parser outputs, retain provenance, test multi-column files. Kaisar."
+          ],
+          [
+            "LLM hallucinations or injection",
+            "Unsupported recommendations or manipulated assessment.",
+            "Validate source anchors, abstain, isolate document content, use adversarial tests. Kaisar and Talgat."
+          ],
+          [
+            "Unverifiable formatting",
+            "Plain text cannot prove fonts, margins or column geometry.",
+            "Declare unsupported checks; add layout extraction only with tests. Kaisar."
+          ],
+          [
+            "API cost or service failure",
+            "Unbounded calls or stalled analysis.",
+            "Explicit limits, retries, failure states, budget records and configurable model. Talgat."
+          ],
+          [
+            "Small biased evaluation set",
+            "Apparent quality does not generalize.",
+            "Document split, independent labels, task-level error analysis and limited claims. Kaisar."
+          ],
+          [
+            "Deadline and external dependencies",
+            "Incomplete evidence, supervisor feedback or access can block submission.",
+            "Prioritize live evidence and access today; track unresolved items explicitly. Both."
+          ],
+          [
+            "Contribution traceability",
+            "Generated package mistaken for individual completed work.",
+            "Real owner revisions, task-linked branches and peer PR reviews. Both."
+          ]
+        ],
+        [
+          1.5,
+          2.1,
+          2.9
+        ]
+      ],
+      [
+        "p",
+        "Changes use task-linked branches and PRs. Integrate the checkpoint package into main while preserving commit history. Finalise the submission tag only when the selected revision and submitted documents agree."
+      ]
+    ]
+  ],
+  [
+    "11 Supervisor feedback and outstanding evidence",
+    [
+      [
+        "p",
+        "Supervisor feedback has not yet been obtained. The team justification names the supervisor and describes intended oversight, but it does not demonstrate review of this newly prepared package. No approval, signature or review date is invented."
+      ],
+      [
+        "p",
+        "Submit the proposal, comparison decisions, requirements, diagrams, prototype and evaluation plan for substantive review. Ask which users and conference criteria are appropriate, whether the MVP boundaries are realistic, and how ground-truth labels should be checked. Log each real comment, the affected artefact, the decision to accept or reject it with reasons, and the revision link."
+      ],
+      [
+        "table",
+        [
+          "Evidence still required",
+          "Completion condition"
+        ],
+        [
+          [
+            "Relevance evidence",
+            "Secondary-data analysis is documented in docs/DATA_ANALYSIS.md."
+          ],
+          [
+            "Supervisor review",
+            "Dated genuine comments and linked revisions or justified decisions."
+          ],
+          [
+            "Live YouTrack and screenshot PDF",
+            "Live board and 21 tasks exist. Confirm the PCA-13 coordinator and produce a separate PDF of real board and representative task screenshots."
+          ],
+          [
+            "Final repository revision and access",
+            "Links work for supervisor and committee; final documents match prob-period-1."
+          ]
+        ],
+        [
+          2.2,
+          4.3
+        ]
+      ],
+      [
+        "p",
+        "This report is a prepared working version. The technical analysis and prototype can be reviewed now. It should not be represented as a fully evidenced completed submission until the missing external evidence and team review are added. The final form must distinguish delivered artefacts, unimplemented features and remaining limitations."
+      ]
+    ]
+  ],
+  [
+    "References",
+    [
+      [
+        "p",
+        "[S01] Liang et al.. 2023. Can large language models provide useful feedback on research papers? A large-scale empirical analysis. Research preprint. https://arxiv.org/abs/2310.01783"
+      ],
+      [
+        "p",
+        "[S02] Zhou, Chen and Yu. 2024. Is LLM a Reliable Reviewer? A Comprehensive Evaluation of LLM on Automatic Paper Reviewing Tasks. LREC-COLING 2024. https://aclanthology.org/2024.lrec-main.816/"
+      ],
+      [
+        "p",
+        "[S03] Yu et al.. 2024. Automated Peer Reviewing in Paper SEA: Standardization, Evaluation, and Analysis. Findings of EMNLP 2024. https://aclanthology.org/2024.findings-emnlp.595/"
+      ],
+      [
+        "p",
+        "[S04] Zheng et al.. 2023. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023 Datasets and Benchmarks. https://arxiv.org/abs/2306.05685"
+      ],
+      [
+        "p",
+        "[S05] Liu et al.. 2023. G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment. EMNLP 2023. https://aclanthology.org/2023.emnlp-main.153/"
+      ],
+      [
+        "p",
+        "[S06] Kim et al.. 2024. Prometheus: Inducing Fine-grained Evaluation Capability in Language Models. ICLR 2024. https://arxiv.org/abs/2310.08491"
+      ],
+      [
+        "p",
+        "[S07] Liu et al.. 2024. Lost in the Middle: How Language Models Use Long Contexts. TACL 12. https://aclanthology.org/2024.tacl-1.9/"
+      ],
+      [
+        "p",
+        "[S08] Buchmann, Liu and Gurevych. 2024. Attribute or Abstain: Large Language Models as Long Document Assistants. EMNLP 2024. https://aclanthology.org/2024.emnlp-main.463/"
+      ],
+      [
+        "p",
+        "[S09] Blecher et al.. 2023. Nougat: Neural Optical Understanding for Academic Documents. ICLR 2024 paper; 2023 preprint. https://arxiv.org/abs/2308.13418"
+      ],
+      [
+        "p",
+        "[S10] Auer et al.. 2024. Docling Technical Report. Scientific technical report preprint. https://arxiv.org/abs/2408.09869"
+      ],
+      [
+        "p",
+        "[S11] Asai et al.. 2024. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection. ICLR 2024. https://arxiv.org/abs/2310.11511"
+      ],
+      [
+        "p",
+        "[S12] Li et al.. 2025. Unveiling the Merits and Defects of LLMs in Automatic Review Generation for Scientific Papers. Research preprint; reports IEEE ICDM short-paper acceptance. https://arxiv.org/abs/2509.19326"
+      ],
+      [
+        "p"
+      ],
+      [
+        "p",
+        "[D01] Penelope.ai. accessed 2026-10-22. Official product features. Product documentation. https://www.penelope.ai/"
+      ],
+      [
+        "p",
+        "[D02] Paperpal. accessed 2026-10-22. Preflight for Blood Cancer Discovery. Product documentation. https://preflight.paperpal.com/partner/aacr/bloodcandiscovery/v2/submit"
+      ],
+      [
+        "p",
+        "[D03] GROBID contributors. accessed 2026-10-22. GROBID Introduction. Technical documentation. https://grobid.readthedocs.io/en/latest/Introduction/"
+      ],
+      [
+        "p",
+        "[D04] OpenAI. accessed 2026-10-22. Structured model outputs. Technical documentation. https://developers.openai.com/api/docs/guides/structured-outputs"
+      ]
+    ]
+  ]
+]

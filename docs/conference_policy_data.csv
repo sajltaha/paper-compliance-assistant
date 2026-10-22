@@ -1,0 +1,7 @@
+profile_id,venue,edition,paper_type,stage,main_text_limit,excluded_recorded,anonymous,style_required,source_ids
+ICML2026,ICML,2026,main,initial,8,references;appendices,true,true,A
+NEURIPS2025,NeurIPS,2025,main,initial,9,references;checklist;technical appendices,true,true,B
+ACL2026LONG,ACL,2026,long,initial,8,references;appendices;Limitations and Ethical considerations per current ARR guidance,true,true,C;E;F
+ACL2026SHORT,ACL,2026,short,initial,4,references;appendices;Limitations and Ethical considerations per current ARR guidance,true,true,C;E;F
+CVPR2026,CVPR,2026,main,initial,8,reference-only pages;other supplementary material separate,true,true,D
+ICLR2026,ICLR,2026,main,initial,9,references;appendices;conditional optional ethics statement,true,true,G

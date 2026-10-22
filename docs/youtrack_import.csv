@@ -1,0 +1,127 @@
+﻿Summary,Description,Priority,Due Date
+Confirm proposal and scope,"Local planning key: P01. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: Review required; not a completed live task.
+Expected outcome and acceptance criteria: Proposal identifies users, scope and exclusions; both members confirm.
+Deliverable: docs/01_proposal.md
+Add actual GitHub commit/PR link after the work is reviewed.",High,2026-10-23
+Conduct 3-5 real user discussions,"Local planning key: P02. This is NOT a real issue ID.
+Proposed owner: Kaisar. Map to actual YouTrack account after creating the workspace.
+Preparation status: Not started; not a completed live task.
+Expected outcome and acceptance criteria: 3-5 consented, dated discussions OR substantive real-client agreement; distinguish assumptions and findings.
+Deliverable: docs/02_relevance.md
+Add actual GitHub commit/PR link after the work is reviewed.",Critical,2026-10-23
+Review scientific literature and matrix,"Local planning key: P03. This is NOT a real issue ID.
+Proposed owner: Kaisar. Map to actual YouTrack account after creating the workspace.
+Preparation status: Review required; not a completed live task.
+Expected outcome and acceptance criteria: >=12 used sources, >=8 scientific; each has limitation and project implication; team reads and verifies core papers.
+Deliverable: docs/literature_matrix.csv
+Add actual GitHub commit/PR link after the work is reviewed.",High,2026-10-23
+Review comparison of four existing systems,"Local planning key: P04. This is NOT a real issue ID.
+Proposed owner: Kaisar. Map to actual YouTrack account after creating the workspace.
+Preparation status: Review required; not a completed live task.
+Expected outcome and acceptance criteria: 4 systems, 8 common criteria, primary source for capability claims; not-documented is not absent.
+Deliverable: docs/04_existing_systems.md
+Add actual GitHub commit/PR link after the work is reviewed.",High,2026-10-23
+Select storage and document parser after review,"Local planning key: P05. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: Review required; not a completed live task.
+Expected outcome and acceptance criteria: Compare >=3 technical decisions with 2-3 alternatives; record trade-offs and remaining pilot decisions.
+Deliverable: docs/05_technology.md
+Add actual GitHub commit/PR link after the work is reviewed.",High,2026-10-23
+Review functional and non-functional requirements,"Local planning key: P06. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: Review required; not a completed live task.
+Expected outcome and acceptance criteria: Every Must has acceptance criteria and test; Kaisar reviews AI requirements.
+Deliverable: docs/requirements.csv
+Add actual GitHub commit/PR link after the work is reviewed.",Critical,2026-10-23
+Review architecture and API contract,"Local planning key: P07. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: Review required; not a completed live task.
+Expected outcome and acceptance criteria: Three diagrams have editable sources and exports; API, components and data entities agree.
+Deliverable: diagrams/
+Add actual GitHub commit/PR link after the work is reviewed.",High,2026-10-23
+Review interactive UX prototype,"Local planning key: P08. This is NOT a real issue ID.
+Proposed owner: Kaisar. Map to actual YouTrack account after creating the workspace.
+Preparation status: Review required; not a completed live task.
+Expected outcome and acceptance criteria: User can follow upload, confirmed criteria, results/evidence and error flow; mock mode visibly identified.
+Deliverable: prototype/index.html
+Add actual GitHub commit/PR link after the work is reviewed.",High,2026-10-23
+Approve verification corpus and baselines,"Local planning key: P09. This is NOT a real issue ID.
+Proposed owner: Kaisar. Map to actual YouTrack account after creating the workspace.
+Preparation status: Review required; not a completed live task.
+Expected outcome and acceptance criteria: Rights-cleared corpus plan, two annotators, frozen split, metrics and baseline protocols recorded.
+Deliverable: docs/09_evaluation.md
+Add actual GitHub commit/PR link after the work is reviewed.",High,2026-10-23
+Connect GitHub and configure team access,"Local planning key: P10. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: In progress; not a completed live task.
+Expected outcome and acceptance criteria: Repo accessible to both students; supervisor and committee access verified; GitHub connection can upload.
+Deliverable: README.md
+Add actual GitHub commit/PR link after the work is reviewed.",Critical,2026-10-23
+Create YouTrack project and import work items,"Local planning key: P11. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: Not started; not a completed live task.
+Expected outcome and acceptance criteria: Actual tasks have real IDs, owners, priorities, acceptance criteria, due dates and links.
+Deliverable: docs/youtrack_tasks.csv
+Add actual GitHub commit/PR link after the work is reviewed.",Critical,2026-10-23
+Review risks and project milestones,"Local planning key: P12. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: Review required; not a completed live task.
+Expected outcome and acceptance criteria: Risk register covers parsing, cost, hallucination, access and evaluation dependencies.
+Deliverable: docs/10_management.md
+Add actual GitHub commit/PR link after the work is reviewed.",High,2026-10-23
+Obtain supervisor review and apply revisions,"Local planning key: P13. This is NOT a real issue ID.
+Proposed owner: Both. Map to actual YouTrack account after creating the workspace.
+Preparation status: Not started; not a completed live task.
+Expected outcome and acceptance criteria: Supervisor comments are dated and linked to explicit decisions and actual revisions.
+Deliverable: docs/11_supervisor_feedback.md
+Add actual GitHub commit/PR link after the work is reviewed.",Critical,2026-10-23
+Make individual contributions and peer PR reviews,"Local planning key: P14. This is NOT a real issue ID.
+Proposed owner: Both. Map to actual YouTrack account after creating the workspace.
+Preparation status: Not started; not a completed live task.
+Expected outcome and acceptance criteria: Each student makes a genuine substantive change using own account; teammate reviews PR; changes link to actual tasks.
+Deliverable: CONTRIBUTING.md
+Add actual GitHub commit/PR link after the work is reviewed.",Critical,2026-10-24
+Prepare PDF of live YouTrack board and tasks,"Local planning key: P15. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: Not started; not a completed live task.
+Expected outcome and acceptance criteria: One PDF shows actual board plus representative task details, including assignees and acceptance criteria.
+Deliverable: docs/SUBMISSION_CHECKLIST.md
+Add actual GitHub commit/PR link after the work is reviewed.",Critical,2026-10-24
+"Finalize report, access checks and submission tag","Local planning key: P16. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: Blocked; not a completed live task.
+Expected outcome and acceptance criteria: Replace pending evidence, resolve comments, verify links; create prob-period-1 only at final agreed revision and export matching PDFs.
+Deliverable: docs/SUBMISSION_CHECKLIST.md
+Add actual GitHub commit/PR link after the work is reviewed.",Critical,2026-10-24
+Implement Go upload and persistence API,"Local planning key: P17. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: Planned; not a completed live task.
+Expected outcome and acceptance criteria: FR01, FR08, FR10-12 and relevant security tests pass on documented local setup.
+Deliverable: docs/requirements.csv
+Add actual GitHub commit/PR link after the work is reviewed.",Normal,
+Implement PDF DOCX extraction adapter,"Local planning key: P18. This is NOT a real issue ID.
+Proposed owner: Kaisar. Map to actual YouTrack account after creating the workspace.
+Preparation status: Planned; not a completed live task.
+Expected outcome and acceptance criteria: FR02 and parser evaluation cases pass; retain provenance and reject unsupported scans.
+Deliverable: docs/requirements.csv
+Add actual GitHub commit/PR link after the work is reviewed.",Normal,
+Implement criterion normalization and evaluation,"Local planning key: P19. This is NOT a real issue ID.
+Proposed owner: Kaisar. Map to actual YouTrack account after creating the workspace.
+Preparation status: Planned; not a completed live task.
+Expected outcome and acceptance criteria: FR03-07, FR11 and schema/evidence validation pass against fixtures; provider key server-side.
+Deliverable: docs/ai_contract.schema.json
+Add actual GitHub commit/PR link after the work is reviewed.",Normal,
+Implement Vue interface and Docker startup,"Local planning key: P20. This is NOT a real issue ID.
+Proposed owner: Talgat. Map to actual YouTrack account after creating the workspace.
+Preparation status: Planned; not a completed live task.
+Expected outcome and acceptance criteria: Real API integration replaces mock; error/empty/loading states and startup checks pass.
+Deliverable: prototype/index.html
+Add actual GitHub commit/PR link after the work is reviewed.",Normal,
+Run controlled evaluation and analyse errors,"Local planning key: P21. This is NOT a real issue ID.
+Proposed owner: Kaisar. Map to actual YouTrack account after creating the workspace.
+Preparation status: Planned; not a completed live task.
+Expected outcome and acceptance criteria: Frozen test protocol executed; metrics and failures reported without tuning on test data.
+Deliverable: docs/09_evaluation.md
+Add actual GitHub commit/PR link after the work is reviewed.",Normal,
