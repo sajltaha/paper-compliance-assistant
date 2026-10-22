@@ -21,7 +21,7 @@ Evaluation strategy: Propose hybrid checks: deterministic for counts/structure, 
 
 Component interaction: REST/JSON selected in justification; easier boundary inspection and language-independent parser interface. No latency advantage claimed.
 
-Evidence selection: Start with section/block selection and explicit limits; compare full-context baseline; vector retrieval only if tests show need. [S07,S08,S11,S13]
+Evidence selection: Start with section/block selection and explicit limits; compare full-context baseline; vector retrieval only if tests show need. [S07,S08,S11]
 
 ## Model and deployment boundary
 

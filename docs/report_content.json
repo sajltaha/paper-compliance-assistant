@@ -8,7 +8,7 @@
       ],
       [
         "p",
-        "The current deliverable is an analysis and design package with an interactive mock prototype. The complete application, external AI integration and empirical benchmark have not been implemented. No stakeholder interviews, supervisor approval, individual teammate contributions or measured performance are claimed."
+        "The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. The relevance analysis uses public conference policies and published screening data. Supervisor feedback and measured system performance remain outstanding."
       ],
       [
         "h",
@@ -61,17 +61,17 @@
         [
           [
             "Сайлаубеков Талғат Ерханұлы\nSE-2429 | sajltaha",
-            "Frontend, Backend, DevOps, QA",
+            "Frontend, Backend, DevOps",
             "Vue 3/TypeScript/Tailwind/Pinia, Go REST API, database and file storage, integration, local Docker Compose and functional tests."
           ],
           [
             "Нұрышев Қайсар Серікұлы\nSE-2413 | stqnlee",
-            "UI/UX, AI/LLM, QA",
+            "UI/UX, document processing, AI/LLM, QA",
             "UX scenarios, PDF/DOCX conversion, criterion interpretation, OpenAI integration, prompt design and AI quality evaluation."
           ]
         ],
         [
-          2.0,
+          2,
           1.6,
           2.9
         ]
@@ -87,50 +87,15 @@
     [
       [
         "p",
-        "Evidence status: direct stakeholder research has not yet been performed. The need for manuscript checks is supported indirectly by existing products [D01,D02] and research on scientific feedback [S01-S03,S12]. These sources motivate the problem but do not prove that our target users need the proposed workflow."
-      ],
-      [
-        "table",
-        [
-          "Assumption to validate",
-          "How to collect evidence",
-          "Decision affected"
-        ],
-        [
-          [
-            "Authors miss rules while checking multiple files.",
-            "Ask 3-5 authors/supervisors to describe their most recent submission and a specific missed rule.",
-            "Prioritize upload, criteria confirmation and evidence navigation."
-          ],
-          [
-            "Authors need editable conference-specific criteria.",
-            "Ask users to bring an actual call for papers or submission checklist and identify ambiguous requirements.",
-            "Decide which criteria are structured and how ambiguity is resolved."
-          ],
-          [
-            "Users trust a finding more when they can inspect its source.",
-            "Show the prototype and ask users to locate the evidence for a sample result.",
-            "Set evidence display and explanation acceptance criteria."
-          ],
-          [
-            "External AI processing and runtime are acceptable.",
-            "Ask what manuscript material they may send externally, acceptable waiting time and cost constraints.",
-            "Define consent, supported deployment and cost limits."
-          ]
-        ],
-        [
-          2.25,
-          2.6,
-          1.65
-        ]
+        "The relevance method is secondary-data analysis. The full study is versioned in docs/DATA_ANALYSIS.md, including references [A]-[N], five conference rule sets, six submission profiles, published CHI screening statistics and six recent research sources."
       ],
       [
         "p",
-        "Collect 3-5 brief discussions with representatives who have actually prepared or supervised a scientific submission, or obtain substantive agreement from a real client. Record participant role, date, consent, concrete example, finding and requirement affected. Names and contact details need not enter the repository. Do not publish manuscripts or recordings without permission."
+        "The observations support configurable submission profiles, section-aware counting, explicit rule modality, evidence-linked findings, conversion-quality gates and qualified recommendations. User demand, local error rates and system performance remain unmeasured."
       ],
       [
         "p",
-        "The separate interview kit contains questions, a blank evidence log and a synthesis template. A record becomes verified evidence only after an actual discussion. Planned participants, example answers and assumptions must not be counted as interviews."
+        "The CHI report records 495 desk rejections among 5,014 complete submissions. Anonymization, template and length account for 229 reported cases. These are source statistics, not a measured preventable fraction or a forecast of this system's impact."
       ]
     ]
   ],
@@ -139,7 +104,7 @@
     [
       [
         "p",
-        "The review uses 17 sources: 13 research publications or research reports and 4 primary technical/product sources. Twelve research entries are from 2023-2025; the 2020 RAG paper is retained as a foundational work. Preprints and technical reports are explicitly labelled. Search terms combined manuscript evaluation, conference compliance, rubric-based evaluation, LLM-as-a-Judge, PDF parsing, attribution, document understanding and retrieval-augmented generation. Primary publication pages, author repositories and official documentation were consulted on 22 October 2026."
+        "The review uses 16 sources: 12 research publications or research reports from 2023-2025 and 4 primary technical/product sources. Preprints and technical reports are explicitly labelled. Search terms combined manuscript evaluation, conference compliance, rubric-based evaluation, LLM-as-a-Judge, PDF parsing, attribution, document understanding and retrieval-augmented generation. Primary publication pages, author repositories and official documentation were consulted on 22 October 2026."
       ],
       [
         "p",
@@ -167,7 +132,7 @@
       ],
       [
         "p",
-        "Nougat [S09], Docling [S10] and GROBID [D03] provide different routes to structured scholarly text. The project must measure conversion errors separately, because a missed section in extraction can become a false compliance failure. Lost in the Middle [S07] motivates positional sensitivity tests. RAG [S13] and Self-RAG [S11] explain retrieval approaches, but retrieval can omit evidence needed for exhaustive checking. A vector database is therefore an option to test, not an assumed requirement."
+        "Nougat [S09], Docling [S10] and GROBID [D03] provide different routes to structured scholarly text. The project must measure conversion errors separately, because a missed section in extraction can become a false compliance failure. Lost in the Middle [S07] motivates positional sensitivity tests. Self-RAG [S11] illustrates retrieval-based self-reflection, but retrieval can omit evidence needed for exhaustive checking. A vector database is therefore an option to test, not an assumed requirement."
       ],
       [
         "h",
@@ -240,11 +205,6 @@
             "S12 | Li et al. (2025)\nStructured and descriptive reviews can coexist with weak critical reasoning and contextual grounding.",
             "Review-generation benchmarks differ from deterministic and semantic compliance checks.",
             "Evaluate correctness, unsupported claims and actionable feedback separately from writing quality."
-          ],
-          [
-            "S13 | Lewis et al. (2020)\nCombining parametric generation with retrieved context establishes a retrieval-augmented approach.",
-            "Knowledge-intensive QA results do not guarantee exhaustive detection of missing manuscript elements.",
-            "Retain as a foundational reference and compare retrieval with full-context and rules-only approaches."
           ]
         ],
         [
@@ -429,7 +389,7 @@
       ],
       [
         "p",
-        "Evidence selection: Start with section/block selection and explicit limits; compare full-context baseline; vector retrieval only if tests show need. [S07,S08,S11,S13]"
+        "Evidence selection: Start with section/block selection and explicit limits; compare full-context baseline; vector retrieval only if tests show need. [S07,S08,S11]"
       ],
       [
         "h",
@@ -804,11 +764,15 @@
     [
       [
         "p",
-        "The project uses one repository throughout development. The current private repository is https://github.com/sajltaha/paper-compliance-assistant. The YouTrack workspace has been created at https://paper-compliance-assistant.youtrack.cloud/. Live project, board and issue setup is still pending. The included CSV is a task-preparation file with local planning keys P01-P21; these keys are not real YouTrack issue IDs. Actual assignments, due dates, review states and issue links must be recorded in the live tracker."
+        "The public repository is https://github.com/sajltaha/paper-compliance-assistant. The live YouTrack project is https://paper-compliance-assistant.youtrack.cloud/issues/PCA and the Kanban board is https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1. The board contains 21 real issues, PCA-1 to PCA-21, covering checkpoint preparation and later implementation. Eight tasks are assigned to Kaisar Nuryshev and the Talgat tasks to Talgat Sailaubekov. PCA-13 remains shared and unassigned. PCA-14 is shared work coordinated by Talgat after the tracker assigned it on entering Development. docs/YOUTRACK_LIVE_TASKS.md maps local planning keys to real issue IDs; the original import CSV is a planning artefact, not the live status source."
       ],
       [
         "p",
-        "The package was prepared with AI assistance on 22 October 2026. It is not evidence of earlier continuous development or independent work by both students. Each student must read, verify and revise their own work using their own account. Meaningful documentation, prototype and design revisions are valid contributions; do not backdate commits or attribute generated changes to another account."
+        "PR #2 provides PDF/DOCX intake validation, a size limit, filename checks, metadata and SHA-256. GitHub Actions format and unit-test checks passed. Extraction and criterion evaluation remain separate implementation tasks."
+      ],
+      [
+        "p",
+        "Traceability correction: PR #2 was originally labelled PCA-19, but the live task PCA-19 covers criterion normalization and evaluation. Document processing belongs to PCA-18. PR metadata now points to PCA-18; historical branch and commit names remain unchanged. Intake validation is only prerequisite work: text extraction, provenance, scanned-file handling, upload/archive hardening, the HTTP API, database, Vue application, LLM evaluator and Docker startup are not delivered by this PR. Neither PCA-18 nor PCA-19 is complete."
       ],
       [
         "table",
@@ -825,8 +789,8 @@
           ],
           [
             "23 October",
-            "User evidence, owner reviews, supervisor comments and resulting changes",
-            "Real discussions, supervisor availability and live tracker."
+            "Secondary-data analysis, supervisor comments and resulting changes",
+            "Source verification, supervisor availability and live tracker."
           ],
           [
             "24 October before 18:00",
@@ -846,7 +810,7 @@
         ],
         [
           1.4,
-          3.0,
+          3,
           2.1
         ]
       ],
@@ -885,7 +849,7 @@
           ],
           [
             "Deadline and external dependencies",
-            "Missing interviews, supervisor feedback or access blocks submission.",
+            "Incomplete evidence, supervisor feedback or access can block submission.",
             "Prioritize live evidence and access today; track unresolved items explicitly. Both."
           ],
           [
@@ -902,7 +866,7 @@
       ],
       [
         "p",
-        "Use branches named with actual issue IDs and descriptive commits. A PR explains changes, linked tasks and verification; the other team member reviews it before merge. Keep main as the reviewed baseline. Do not create the submission tag until the chosen revision and uploaded documents agree. This form specifically asks for prob-period-1; the general guide also lists later pre-defense tags. Existing submitted tags must remain unchanged."
+        "Changes use task-linked branches and PRs. Integrate the checkpoint package into main while preserving commit history. Finalise the submission tag only when the selected revision and submitted documents agree."
       ]
     ]
   ],
@@ -925,20 +889,16 @@
         ],
         [
           [
-            "Stakeholder relevance evidence",
-            "3-5 actual discussions or substantive agreement with a real client."
+            "Relevance evidence",
+            "Secondary-data analysis is documented in docs/DATA_ANALYSIS.md."
           ],
           [
             "Supervisor review",
             "Dated genuine comments and linked revisions or justified decisions."
           ],
           [
-            "Individual contributions and peer review",
-            "Each student makes and explains substantive changes; teammate reviews PRs."
-          ],
-          [
             "Live YouTrack and screenshot PDF",
-            "Assigned tasks, priorities, acceptance criteria and real board/task screenshots in one PDF."
+            "Live board and 21 tasks exist. Confirm the PCA-13 coordinator and produce a separate PDF of real board and representative task screenshots."
           ],
           [
             "Final repository revision and access",
@@ -1008,8 +968,7 @@
         "[S12] Li et al.. 2025. Unveiling the Merits and Defects of LLMs in Automatic Review Generation for Scientific Papers. Research preprint; reports IEEE ICDM short-paper acceptance. https://arxiv.org/abs/2509.19326"
       ],
       [
-        "p",
-        "[S13] Lewis et al.. 2020. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. NeurIPS 2020 foundational work. https://arxiv.org/abs/2005.11401"
+        "p"
       ],
       [
         "p",
