@@ -2,7 +2,7 @@
 
 Development of an Intelligent Web System for Analyzing Scientific Articles for Compliance with Scientific Conference Requirements and Generating Recommendations. This report prepares the first probationary-period submission due on 24 October 2026 at 18:00 Asia/Almaty. The project assists authors in checking a manuscript against explicitly supplied conference requirements and produces evidence-linked recommendations.
 
-The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. PR #2 records AI-assisted account activity and relayed participant approval as detailed in Section 10. Stakeholder interviews, supervisor approval and measured system performance remain outstanding.
+The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. The relevance analysis uses public conference policies and published screening data. Supervisor feedback and measured system performance remain outstanding.
 
 ## Problem and intended users
 

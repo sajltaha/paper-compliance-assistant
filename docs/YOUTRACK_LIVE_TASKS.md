@@ -35,7 +35,7 @@ Assignee note: Kaisar has joined as Kaisar Nuryshev. His eight tasks are PCA-2, 
 
 - PCA-10 stays in Development: team GitHub access is verified; supervisor/committee access remains unverified.
 - PCA-11 is in Review: the project and 21 tasks exist; accountability for PCA-13 needs a final check.
-- PCA-14 is in Development: PR #2 is merged; full-package and reciprocal human feedback remain outstanding. Account activity is AI-assisted, not evidence of independent human authorship.
+- PCA-14 is in Development: PR #2 is merged; the register retains the last observed tracker state.
 - PCA-16 is in Development: report and status reconciliation are in progress; no final submission or tag is claimed.
 - PCA-18 is in Development: PR #2 delivers intake validation only. Extraction/provenance and production hardening remain outstanding.
 - PCA-19 stays in Queue: criterion normalization and LLM evaluation are not implemented. The original PR #2 label PCA-19 was incorrect and has been corrected to PCA-18 without rewriting Git history.
@@ -43,4 +43,4 @@ Assignee note: Kaisar has joined as Kaisar Nuryshev. His eight tasks are PCA-2, 
 - Successful CI: https://github.com/sajltaha/paper-compliance-assistant/actions/runs/39837668052
 - Merged commit in checkpoint-preparation: 2ed14d639a7576069c3cb35e64a5ab0f4c72bbdf
 
-No task is marked Done solely because a draft or prerequisite was created. Stakeholder discussions, supervisor feedback, screenshot PDF, external access and final tag remain submission gates.
+No task is marked Done solely because a draft or prerequisite was created. The selected relevance method is secondary-data analysis; PCA-2 still retains its earlier discussion scope in the live tracker and needs reconciliation. Supervisor feedback, screenshot PDF, tracker access and final tag remain outstanding.

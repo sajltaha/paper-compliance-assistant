@@ -24,7 +24,6 @@
 
 [S12] Li et al.. 2025. Unveiling the Merits and Defects of LLMs in Automatic Review Generation for Scientific Papers. Research preprint; reports IEEE ICDM short-paper acceptance. https://arxiv.org/abs/2509.19326
 
-[S13] Lewis et al.. 2020. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. NeurIPS 2020 foundational work. https://arxiv.org/abs/2005.11401
 
 [D01] Penelope.ai. accessed 2026-10-22. Official product features. Product documentation. https://www.penelope.ai/
 

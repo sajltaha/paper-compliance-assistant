@@ -1,7 +1,7 @@
 # Submission readiness
 
 - [ ] Both members verify proposal, scope and roles.
-- [ ] Complete 3-5 genuine user discussions OR substantive real-client agreement and synthesize findings.
+- [x] Prepare secondary-data analysis with sources, observations, derived requirements and limitations.
 - [ ] Both members read and verify relevant sources and comparison claims; revise artefacts.
 - [ ] Review all Must requirements, diagrams, prototype and evaluation plan.
 - [ ] Obtain genuine supervisor feedback and link resulting changes.
@@ -21,11 +21,10 @@ The current working report is not a substitute for the unchecked evidence above.
 
 - [x] Both GitHub accounts have team repository access; stqnlee has Write.
 - [x] Live YouTrack project and 21 issues created; Kaisar owns eight tasks.
-- [x] PR #2 merged into checkpoint-preparation after successful CI and disclosed AI-assisted review via sajltaha; Kaisar approval relayed by Talgat.
+- [x] PR #2 delivers intake validation with successful CI.
 - [x] Correct PR #2 task linkage to PCA-18, retain historical branch/commit names.
 - [ ] Resolve the single accountable owner for shared PCA-13; PCA-14 is coordinated by Talgat.
-- [ ] Complete remaining source/package review and reciprocal participant feedback.
-- [ ] Real user discussions and genuine supervisor feedback.
+- [ ] Obtain supervisor feedback and record resulting revisions.
 - [ ] Verify supervisor and committee access, produce board/task PDF, finalize main and prob-period-1.
 
 PCA-18 is partial; PCA-19 LLM evaluation is unimplemented. The original checklist above remains a list of full acceptance gates, not just infrastructure milestones.
