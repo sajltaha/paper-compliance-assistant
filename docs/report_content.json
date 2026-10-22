@@ -8,7 +8,7 @@
       ],
       [
         "p",
-        "The current deliverable is an analysis and design package with an interactive mock prototype. The complete application, external AI integration and empirical benchmark have not been implemented. No stakeholder interviews, supervisor approval, individual teammate contributions or measured performance are claimed."
+        "The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. PR #2 records AI-assisted account activity and relayed participant approval as detailed in Section 10. Stakeholder interviews, supervisor approval and measured system performance remain outstanding."
       ],
       [
         "h",
@@ -61,12 +61,12 @@
         [
           [
             "Сайлаубеков Талғат Ерханұлы\nSE-2429 | sajltaha",
-            "Frontend, Backend, DevOps, QA",
+            "Frontend, Backend, DevOps",
             "Vue 3/TypeScript/Tailwind/Pinia, Go REST API, database and file storage, integration, local Docker Compose and functional tests."
           ],
           [
             "Нұрышев Қайсар Серікұлы\nSE-2413 | stqnlee",
-            "UI/UX, AI/LLM, QA",
+            "UI/UX, document processing, AI/LLM, QA",
             "UX scenarios, PDF/DOCX conversion, criterion interpretation, OpenAI integration, prompt design and AI quality evaluation."
           ]
         ],
@@ -804,7 +804,7 @@
     [
       [
         "p",
-        "The private repository is https://github.com/sajltaha/paper-compliance-assistant. The live YouTrack project is https://paper-compliance-assistant.youtrack.cloud/issues/PCA and the Kanban board is https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1. The board contains 21 real issues, PCA-1 to PCA-21, covering checkpoint preparation and later implementation. Eight tasks are assigned to Kaisar Nuryshev and the Talgat tasks to Talgat Sailaubekov. PCA-13 and PCA-14 remain shared and have no single assignee. docs/YOUTRACK_LIVE_TASKS.md maps local planning keys to real issue IDs; the original import CSV is a planning artefact, not the live status source."
+        "The private repository is https://github.com/sajltaha/paper-compliance-assistant. The live YouTrack project is https://paper-compliance-assistant.youtrack.cloud/issues/PCA and the Kanban board is https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1. The board contains 21 real issues, PCA-1 to PCA-21, covering checkpoint preparation and later implementation. Eight tasks are assigned to Kaisar Nuryshev and the Talgat tasks to Talgat Sailaubekov. PCA-13 remains shared and unassigned. PCA-14 is shared work coordinated by Talgat after the tracker assigned it on entering Development. docs/YOUTRACK_LIVE_TASKS.md maps local planning keys to real issue IDs; the original import CSV is a planning artefact, not the live status source."
       ],
       [
         "p",
@@ -942,7 +942,7 @@
           ],
           [
             "Live YouTrack and screenshot PDF",
-            "Live board and 21 tasks exist. Resolve shared accountability and produce a separate PDF of real board and representative task screenshots."
+            "Live board and 21 tasks exist. Confirm the PCA-13 coordinator and produce a separate PDF of real board and representative task screenshots."
           ],
           [
             "Final repository revision and access",

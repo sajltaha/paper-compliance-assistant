@@ -23,7 +23,7 @@ The current working report is not a substitute for the unchecked evidence above.
 - [x] Live YouTrack project and 21 issues created; Kaisar owns eight tasks.
 - [x] PR #2 merged into checkpoint-preparation after successful CI and disclosed AI-assisted review via sajltaha; Kaisar approval relayed by Talgat.
 - [x] Correct PR #2 task linkage to PCA-18, retain historical branch/commit names.
-- [ ] Resolve single accountable owners for shared PCA-13 and PCA-14.
+- [ ] Resolve the single accountable owner for shared PCA-13; PCA-14 is coordinated by Talgat.
 - [ ] Complete remaining source/package review and reciprocal participant feedback.
 - [ ] Real user discussions and genuine supervisor feedback.
 - [ ] Verify supervisor and committee access, produce board/task PDF, finalize main and prob-period-1.

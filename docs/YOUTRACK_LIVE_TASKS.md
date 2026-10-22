@@ -20,7 +20,7 @@ This register maps the local planning keys used in the preparation documents to 
 | P11 | [PCA-11](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-11) | Create YouTrack project and import work items | Talgat | Review |
 | P12 | [PCA-12](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-12) | Review risks and project milestones | Talgat | Review |
 | P13 | [PCA-13](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-13) | Obtain supervisor review and apply revisions | Both; unassigned | Queue |
-| P14 | [PCA-14](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-14) | Make individual contributions and peer PR reviews | Both; unassigned | Development |
+| P14 | [PCA-14](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-14) | Make individual contributions and peer PR reviews | Both; Talgat coordinator | Development |
 | P15 | [PCA-15](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-15) | Prepare PDF of live YouTrack board and tasks | Talgat | Queue |
 | P16 | [PCA-16](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-16) | Finalize report, access checks and submission tag | Talgat | Development |
 | P17 | [PCA-17](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-17) | Implement Go upload and persistence API | Talgat | Queue |
@@ -29,12 +29,12 @@ This register maps the local planning keys used in the preparation documents to 
 | P20 | [PCA-21](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-21) | Implement Vue interface and Docker startup | Talgat | Queue |
 | P21 | [PCA-20](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-20) | Run controlled evaluation and analyse errors | Kaisar | Queue |
 
-Assignee note: Kaisar has joined as Kaisar Nuryshev. His eight tasks are PCA-2, PCA-3, PCA-4, PCA-8, PCA-9, PCA-18, PCA-19 and PCA-20. Shared tasks PCA-13 and PCA-14 still require a single accountable assignee.
+Assignee note: Kaisar has joined as Kaisar Nuryshev. His eight tasks are PCA-2, PCA-3, PCA-4, PCA-8, PCA-9, PCA-18, PCA-19 and PCA-20. PCA-13 still requires an accountable assignee. PCA-14 is shared work with Talgat as the accountable coordinator, assigned automatically on entry to Development.
 
 ## Verified progress and remaining gates
 
 - PCA-10 stays in Development: team GitHub access is verified; supervisor/committee access remains unverified.
-- PCA-11 is in Review: the project and 21 tasks exist; shared accountability needs a final check.
+- PCA-11 is in Review: the project and 21 tasks exist; accountability for PCA-13 needs a final check.
 - PCA-14 is in Development: PR #2 is merged; full-package and reciprocal human feedback remain outstanding. Account activity is AI-assisted, not evidence of independent human authorship.
 - PCA-16 is in Development: report and status reconciliation are in progress; no final submission or tag is claimed.
 - PCA-18 is in Development: PR #2 delivers intake validation only. Extraction/provenance and production hardening remain outstanding.
