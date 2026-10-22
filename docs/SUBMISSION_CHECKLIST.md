@@ -16,3 +16,16 @@
 - [ ] One representative submits by 18:00, 24 October 2026, Asia/Almaty.
 
 The current working report is not a substitute for the unchecked evidence above.
+
+## Verified update 23 October 2026
+
+- [x] Both GitHub accounts have team repository access; stqnlee has Write.
+- [x] Live YouTrack project and 21 issues created; Kaisar owns eight tasks.
+- [x] PR #2 merged into checkpoint-preparation after successful CI and disclosed AI-assisted review via sajltaha; Kaisar approval relayed by Talgat.
+- [x] Correct PR #2 task linkage to PCA-18, retain historical branch/commit names.
+- [ ] Resolve single accountable owners for shared PCA-13 and PCA-14.
+- [ ] Complete remaining source/package review and reciprocal participant feedback.
+- [ ] Real user discussions and genuine supervisor feedback.
+- [ ] Verify supervisor and committee access, produce board/task PDF, finalize main and prob-period-1.
+
+PCA-18 is partial; PCA-19 LLM evaluation is unimplemented. The original checklist above remains a list of full acceptance gates, not just infrastructure milestones.

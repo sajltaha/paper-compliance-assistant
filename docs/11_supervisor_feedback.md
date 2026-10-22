@@ -8,8 +8,8 @@ Submit the proposal, comparison decisions, requirements, diagrams, prototype and
 | --- | --- |
 | Stakeholder relevance evidence | 3-5 actual discussions or substantive agreement with a real client. |
 | Supervisor review | Dated genuine comments and linked revisions or justified decisions. |
-| Individual contributions and peer review | Each student makes and explains substantive changes; teammate reviews PRs. |
-| Live YouTrack and screenshot PDF | Assigned tasks, priorities, acceptance criteria and real board/task screenshots in one PDF. |
+| Individual contributions and peer review | PR #2 is merged with disclosed AI-assisted review; broader package review and the reciprocal review of Talgat changes remain outstanding. |
+| Live YouTrack and screenshot PDF | Live board and 21 tasks exist. Resolve shared accountability and produce a separate PDF of real board and representative task screenshots. |
 | Final repository revision and access | Links work for supervisor and committee; final documents match prob-period-1. |
 
 This report is a prepared working version. The technical analysis and prototype can be reviewed now. It should not be represented as a fully evidenced completed submission until the missing external evidence and team review are added. The final form must distinguish delivered artefacts, unimplemented features and remaining limitations.

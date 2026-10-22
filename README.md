@@ -10,14 +10,14 @@ Authors need to check a manuscript against conference requirements and understan
 ## Team and supervisor
 | Member | Group | GitHub | Planned role |
 |---|---|---|---|
-| Сайлаубеков Талғат Ерханұлы | SE-2429 | [sajltaha](https://github.com/sajltaha) | Frontend, Backend, DevOps, QA |
-| Нұрышев Қайсар Серікұлы | SE-2413 | [stqnlee](https://github.com/stqnlee) | UI/UX, AI/LLM, QA |
+| Сайлаубеков Талғат Ерханұлы | SE-2429 | [sajltaha](https://github.com/sajltaha) | Frontend, Backend, storage, integration, DevOps |
+| Нұрышев Қайсар Серікұлы | SE-2413 | [stqnlee](https://github.com/stqnlee) | UI/UX, document processing, AI/LLM, AI quality checks |
 
 Supervisor: Солтан Гульжан Жексенбаевна.
 
 ## Scope and status
 Prepared: proposal, critical literature review (17 sources, 13 research entries), four-system comparison, six technology comparisons, 20 requirements with acceptance criteria, three source-editable diagrams, API/schema draft, interactive UX mockup, evaluation plan and task/evidence templates.
-Not implemented: PDF/DOCX parsing, Go API, Vue application, database, OpenAI integration and Docker deployment. Not yet obtained: actual user discussions, supervisor review, peer reviews, live YouTrack links and screenshot evidence. The package is AI-assisted preparation; individual ownership must be established through real revisions and review.
+Implemented foundation: PDF/DOCX intake validation, SHA-256 and unit tests in merged PR #2; CI passed. The PR is partial PCA-18 work, not PCA-19 criterion evaluation. Not implemented: text extraction, Go HTTP API, Vue application, database, OpenAI integration and Docker deployment. Still outstanding: actual user discussions, supervisor feedback, broader team review, external access checks and screenshot PDF. Development and technical review are AI-assisted; Kaisar approval was relayed by Talgat.
 
 In scope: author-supplied conference criteria, supported formal and semantic checks, uncertainty, evidence and saved versioned runs. Out of scope: replacing scientific peer review, autonomous acceptance decisions, plagiarism certification and unsupported formatting guarantees.
 
@@ -32,11 +32,11 @@ Specified: Vue 3, TypeScript, Tailwind CSS, Pinia, Go, REST/JSON, OpenAI API, Gi
 - config/: placeholder configuration; no secrets.
 
 ## Open the prototype
-Open prototype/index.html in a current browser; no installation, API key or network is required. Choose Load demo, confirm criteria, run the mock and inspect evidence. This is a synthetic UX demonstration; selected file contents are not parsed or sent externally. There are no setup/run/test commands for a real backend yet; they will be added with implemented code.
+Open prototype/index.html in a current browser; no installation, API key or network is required. Choose Load demo, confirm criteria, run the mock and inspect evidence. This is a synthetic UX demonstration; selected file contents are not parsed or sent externally. For the implemented intake package only, run `cd backend && go test ./...` with Go 1.23 or compatible newer Go. This does not start an HTTP server or an AI service.
 
 ## Documentation and tracking
 Start with docs/01_proposal.md and docs/SUBMISSION_CHECKLIST.md. Report sections are in docs/01_*.md through docs/11_*.md; references are in docs/references.md. The report DOCX/PDF is provided in the preparation package. These source documents and the UX prototype are uploaded on checkpoint-preparation for team review; main remains the reviewed baseline.
-YouTrack workspace: https://paper-compliance-assistant.youtrack.cloud/ (created). Live project, board and issues are pending; docs/youtrack_tasks.csv contains proposed tasks, not actual issue IDs.
+YouTrack workspace: https://paper-compliance-assistant.youtrack.cloud/ (created). Live project and 21 issues exist. See docs/YOUTRACK_LIVE_TASKS.md for the verified mapping and current progress. The import CSV is historical planning data.
 Submission tag: pending final reviewed revision; this form requires prob-period-1.
 
 ## Evaluation

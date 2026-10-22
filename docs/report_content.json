@@ -804,11 +804,15 @@
     [
       [
         "p",
-        "The project uses one repository throughout development. The current private repository is https://github.com/sajltaha/paper-compliance-assistant. The YouTrack workspace has been created at https://paper-compliance-assistant.youtrack.cloud/. Live project, board and issue setup is still pending. The included CSV is a task-preparation file with local planning keys P01-P21; these keys are not real YouTrack issue IDs. Actual assignments, due dates, review states and issue links must be recorded in the live tracker."
+        "The private repository is https://github.com/sajltaha/paper-compliance-assistant. The live YouTrack project is https://paper-compliance-assistant.youtrack.cloud/issues/PCA and the Kanban board is https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1. The board contains 21 real issues, PCA-1 to PCA-21, covering checkpoint preparation and later implementation. Eight tasks are assigned to Kaisar Nuryshev and the Talgat tasks to Talgat Sailaubekov. PCA-13 and PCA-14 remain shared and have no single assignee. docs/YOUTRACK_LIVE_TASKS.md maps local planning keys to real issue IDs; the original import CSV is a planning artefact, not the live status source."
       ],
       [
         "p",
-        "The package was prepared with AI assistance on 22 October 2026. It is not evidence of earlier continuous development or independent work by both students. Each student must read, verify and revise their own work using their own account. Meaningful documentation, prototype and design revisions are valid contributions; do not backdate commits or attribute generated changes to another account."
+        "The package and implementation were prepared with AI assistance. PR #2 was created through stqnlee: https://github.com/sajltaha/paper-compliance-assistant/pull/2. It adds initial Go document-intake checks for PDF/DOCX, a default 20 MiB size limit, filename checks, metadata and SHA-256. Format and unit tests passed in GitHub Actions run 39837668052 for commit 933d7188b4f11b3dfe75d955b2d3de395b8bfff5. Talgat relayed Kaisar's approval in the project conversation. An AI-assisted technical review and merge were performed through sajltaha, producing commit 2ed14d639a7576069c3cb35e64a5ab0f4c72bbdf in checkpoint-preparation. This records account activity and relayed approval, not independent authorship or an independent human code review."
+      ],
+      [
+        "p",
+        "Traceability correction: PR #2 was originally labelled PCA-19, but the live task PCA-19 covers criterion normalization and evaluation. Document processing belongs to PCA-18. PR metadata now points to PCA-18; historical branch and commit names remain unchanged. Intake validation is only prerequisite work: text extraction, provenance, scanned-file handling, upload/archive hardening, the HTTP API, database, Vue application, LLM evaluator and Docker startup are not delivered by this PR. Neither PCA-18 nor PCA-19 is complete."
       ],
       [
         "table",
@@ -902,7 +906,7 @@
       ],
       [
         "p",
-        "Use branches named with actual issue IDs and descriptive commits. A PR explains changes, linked tasks and verification; the other team member reviews it before merge. Keep main as the reviewed baseline. Do not create the submission tag until the chosen revision and uploaded documents agree. This form specifically asks for prob-period-1; the general guide also lists later pre-defense tags. Existing submitted tags must remain unchanged."
+        "Changes are prepared in task-linked branches with explicit verification and AI-assistance disclosure. For a PR through stqnlee, technical review and merge use sajltaha; for a PR through sajltaha, Kaisar is asked to inspect the result and give genuine feedback before acceptance. Automated reviews are labelled as automated. PR #1 remains a draft; main and the submission tag prob-period-1 are not finalized. Do not create the tag until the chosen revision and submitted documents agree, and do not move a submitted tag."
       ]
     ]
   ],
@@ -934,11 +938,11 @@
           ],
           [
             "Individual contributions and peer review",
-            "Each student makes and explains substantive changes; teammate reviews PRs."
+            "PR #2 is merged with disclosed AI-assisted review; broader package review and the reciprocal review of Talgat changes remain outstanding."
           ],
           [
             "Live YouTrack and screenshot PDF",
-            "Assigned tasks, priorities, acceptance criteria and real board/task screenshots in one PDF."
+            "Live board and 21 tasks exist. Resolve shared accountability and produce a separate PDF of real board and representative task screenshots."
           ],
           [
             "Final repository revision and access",
