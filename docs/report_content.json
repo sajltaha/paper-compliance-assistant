@@ -8,7 +8,11 @@
       ],
       [
         "p",
-        "The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. The relevance analysis uses public conference policies and published screening data. General supervisor feedback has been received without specific correction requests. Measured system performance remains implementation-stage work."
+        "The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. The relevance analysis uses public conference policies and published screening data. A general positive supervisor response was relayed; its exact date, primary evidence and substantive coverage still require verification. Measured system performance remains implementation-stage work."
+      ],
+      [
+        "p",
+        "This revision corrects the checkpoint audit. Research and design artifacts are prepared; the separate user-discussion condition, substantive supervisor evidence and other-participant review remain open. Representative acceptance is recorded separately from those external conditions."
       ],
       [
         "h",
@@ -61,7 +65,7 @@
         [
           [
             "Сайлаубеков Талғат Ерханұлы\nSE-2429 | sajltaha",
-            "Frontend, Backend, DevOps",
+            "Frontend, Backend, DevOps, functional QA",
             "Vue 3/TypeScript/Tailwind/Pinia, Go REST API, database and file storage, integration, local Docker Compose and functional tests."
           ],
           [
@@ -501,6 +505,14 @@
       [
         "p",
         "The project addresses a documented document-checking problem with a bounded engineering response. Its defensible contribution is an inspectable mapping from confirmed conference rules to manuscript-level findings and revisions. Success should be assessed through correctly detected mismatches, useful evidence and appropriate uncertainty, rather than predicted acceptance or generic review scores."
+      ],
+      [
+        "h",
+        "External evidence condition"
+      ],
+      [
+        "p",
+        "The assignment separately specifies 3-5 discussions with user representatives or a substantive agreement with the actual client. No completed discussions or client agreement are evidenced. The data analysis remains valid in its narrower scope, but it is not automatically a replacement for that separate condition. PCA-22 tracks actual anonymized discussion records, a substantive client agreement, or explicit approval to accept the analysis instead. No interview findings are claimed."
       ]
     ]
   ],
@@ -717,96 +729,162 @@
     [
       [
         "p",
-        "Six technical decisions are compared with three reasonable alternatives each. Vue 3, TypeScript, Tailwind CSS, Pinia, Go, REST and Docker Compose are already specified in the team justification. Storage, parsing, model choice and evidence selection remain proposals until the team and supervisor review them."
+        "The following comparisons use the same requirement-driven criteria for each alternative. They are qualitative design judgements, not measured benchmarks. Vue, Go, REST and local Docker Compose follow the team justification. Storage and parser choices remain provisional until a pilot and substantive review."
+      ],
+      [
+        "h",
+        "Backend alternatives"
+      ],
+      [
+        "table",
+        [
+          "Option",
+          "Local setup and team maintenance",
+          "Document processing and validation",
+          "Decision"
+        ],
+        [
+          [
+            "Go",
+            "Fits the agreed stack; a compiled server is straightforward to package.",
+            "Explicit API and concurrency boundaries; Python parsers require an adapter.",
+            "Selected by the team justification; keep application orchestration here."
+          ],
+          [
+            "FastAPI",
+            "Would add a different application stack to the planned Vue/Go project.",
+            "Direct access to Python parsing libraries; still needs schema and provenance checks.",
+            "Retain as a possible internal parser adapter, not a second application backend."
+          ],
+          [
+            "Node TypeScript",
+            "Shares language with the frontend; would replace the agreed Go backend.",
+            "External parsing still required; runtime validation remains necessary.",
+            "Reasonable alternative, but insufficient benefit to justify changing the agreed stack."
+          ]
+        ],
+        [
+          0.85,
+          1.85,
+          2.05,
+          1.75
+        ]
+      ],
+      [
+        "h",
+        "Storage alternatives"
+      ],
+      [
+        "table",
+        [
+          "Option",
+          "Local operation and maintenance",
+          "Versions provenance and consistency",
+          "Trade-off"
+        ],
+        [
+          [
+            "PostgreSQL",
+            "Extra service and configuration in Compose.",
+            "Relational constraints and transactions fit documents, criterion versions, runs and findings.",
+            "Proposed reference design for FR08, FR10 and NFR01; pilot not yet run."
+          ],
+          [
+            "SQLite",
+            "Simplest single-machine deployment; no database service.",
+            "Can represent the same relations; concurrent writes and worker access need explicit tests.",
+            "Strong fallback for the single-user MVP; choose if reduced setup outweighs concurrency needs."
+          ],
+          [
+            "MongoDB",
+            "Another database service and operational model.",
+            "Flexible nested results, but cross-version references and consistency still need application design.",
+            "No demonstrated need for schema flexibility; not the initial proposal."
+          ]
+        ],
+        [
+          0.85,
+          1.85,
+          2.05,
+          1.75
+        ]
+      ],
+      [
+        "h",
+        "Document conversion alternatives"
+      ],
+      [
+        "table",
+        [
+          "Option",
+          "PDF DOCX and source anchors",
+          "Local cost and maintainability",
+          "Decision and pilot condition"
+        ],
+        [
+          [
+            "Docling adapter",
+            "Candidate for layout-aware conversion; PDF pages and DOCX paragraph/table anchors must be verified.",
+            "Python dependency behind a Go-facing interface; conversion errors still possible.",
+            "Proposed pilot; compare reading order, section retention, tables, failure signals and anchors."
+          ],
+          [
+            "GROBID plus DOCX parser",
+            "Scholarly PDF structure; separate DOCX path adds mapping work.",
+            "More adapter integration; no universal DOCX/page guarantee.",
+            "Compare on the same permitted fixtures; select if scholarly structure improves measurable extraction quality."
+          ],
+          [
+            "Plain PDF text plus DOCX parser",
+            "Useful simple baseline; cannot certify fonts, margins or complex reading order.",
+            "Lowest initial integration complexity but weaker layout evidence.",
+            "Keep as baseline; do not use unsupported formatting checks to claim compliance."
+          ]
+        ],
+        [
+          0.9,
+          2,
+          1.8,
+          1.8
+        ]
+      ],
+      [
+        "h",
+        "Interaction and evaluation choices"
       ],
       [
         "table",
         [
           "Decision",
-          "Alternative A",
-          "Alternative B",
-          "Alternative C"
+          "Alternatives and common criteria",
+          "Current rationale"
         ],
         [
           [
-            "Backend",
-            "Go net/http or Gin",
-            "Python FastAPI",
-            "Node.js with TypeScript"
+            "Interaction",
+            "REST JSON / gRPC / in-process; inspectability, language boundary, local maintenance.",
+            "REST JSON matches the planned UI/API and parser boundary. gRPC adds schema/tooling overhead without a measured need. In-process calls are useful inside one service but cannot be the browser API."
           ],
           [
-            "Data storage",
-            "PostgreSQL",
-            "SQLite",
-            "MongoDB"
+            "Evaluation",
+            "Hybrid / rules only / one whole-document LLM prompt; supported checks, evidence and reproducibility.",
+            "Hybrid is proposed: rules for measurable supported checks, LLM for semantic criteria, backend validates evidence. Keep both simpler methods as experimental baselines."
           ],
           [
-            "Document conversion",
-            "Docling adapter",
-            "GROBID plus DOCX parser",
-            "Plain PDF text plus DOCX parser"
-          ],
-          [
-            "Evaluation strategy",
-            "Rules plus schema-validated LLM",
-            "Rules only",
-            "Single unconstrained LLM prompt"
-          ],
-          [
-            "Component interaction",
-            "REST and JSON",
-            "gRPC",
-            "Direct in-process library calls"
-          ],
-          [
-            "Evidence selection",
-            "Section/block selection",
-            "Whole document context",
-            "Vector retrieval"
+            "Evidence",
+            "Section/block selection / whole context / vector retrieval; source anchors, context limits and complexity.",
+            "Start with blocks and explicit limits. Whole context is a baseline. Add vector retrieval only if a pilot demonstrates benefit; retrieval does not itself validate support."
           ]
         ],
         [
-          1.3,
-          1.75,
-          1.75,
-          1.7
+          1,
+          2.5,
+          3
         ]
       ],
       [
         "p",
-        "Backend: Go selected in team justification; keep orchestration, storage and validation here. Python remains a possible internal parser adapter, not a replacement backend."
-      ],
-      [
-        "p",
-        "Data storage: Propose PostgreSQL for relational versioned runs; SQLite is a simpler local alternative. Decision requires pilot and supervisor review; no database implemented yet."
-      ],
-      [
-        "p",
-        "Document conversion: Propose Docling pilot for layout; compare GROBID on scholarly PDFs. Plain text baseline cannot verify fonts/margins. [S09,S10,D03]"
-      ],
-      [
-        "p",
-        "Evaluation strategy: Propose hybrid checks: deterministic for counts/structure, LLM for semantic criteria; compare both baselines. [S02,S05,D04]"
-      ],
-      [
-        "p",
-        "Component interaction: REST/JSON selected in justification; easier boundary inspection and language-independent parser interface. No latency advantage claimed."
-      ],
-      [
-        "p",
-        "Evidence selection: Start with section/block selection and explicit limits; compare full-context baseline; vector retrieval only if tests show need. [S07,S08,S11]"
-      ],
-      [
-        "h",
-        "Model and deployment boundary"
-      ],
-      [
-        "p",
-        "The OpenAI model identifier is configured through the server environment and recorded in every run. Select an available model that supports the chosen structured-output workflow after a small pilot; this report does not lock a model, token price or context limit. There is no paid model call in the prototype and no purchased cloud hosting. Local deployment still requires internet and an API key for external AI analysis; local startup does not mean the AI model runs offline."
-      ],
-      [
-        "p",
-        "Parser dependencies should remain behind a stable interface. A Python adapter is a proposed implementation route for Docling, while Go remains the application backend. Keep a rules-only mode for baseline evaluation and for checks supported without an LLM. A pilot must establish extraction quality before adding OCR or retrieval complexity."
+        "No parser, database or model performance result has been measured on the project corpus. Record versions, rights-cleared fixtures, reading-order/anchor errors and setup effort before selecting the parser. Model identifiers are configured and recorded at implementation time; no particular model, price or context limit is promised. Local startup requires an internet connection and a server-side API key for external AI processing."
       ]
     ]
   ],
@@ -828,7 +906,7 @@
           [
             "FR01\nMust",
             "Upload a scientific paper in PDF or DOCX",
-            "A valid supported file at or below 20 MB creates a document ID; unsupported, malformed, encrypted or oversize files return an explicit error."
+            "A valid supported file at or below 20 MiB (20,971,520 bytes) creates a document ID; unsupported, malformed, encrypted or oversize files return an explicit error."
           ],
           [
             "FR02\nMust",
@@ -939,6 +1017,75 @@
       [
         "p",
         "The versioned result contract requires criterion_id, status, engine, explanation, evidence and recommendation. Evidence contains a block_id and a matching quote; page numbers are nullable and derived from the PDF parser, while DOCX uses stable paragraph/table anchors. The backend checks completeness, uniqueness, schema conformance and anchor validity before presenting a result."
+      ],
+      [
+        "h",
+        "Analysis to requirements and tasks"
+      ],
+      [
+        "table",
+        [
+          "Analysis",
+          "Requirements",
+          "Implementation tasks",
+          "Design consequence"
+        ],
+        [
+          [
+            "DA-R1",
+            "FR03 FR04 FR08 NFR01",
+            "PCA-17 PCA-19",
+            "Venue/edition/type/stage and frozen rule source belong to the confirmed version."
+          ],
+          [
+            "DA-R2",
+            "FR02 FR05 FR07",
+            "PCA-18 PCA-19",
+            "Use labelled main-text/reference sections; abstain if counting cannot be established."
+          ],
+          [
+            "DA-R3",
+            "FR04 FR05 NFR08",
+            "PCA-19",
+            "Required/optional/unknown have different applicability and result states."
+          ],
+          [
+            "DA-R4",
+            "FR06 NFR02",
+            "PCA-18 PCA-19",
+            "Both rule source and manuscript anchors are checked."
+          ],
+          [
+            "DA-R5",
+            "FR05 FR06 NFR08",
+            "PCA-19 PCA-20",
+            "Located identifier warnings are limited checks, never anonymity certification."
+          ],
+          [
+            "DA-R6",
+            "FR02 NFR08",
+            "PCA-18",
+            "Conversion failures cannot become a pass."
+          ],
+          [
+            "DA-R7",
+            "FR03 FR04 NFR01",
+            "PCA-17 PCA-19 PCA-21",
+            "Confirm editable source-derived rules and preserve version."
+          ],
+          [
+            "DA-R8",
+            "FR06 NFR02",
+            "PCA-19 PCA-20",
+            "Check evidence support separately from quote existence."
+          ]
+        ],
+        [
+          0.6,
+          1.3,
+          1.6,
+          3
+        ]
       ]
     ]
   ],
@@ -1023,6 +1170,22 @@
       [
         "p",
         "Uploaded article and requirement text are untrusted data: instructions embedded in them must not change the system prompt, trigger tools or override the rubric. Do not execute document macros. Validate model-generated anchors against extraction output; keep unsupported checks visible. Store keys server-side and exclude raw private manuscripts from Git. These controls are requirements to implement and test, not security guarantees already achieved."
+      ],
+      [
+        "h",
+        "Storage history deletion and provider consent"
+      ],
+      [
+        "p",
+        "The Go API owns persistence. It writes original files and extracted blocks to generated local paths, and metadata, immutable criteria versions, runs and findings to relational storage. GET history and GET run read saved data through Go; they do not invoke the LLM again. The component diagram shows direct bidirectional Go/storage connections."
+      ],
+      [
+        "p",
+        "UC1/UC3: explain the configured external provider and the extracted content to be sent, require confirmation for that run, and make no provider request after cancellation. UC5: list saved run IDs, reopen a run using its stored version/configuration and clearly show a missing document. Deletion requires confirmation of the document and dependent runs, removes linked blocks/findings/local files and reports failure honestly; original private content is never committed to Git."
+      ],
+      [
+        "p",
+        "The complete FR to component/data/API mapping and request/error examples are in docs/ARCHITECTURE_TRACEABILITY.md and docs/API_CONTRACT.md. These are design contracts, not implemented endpoints."
       ]
     ]
   ],
@@ -1169,11 +1332,15 @@
     [
       [
         "p",
-        "The public repository is https://github.com/sajltaha/paper-compliance-assistant. The task list is https://paper-compliance-assistant.youtrack.cloud/issues/PCA and the board is https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1. The 21 assigned issues cover checkpoint preparation and later implementation. The verified snapshot contains 11 Done, 3 Review, 3 Develop and 4 Backlog tasks. PCA-13 is assigned to the checkpoint coordinator."
+        "The public repository is https://github.com/sajltaha/paper-compliance-assistant. Task list: https://paper-compliance-assistant.youtrack.cloud/issues/PCA . Board: https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1 . The audit-corrected snapshot has 22 issues: 10 Done, 5 Review, 2 Develop and 5 Backlog. PCA-1, PCA-3, PCA-6, PCA-13 and PCA-14 are in Review because separate evidence conditions remain unverified. Representative acceptance is retained. PCA-22 tracks the external discussion/client-agreement condition separately from completed data analysis PCA-2."
       ],
       [
         "p",
-        "PRs #1, #2 and #3 are merged into main. This report and the corrected source sections are prepared in PCA-16-submission-alignment. The fixed prob-period-1 tag must identify the agreed integrated revision before submission. The public-reader role in YouTrack is limited to the PCA project and includes only basic project reading, issue reading and issue-comment reading. Anonymous opening of the supplied links still needs a separate session check."
+        "PRs #1-#4 are merged into main at 86141520e74e46f433be94ae29639844ec4e3760. prob-period-1 identifies that historical baseline and is retained unchanged. The source assignment requests pre-defense-1, while the inspected form requests prob-period-1. The audit-fix revision must pass actual other-participant review before integration and final tagging; do not pretend the historical merges had that review. docs/VERSIONING.md documents the exact-name conflict and the finalization sequence."
+      ],
+      [
+        "p",
+        "A cookie-free, authorization-free HTTP check on 23 October 2026 identified login=guest and returned HTTP 200 for the PCA project, board and PCA-2 description. This establishes anonymous read access at the API level; it does not test every browser presentation or claim anonymous edit rights. See docs/ACCESS_VERIFICATION.md."
       ],
       [
         "p",
@@ -1281,6 +1448,10 @@
       [
         "p",
         "Changes use task-linked branches and PRs. Keep main as the integrated baseline and retain the original contribution history. Do not move a submitted tag. Implementation tasks remain open until their acceptance criteria are met."
+      ],
+      [
+        "p",
+        "The visible Git history is concentrated on 22-23 October 2026; it does not establish weeks of progressive work. Keep the existing history unchanged, record future substantive work as it happens and avoid artificial commits or backdated evidence. Every significant artifact is mapped to a task, historical PR and immutable baseline in docs/TRACEABILITY.md. Assigned roles are not proof of personal authorship or understanding."
       ]
     ]
   ],
@@ -1289,40 +1460,54 @@
     [
       [
         "p",
-        "General supervisor feedback on the consolidated report has been received. No specific corrections were requested. This does not separately approve every technical choice."
+        "A general positive response to the consolidated report was relayed by the project representative. No specific corrections are recorded. The exact response date, original evidence reference and individual decisions reviewed have not been verified in the supplied package. This is not evidence of detailed approval of each technology, corpus, criterion or requirement."
       ],
       [
         "table",
         [
-          "Feedback",
-          "Decision",
-          "Result"
+          "Evidence item",
+          "Verified state",
+          "Required action"
         ],
         [
           [
-            "General positive response; no specific requested correction.",
-            "Retain the research and design content.",
-            "Feedback recorded in the source section and feedback log; the original conversation screenshot is retained privately."
+            "General response",
+            "Relayed; no specific correction requested.",
+            "Keep the statement limited to that fact."
           ],
           [
-            "Final consistency check.",
-            "Update administrative facts and access/source links.",
-            "Task status, provisional implementation targets, direct artifact links and submission packaging updated. These are consistency corrections, not attributed supervisor requests."
+            "Response date and primary record",
+            "Not verified.",
+            "Record the actual date and a private evidence reference with permission."
+          ],
+          [
+            "Substantive decisions",
+            "Coverage not established.",
+            "Ask for review of scope, requirements, technical trade-offs and evaluation; record actual decisions."
+          ],
+          [
+            "Resulting improvements",
+            "No supervisor-specific revisions evidenced.",
+            "Attribute audit corrections to the audit; link future real comments to revisions or a reasoned no-change decision."
           ]
         ],
         [
-          2.0,
-          1.8,
-          2.7
+          1.4,
+          2.1,
+          3
         ]
       ],
       [
         "p",
-        "Before submission, complete the outstanding participant confirmations and PR step, integrate the matching materials, create prob-period-1 and verify all form fields and files. The current supervisor response does not replace these separate checks."
+        "PCA-13 remains in Review. Templates in docs/REVIEW_HANDOFF_RU.md make the remaining review concrete; their existence does not count as received feedback. No weekly meeting history is claimed."
+      ],
+      [
+        "h",
+        "Submission status"
       ],
       [
         "p",
-        "Text extraction, an HTTP API, persistence, a Vue application, external LLM integration, Docker startup and controlled system evaluation remain implementation work."
+        "The package corrects the audit findings that can be resolved from existing evidence. Completion still depends on genuine other-participant review, external relevance evidence or explicit substitution approval, substantive supervisor evidence, final version integration and form checks. Full application development remains next-stage work."
       ],
       [
         "h",
@@ -1330,31 +1515,35 @@
       ],
       [
         "p",
-        "Prototype HTML: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/prototype/index.html"
+        "Rendered links use the immutable revision supplied to the report builder. Prototype HTML: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/prototype/index.html"
       ],
       [
         "p",
-        "Download the repository and open prototype/index.html locally. It uses synthetic results and requires no installation or API key."
+        "Download that revision and open prototype/index.html locally. It uses synthetic results; file contents are not parsed and no model is called."
       ],
       [
         "p",
-        "Context diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/01_context.svg"
+        "Context SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/01_context.svg"
       ],
       [
         "p",
-        "Use case diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/02_use_cases.svg"
+        "Use case SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/02_use_cases.svg"
       ],
       [
         "p",
-        "Component diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/03_components.svg"
+        "Component SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/03_components.svg"
       ],
       [
         "p",
-        "Analysis and supporting data: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/docs/DATA_ANALYSIS.md"
+        "Analysis and data: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/DATA_ANALYSIS.md"
       ],
       [
         "p",
-        "Task register and provisional schedule: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/docs/YOUTRACK_LIVE_TASKS.md"
+        "Task register: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/YOUTRACK_LIVE_TASKS.md"
+      ],
+      [
+        "p",
+        "Audit resolution: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/AUDIT_RESOLUTION.md"
       ]
     ]
   ],

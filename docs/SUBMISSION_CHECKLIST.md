@@ -1,18 +1,20 @@
 # Submission readiness
 
-- [x] Research/design sections and English secondary-data analysis prepared.
-- [x] At least 12 meaningfully used sources, including at least 8 scientific publications.
-- [x] Four-system comparison, technology alternatives and 20 requirements prepared.
-- [x] Three editable diagrams, synthetic UX prototype and evaluation plan prepared.
-- [x] Both accounts contribute commits in main; existing PRs integrated.
-- [x] Live YouTrack tasks have owners, priorities, outcomes, criteria and textual target dates.
-- [x] General supervisor response recorded without invented detailed remarks.
-- [x] Read-only guest role scoped to PCA configured.
-- [x] Separate board/task PDF prepared; refresh after status changes.
-- [ ] Complete participant confirmations retained in PCA-1, PCA-3 and PCA-6.
-- [ ] Complete the team PR requirement in PCA-14; integrate the prepared alignment revision.
-- [ ] Verify tracker links anonymously and inspect all five form pages.
-- [ ] Create the fixed prob-period-1 tag for the matching integrated revision.
-- [ ] Attach matching report and board PDFs; one representative submits the form.
+- [x] Research/design sections, literature and data analysis prepared.
+- [x] Technology trade-offs use common requirement-driven criteria.
+- [x] Requirements, exact upload limit and source/stage metadata defined.
+- [x] DA-R/FR/NFR/task and component/data/API mapping prepared.
+- [x] Three editable diagrams and matching PNGs prepared.
+- [x] Synthetic prototype and explicit implementation limits retained.
+- [x] Traceability links to real historical PRs and baseline added.
+- [x] Anonymous API access verified as guest without cookies/authentication.
+- [x] Existing prob-period-1 preserved at its historical commit.
+- [ ] Actual user discussions/client agreement or explicit substitution acceptance (PCA-22).
+- [ ] Other-participant substantive review of proposal/literature/requirements and full correction PR (PCA-1/3/6/14).
+- [ ] Dated substantive supervisor feedback and private primary evidence reference (PCA-13).
+- [ ] Resolve review findings and merge the approved correction revision.
+- [ ] Create pre-defense-1 on that final revision; resolve form exact-name conflict without moving old tags.
+- [ ] Rebuild matching PDFs and verify their source commit/hashes.
+- [ ] Replace both form attachments; inspect all five pages; representative submits.
 
-Implementation tasks PCA-17 through PCA-21 remain separate from checkpoint completion. Their dates are provisional internal planning targets.
+The generated audit-correction PDFs are review candidates while these external conditions remain open. A complete application is not required at this stage. No retrospective history or reviews are fabricated.

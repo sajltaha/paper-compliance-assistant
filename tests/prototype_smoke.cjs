@@ -17,8 +17,9 @@ const source=fs.readFileSync(require('path').join(__dirname,'../prototype/index.
  await get('recheck').click();assert(!get('inputView').classList.contains('hidden'));
  get('criteriaInput').value='Custom safety criterion';await get('criteriaInput').dispatch('input');await get('reviewCriteria').click();get('confirmed').checked=true;await get('runDemo').click();assert.equal(vm.runInContext('results[0].status',c),'insufficient_evidence');
  await get('newCheck').click();get('paperFile').files=[{name:'bad.exe',size:10}];await get('paperFile').dispatch('change');assert.match(get('error').textContent,/PDF or DOCX/);
- get('paperFile').files=[{name:'large.pdf',size:21*1024*1024}];await get('paperFile').dispatch('change');assert.match(get('error').textContent,/20 MB/);
+ get('paperFile').files=[{name:'large.pdf',size:21*1024*1024}];await get('paperFile').dispatch('change');assert.match(get('error').textContent,/20 MiB/);
  get('paperFile').files=[{name:'valid.docx',size:1024}];await get('paperFile').dispatch('change');assert.equal(vm.runInContext('selectedName',c),'valid.docx');
  console.log('PASS: empty input, confirmation, 4-result demo, evidence toggle, status filter, recheck, custom-criterion abstention and file validation.');
  console.log('Scope: JavaScript handlers in a minimal simulated DOM; not a visual browser test or AI evaluation.');
 })().catch(e=>{console.error(e);process.exit(1)});
+
