@@ -4,26 +4,26 @@ Requirements use Must, Should and Could priorities. The current MVP has 12 funct
 
 | ID and priority | Requirement | Acceptance criterion |
 | --- | --- | --- |
-| FR01 / Must | Upload a scientific paper in PDF or DOCX | A valid supported file at or below 20 MB creates a document ID; unsupported, malformed, encrypted or oversize files return an explicit error. |
-| FR02 / Must | Extract document text and retain provenance | Text blocks have stable block IDs, reading order, section labels and PDF pages where available; DOCX uses paragraph/table anchors, not fabricated page numbers. |
-| FR03 / Must | Enter or attach conference requirements | A user can paste criteria or attach PDF/DOCX; original wording and source identifiers are retained. |
-| FR04 / Must | Confirm normalized criteria before analysis | User can edit criterion wording, category, threshold, priority and applicability; analysis uses the confirmed version. |
-| FR05 / Must | Run a criterion-based analysis | Every applicable criterion returns pass, fail or insufficient_evidence; excluded criteria return not_applicable with a reason. No criterion silently disappears. |
-| FR06 / Must | Show grounded findings and recommendations | Each evaluable finding includes criterion ID, explanation, valid source anchors and an actionable recommendation when appropriate; invalid anchors are rejected. |
-| FR07 / Must | Keep formal and semantic checks distinct | Results identify engine=rule or engine=llm and state unsupported layout checks; plain text is never used to certify font size or margins. |
-| FR08 / Must | Save and retrieve analysis history | Restarting the local system preserves document metadata, criterion versions, results and run configuration; a run can be reopened. |
-| FR09 / Should | Export a structured result | An analysis can be downloaded as JSON with document hash, criterion version and model/prompt configuration; PDF export is a later enhancement. |
-| FR10 / Must | Recheck a revised manuscript | A new manuscript creates a new document version and run; the earlier result remains identifiable. |
-| FR11 / Must | Handle external AI failures | Timeout, refusal, invalid JSON and provider errors produce a retryable failure state; no successful assessment is invented. |
-| FR12 / Must | Explain processing and deletion controls | Before external analysis, UI explains that extracted content goes to the configured provider; user can delete stored files and results. |
-| NFR01 / Must | Reproducible evaluation | Each run records document hash, confirmed criteria, parser/model ID and version, prompt/schema version, sampling settings and timestamp. |
-| NFR02 / Must | Validate structured data | All accepted results satisfy the shared JSON schema; each criterion occurs once; all cited block IDs exist and quoted text matches source text after documented whitespace normalization. |
-| NFR03 / Must | Protect secrets and local files | API keys only in server environment; examples contain placeholders; uploads use generated paths and size/type validation; external content cannot execute instructions or tools. |
-| NFR04 / Must | Reproduce local setup | On a documented supported Docker environment, one Docker Compose command starts the implemented services after environment setup; smoke checks are documented. Target for implementation stage. |
-| NFR05 / Should | Measure user-visible latency and cost | Report p50/p95 latency, provider tokens and estimated cost per run on specified hardware and corpus; proposed target p95 <= 120 s for <= 10 text-PDF pages and <= 10 criteria, to be revised after pilot. |
-| NFR06 / Must | Assess correctness against human labels | Evaluate >= 20 rights-cleared manuscripts with 8-12 criteria each using a frozen test split; report macro-F1, abstention coverage and supported-evidence rate. These are planned measurements, not achieved results. |
-| NFR07 / Should | Make key flows accessible | Core controls support keyboard navigation, visible focus and labeled error/status messages on desktop and narrow screens. |
-| NFR08 / Must | Expose unsupported capabilities honestly | UI and reports distinguish unavailable OCR/layout checks from checked failures, and demonstrate that unknown evidence is not treated as a pass. |
+| FR01 Must | Upload a scientific paper in PDF or DOCX | A valid supported file at or below 20 MB creates a document ID; unsupported, malformed, encrypted or oversize files return an explicit error. |
+| FR02 Must | Extract document text and retain provenance | Text blocks have stable block IDs, reading order, section labels and PDF pages where available; DOCX uses paragraph/table anchors, not fabricated page numbers. |
+| FR03 Must | Enter or attach conference requirements | A user can paste criteria or attach PDF/DOCX; original wording and source identifiers are retained. |
+| FR04 Must | Confirm normalized criteria before analysis | User can edit criterion wording, category, threshold, priority and applicability; analysis uses the confirmed version. |
+| FR05 Must | Run a criterion-based analysis | Every applicable criterion returns pass, fail or insufficient_evidence; excluded criteria return not_applicable with a reason. No criterion silently disappears. |
+| FR06 Must | Show grounded findings and recommendations | Each evaluable finding includes criterion ID, explanation, valid source anchors and an actionable recommendation when appropriate; invalid anchors are rejected. |
+| FR07 Must | Keep formal and semantic checks distinct | Results identify engine=rule or engine=llm and state unsupported layout checks; plain text is never used to certify font size or margins. |
+| FR08 Must | Save and retrieve analysis history | Restarting the local system preserves document metadata, criterion versions, results and run configuration; a run can be reopened. |
+| FR09 Should | Export a structured result | An analysis can be downloaded as JSON with document hash, criterion version and model/prompt configuration; PDF export is a later enhancement. |
+| FR10 Must | Recheck a revised manuscript | A new manuscript creates a new document version and run; the earlier result remains identifiable. |
+| FR11 Must | Handle external AI failures | Timeout, refusal, invalid JSON and provider errors produce a retryable failure state; no successful assessment is invented. |
+| FR12 Must | Explain processing and deletion controls | Before external analysis, UI explains that extracted content goes to the configured provider; user can delete stored files and results. |
+| NFR01 Must | Reproducible evaluation | Each run records document hash, confirmed criteria, parser/model ID and version, prompt/schema version, sampling settings and timestamp. |
+| NFR02 Must | Validate structured data | All accepted results satisfy the shared JSON schema; each criterion occurs once; all cited block IDs exist and quoted text matches source text after documented whitespace normalization. |
+| NFR03 Must | Protect secrets and local files | API keys only in server environment; examples contain placeholders; uploads use generated paths and size/type validation; external content cannot execute instructions or tools. |
+| NFR04 Must | Reproduce local setup | On a documented supported Docker environment, one Docker Compose command starts the implemented services after environment setup; smoke checks are documented. Target for implementation stage. |
+| NFR05 Should | Measure user-visible latency and cost | Report p50/p95 latency, provider tokens and estimated cost per run on specified hardware and corpus; proposed target p95 <= 120 s for <= 10 text-PDF pages and <= 10 criteria, to be revised after pilot. |
+| NFR06 Must | Assess correctness against human labels | Evaluate >= 20 rights-cleared manuscripts with 8-12 criteria each using a frozen test split; report macro-F1, abstention coverage and supported-evidence rate. These are planned measurements, not achieved results. |
+| NFR07 Should | Make key flows accessible | Core controls support keyboard navigation, visible focus and labeled error/status messages on desktop and narrow screens. |
+| NFR08 Must | Expose unsupported capabilities honestly | UI and reports distinguish unavailable OCR/layout checks from checked failures, and demonstrate that unknown evidence is not treated as a pass. |
 
 Four result states avoid conflating absent evidence with compliance: pass, fail, insufficient_evidence and not_applicable. A document with no extractable text must fail the extraction stage rather than receive a compliant result. Criteria that require unsupported visual metadata remain explicitly unverified. Ambiguous requirements must be confirmed by the user before being treated as executable rules.
 

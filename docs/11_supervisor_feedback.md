@@ -1,14 +1,28 @@
-# 11 Supervisor feedback and outstanding evidence
+# 11 Supervisor feedback and next steps
 
-Supervisor feedback has not yet been obtained. The team justification names the supervisor and describes intended oversight, but it does not demonstrate review of this newly prepared package. No approval, signature or review date is invented.
+General supervisor feedback on the consolidated report has been received. No specific corrections were requested. This does not separately approve every technical choice.
 
-Submit the proposal, comparison decisions, requirements, diagrams, prototype and evaluation plan for substantive review. Ask which users and conference criteria are appropriate, whether the MVP boundaries are realistic, and how ground-truth labels should be checked. Log each real comment, the affected artefact, the decision to accept or reject it with reasons, and the revision link.
+| Feedback | Decision | Result |
+| --- | --- | --- |
+| General positive response; no specific requested correction. | Retain the research and design content. | Feedback recorded in the source section and feedback log; the original conversation screenshot is retained privately. |
+| Final consistency check. | Update administrative facts and access/source links. | Task status, provisional implementation targets, direct artifact links and submission packaging updated. These are consistency corrections, not attributed supervisor requests. |
 
-| Evidence still required | Completion condition |
-| --- | --- |
-| Relevance evidence | Secondary-data analysis is documented in DATA_ANALYSIS.md with official sources and derived requirements. |
-| Supervisor review | Dated genuine comments and linked revisions or justified decisions. |
-| Live YouTrack and screenshot PDF | Live board and 21 tasks exist. Confirm the PCA-13 coordinator and produce a separate PDF of real board and representative task screenshots. |
-| Final repository revision and access | Links work for supervisor and committee; final documents match prob-period-1. |
+Before submission, complete the outstanding participant confirmations and PR step, integrate the matching materials, create prob-period-1 and verify all form fields and files. The current supervisor response does not replace these separate checks.
 
-This report is a prepared working version. The technical analysis and prototype can be reviewed now. It should not be represented as a fully evidenced completed submission until the remaining supervisor feedback, screenshot evidence and final access checks are complete. The final form must distinguish delivered artefacts, unimplemented features and remaining limitations.
+Text extraction, an HTTP API, persistence, a Vue application, external LLM integration, Docker startup and controlled system evaluation remain implementation work.
+
+## Direct artifact links
+
+Prototype HTML: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/prototype/index.html
+
+Download the repository and open prototype/index.html locally. It uses synthetic results and requires no installation or API key.
+
+Context diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/01_context.svg
+
+Use case diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/02_use_cases.svg
+
+Component diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/03_components.svg
+
+Analysis and supporting data: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/docs/DATA_ANALYSIS.md
+
+Task register and provisional schedule: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/docs/YOUTRACK_LIVE_TASKS.md
