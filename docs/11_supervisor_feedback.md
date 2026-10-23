@@ -1,25 +1,23 @@
-# 11 Supervisor feedback and next steps
+# 11 Supervisor feedback
 
-A general positive response to the consolidated report was relayed by the project representative. No specific corrections are recorded. The exact response date, original evidence reference and individual decisions reviewed have not been verified in the supplied package. This is not evidence of detailed approval of each technology, corpus, criterion or requirement.
+A general positive response to the consolidated report was relayed by the project representative. No specific corrections are recorded. The exact response date, original evidence reference and individual decisions reviewed have not been verified in the available package. Detailed approval of each technology, corpus, criterion or requirement is therefore not established.
 
-| Evidence item | Verified state | Required action |
-| --- | --- | --- |
-| General response | Relayed; no specific correction requested. | Keep the statement limited to that fact. |
-| Response date and primary record | Not verified. | Record the actual date and a private evidence reference with permission. |
-| Substantive decisions | Coverage not established. | Ask for review of scope, requirements, technical trade-offs and evaluation; record actual decisions. |
-| Resulting improvements | No supervisor-specific revisions evidenced. | Attribute audit corrections to the audit; link future real comments to revisions or a reasoned no-change decision. |
+| Evidence item | Recorded state |
+| --- | --- |
+| General response | Relayed positive response; no specific correction requested. |
+| Actual response date and primary record | Not verified in the available package. |
+| Scope of substantive review | Individual deliverables and decisions reviewed are not established. |
+| Resulting changes | No supervisor-specific revisions evidenced; technical audit corrections are recorded separately in Git history. |
 
-PCA-13 remains in Review. Templates in docs/REVIEW_HANDOFF.md make the remaining review concrete; their existence does not count as received feedback. No weekly meeting history is claimed.
+The feedback and decision log is docs/supervisor_feedback_log.csv. PCA-13 is Review in the recorded task snapshot. No weekly meeting history is evidenced by these records. Private correspondence is retained outside the public repository.
 
-## Submission status
+## Project artifacts
 
-The package corrects the audit findings that can be resolved from existing evidence. Completion still depends on other-participant review, external relevance evidence or explicit substitution approval, substantive supervisor evidence, final version integration and form checks. Full application development remains next-stage work.
+The following links use the immutable revision supplied to the report builder.
 
-## Direct artifact links
+Prototype: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/prototype/index.html
 
-Rendered links use the immutable revision supplied to the report builder. Prototype HTML: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/prototype/index.html
-
-Download that revision and open prototype/index.html locally. It uses synthetic results; file contents are not parsed and no model is called.
+The prototype uses synthetic results; selected file contents are not parsed and no model is called.
 
 Context SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/01_context.svg
 
@@ -27,8 +25,8 @@ Use case SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVI
 
 Component SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/03_components.svg
 
-Analysis and data: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/DATA_ANALYSIS.md
+Relevance analysis: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/02_relevance.md
 
 Task register: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/YOUTRACK_LIVE_TASKS.md
 
-Audit resolution: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/AUDIT_RESOLUTION.md
+Task and PR traceability: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/TRACEABILITY.md

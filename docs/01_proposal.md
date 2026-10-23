@@ -4,7 +4,7 @@ Development of an Intelligent Web System for Analyzing Scientific Articles for C
 
 The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. The relevance analysis uses public conference policies and published screening data. A general positive supervisor response was relayed; its exact date, primary evidence and substantive coverage still require verification. Measured system performance remains implementation-stage work.
 
-This revision corrects the checkpoint audit. Research and design artifacts are prepared; the separate user-discussion condition, substantive supervisor evidence and other-participant review remain open. Representative acceptance is recorded separately from those external conditions.
+Research and design materials are prepared. Three participant discussions dated 20 October 2026 are documented with consent, findings and requirement mappings. Acceptance of those records, participant-review evidence, substantive supervisor feedback and final submission records remain separately tracked in docs/10_management.md and docs/11_supervisor_feedback.md.
 
 ## Problem and intended users
 

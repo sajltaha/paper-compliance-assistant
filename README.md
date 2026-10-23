@@ -2,66 +2,94 @@
 
 Development of an Intelligent Web System for Analyzing Scientific Articles for Compliance with Scientific Conference Requirements and Generating Recommendations
 
-Astana IT University | Software Engineering | Checkpoint: 24 October 2026, 18:00 Asia/Almaty.
+Astana IT University | Software Engineering | First checkpoint: 24 October 2026.
 
-## Problem and users
-Authors need to check a manuscript against conference requirements and understand what to revise. The planned system accepts PDF/DOCX plus user-confirmed criteria and returns criterion-level findings, evidence and recommendations. Primary intended users are students and early-career researchers preparing conference papers. Relevance evidence is documented in docs/DATA_ANALYSIS.md using public policies, published screening statistics and recent research.
+## Problem and scope
 
-## Team and supervisor
-| Member | Group | GitHub | Planned role |
-|---|---|---|---|
-| Saylaubekov Talgat Yerkhanuly | SE-2429 | [sajltaha](https://github.com/sajltaha) | Frontend, Backend, storage, integration, DevOps, functional QA |
-| Nuryshev Kaisar Serikuly | SE-2413 | [stqnlee](https://github.com/stqnlee) | UI/UX, document processing, AI/LLM, AI quality checks |
+Authors need to compare manuscripts with conference requirements and understand what to revise. The planned local web application accepts PDF/DOCX and user-confirmed criteria, then returns criterion-level findings with evidence, recommendations and explicit uncertainty. Primary users are students and early-career researchers preparing conference papers.
+
+The MVP covers English text-based manuscripts, supported formal and semantic checks, saved versioned results and rechecking. It excludes autonomous acceptance decisions, replacement of scientific peer review, plagiarism certification and unsupported formatting guarantees.
+
+## Team
+
+| Member | Group | GitHub | Responsibilities |
+| --- | --- | --- | --- |
+| Saylaubekov Talgat Yerkhanuly | SE-2429 | [sajltaha](https://github.com/sajltaha) | Vue frontend, Go backend, storage, integration, DevOps and functional QA |
+| Nuryshev Kaisar Serikuly | SE-2413 | [stqnlee](https://github.com/stqnlee) | UI/UX, document processing, AI/LLM and quality evaluation |
 
 Supervisor: Soltan Gulzhan Zheksenbayevna.
 
-## Scope and status
-Prepared: proposal, critical literature review (16 sources, 12 research entries), four-system comparison, six technology comparisons, 20 requirements with acceptance criteria, three source-editable diagrams, API/schema draft, interactive UX mockup, evaluation plan and task/evidence templates.
-Implemented foundation: PDF/DOCX intake validation, SHA-256 and unit tests in merged PR #2; CI passed. The PR is partial PCA-18 work, not PCA-19 criterion evaluation. Not implemented: text extraction, Go HTTP API, Vue application, database, OpenAI integration and Docker deployment. General supervisor feedback and the board screenshot PDF are available. Public PCA reading is configured. Audit correction: representative acceptance is retained; separate other-participant review, substantive supervisor evidence and external discussion/substitution evidence remain open. See docs/EVIDENCE_REGISTER.md. PRs #1–#7 are merged. PRs #5–#7 were integrated on 24 October 2026 (Asia/Almaty); the checked main revision is deca7d761aa449f7f8223c8514707706fb44d034. Review acceptance and submission evidence remain tracked in their own records.
+## Current implementation
 
-In scope: author-supplied conference criteria, supported formal and semantic checks, uncertainty, evidence and saved versioned runs. Out of scope: replacing scientific peer review, autonomous acceptance decisions, plagiarism certification and unsupported formatting guarantees.
+Available: standalone synthetic UX prototype; Go PDF/DOCX intake validation, filename/size checks, metadata, SHA-256, unit tests and CI. The prototype does not read or upload selected file contents and makes no AI request. Intake validation is partial PCA-18 work, not full extraction or criterion evaluation.
+
+Planned: PDF/DOCX extraction and provenance, Go HTTP API, persistence, criteria normalization/evaluation, OpenAI integration, Vue application, Docker Compose startup and controlled evaluation. The full application and measured accuracy are not available yet.
 
 ## Technologies
-Specified: Vue 3, TypeScript, Tailwind CSS, Pinia, Go, REST/JSON, OpenAI API, Git/GitHub, Docker Compose. Proposed for review: PostgreSQL and a Docling parser adapter. No model identifier or database implementation is fixed by this package.
 
-## Structure
-- docs/: versionable report sections, source matrix, requirements, evaluation, schema and evidence logs.
-- diagrams/: editable SVG sources and PNG exports.
-- prototype/: standalone interactive synthetic-data demonstration.
-- backend/, frontend/, ai/, tests/: implementation-stage areas.
-- config/: placeholder configuration; no secrets.
+Specified stack: Vue 3, TypeScript, Tailwind CSS, Pinia, Go, REST/JSON, OpenAI API and Docker Compose. PostgreSQL and a Docling adapter are provisional choices. Alternatives and decision criteria are in [Technology comparison](docs/05_technology.md).
 
-## Open the prototype
-Open prototype/index.html in a current browser; no installation, API key or network is required. Choose Load demo, confirm criteria, run the mock and inspect evidence. This is a synthetic UX demonstration; selected file contents are not parsed or sent externally. For the implemented intake package only, run `cd backend && go test ./...` with Go 1.23 or compatible newer Go. This does not start an HTTP server or an AI service.
+## Run available materials
 
-## Documentation and tracking
-Start with docs/01_proposal.md and docs/SUBMISSION_CHECKLIST.md. Report sections are in docs/01_*.md through docs/11_*.md; references are in docs/references.md. The report DOCX/PDF is provided in the preparation package. The main branch contains the checkpoint documentation, interactive prototype and intake-validation foundation. Detailed relevance evidence and source links are in docs/DATA_ANALYSIS.md.
-YouTrack project: https://paper-compliance-assistant.youtrack.cloud/issues/PCA . Board: https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1 . There are 22 live issues after the audit correction. See docs/YOUTRACK_LIVE_TASKS.md for the verified mapping and current progress. The import CSV is historical planning data.
-Historical tag: prob-period-1 at 86141520e74e46f433be94ae29639844ec4e3760. Assignment tag pre-defense-1 is reserved for the final reviewed revision; see docs/VERSIONING.md for the separate form-name conflict.
+Open [prototype/index.html](prototype/index.html) locally in a current browser. Load the synthetic example, confirm its criteria and inspect findings, evidence and status filters. No installation, API key or network is required.
 
-## Evaluation
-Compare rules-only B0, whole-document LLM B1 and the hybrid evidence-validated pipeline B2 on a frozen rights-cleared corpus. Measure violation macro-F1, coverage/abstention, supported evidence, stability, latency, cost and usability. No benchmark has been run.
+Prototype handler checks, from the repository root with Node.js and built-in Blob support:
 
-## Access and privacy
-The repository is public. GitHub content is publicly accessible; PCA guest reading is configured without write permissions; anonymous API reading is verified with a cookie-free guest request; see docs/ACCESS_VERIFICATION.md. Do not commit API keys, private manuscripts, personal interview details or fabricated research evidence. Follow CONTRIBUTING.md for task branches and PRs.
+```bash
+node tests/prototype_smoke.cjs
+```
 
+Intake package tests, with Go 1.23 or a compatible newer version:
 
+```bash
+cd backend
+go test ./...
+```
 
-## Run available checks
+These commands do not start an HTTP server, database or AI service. Handler tests use a simulated DOM; their scope is recorded in [Prototype verification](docs/PROTOTYPE_VERIFICATION.md).
 
-From the repository root run `node tests/prototype_smoke.cjs` with a current Node runtime. This tests handlers in a simulated DOM and is not an AI or full visual browser test. For Go use `go test ./...` from backend with Go 1.23 or compatible newer Go. No HTTP server, database, LLM service or Compose application is available yet.
+## Project documentation
 
-## Review and submission
+| Material | Contents |
+| --- | --- |
+| [1 Proposal](docs/01_proposal.md) | Problem, users, objectives, scope and roles |
+| [2 Relevance](docs/02_relevance.md) | Conference-policy analysis, CHI screening data and user evidence |
+| [3 Literature review](docs/03_literature.md) | Critical synthesis; [16-source matrix](docs/literature_matrix.csv) and [references](docs/references.md) |
+| [4 Existing systems](docs/04_existing_systems.md) | Four systems compared across eight criteria |
+| [5 Technologies](docs/05_technology.md) | Alternatives, decisions and provisional choices |
+| [6 Requirements](docs/06_requirements.md) | 12 FR and 8 NFR; [acceptance criteria](docs/requirements.csv) and [test procedures](docs/test_plan.csv) |
+| [7 Architecture](docs/07_architecture.md) | Context, use cases, components and data model; [editable diagrams](diagrams/) |
+| [8 UX](docs/08_ux.md) | Prototype scenarios and implementation boundaries |
+| [9 Evaluation](docs/09_evaluation.md) | B0/B1/B2, corpus split, annotation, metrics and measurement conditions |
+| [10 Management](docs/10_management.md) | Milestones, risks, access, review records and submission version |
+| [11 Supervisor feedback](docs/11_supervisor_feedback.md) | Recorded feedback, decisions and evidence limits |
 
-Use [audit resolution](docs/AUDIT_RESOLUTION.md), [evidence register](docs/EVIDENCE_REGISTER.md), [task traceability](docs/TRACEABILITY.md) and [review guide](docs/REVIEW_HANDOFF.md). Download this revision and open [prototype HTML](prototype/index.html); editable [diagram sources](diagrams/) and all report sections are included. Generated PDFs substitute their exact source commit into full artifact URLs. No private correspondence belongs in this public repository.
+Technical specifications: [API contract](docs/API_CONTRACT.md), [findings schema](docs/ai_contract.schema.json) and [requirement/component/data mapping](docs/ARCHITECTURE_TRACEABILITY.md).
 
-The actual visible history is concentrated on 22–23 October 2026; no multi-week development history is claimed. Future changes must be meaningful, task-linked and reviewed before merge.
+Research evidence: [interview findings](docs/INTERVIEW_FINDINGS.md), [anonymized discussion log](docs/user_discussions_log.csv), [conference profiles](docs/conference_policy_data.csv), [CHI counts](docs/chi2025_screening_data.csv) and [analysis-to-requirement mapping](docs/data_requirement_mapping.csv). Three discussions dated 20 October 2026 provide 15 observations; self-reported preparation times are not measured product improvements.
 
+Tracking: [task register](docs/YOUTRACK_LIVE_TASKS.md) and [task/PR traceability](docs/TRACEABILITY.md). Live [YouTrack tasks](https://paper-compliance-assistant.youtrack.cloud/issues/PCA) and [board](https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1) record subsequent changes. Supervisor responses are recorded in [the feedback log](docs/supervisor_feedback_log.csv); substantive dated evidence remains unverified in the available records.
 
-## Follow-up technical audit
+## Structure and report source
 
-The follow-up based on PR #5 fixes stale manuscript selection, empty-file handling and run/export filename consistency in the synthetic prototype, demonstrates all four result states, and adds prototype CI. It also corrects CONTRIBUTING version instructions and clarifies the findings payload versus API/export envelopes. See docs/FOLLOWUP_AUDIT_2026_10_23.md and docs/PROTOTYPE_VERIFICATION.md. Technical checks, teammate review, supervisor feedback and user evidence have separate acceptance records.
+- `docs/`: project specification, research evidence, evaluation and tracking records.
+- `diagrams/`: editable SVG sources and PNG exports.
+- `prototype/`: standalone synthetic UX demonstration.
+- `backend/`, `frontend/`, `ai/`: implementation components and current boundaries.
+- `tests/`: executable prototype checks and implementation-stage test notes.
+- `config/`: configuration examples with placeholder values.
+- `tools/build_report.py`: DOCX report builder using `docs/report_content.json`.
 
-## Repeat audit and user discussions
+Report generation requires Python and python-docx:
 
-See [repeat audit](docs/REPEAT_AUDIT_2026_10_23.md) for the full 22-task assessment, PR #5 technical findings and integration limits. [PCA-22 action guide](docs/PCA22_ACTION_GUIDE.md) provides a practical protocol for real discussions; participant findings are documented in the separate interview log. The new document corrections require review and do not alter the already checked PR #6.
+```bash
+python3 tools/build_report.py --source-sha <40-character-source-commit> --output-dir <output-directory>
+```
+
+The generated DOCX can be exported to PDF. The source commit identifies the matching report links and project snapshot. Historical `prob-period-1` remains at `86141520e74e46f433be94ae29639844ec4e3760`; the assignment/form version-name constraint and submission record are described in [Management](docs/10_management.md#submission-version).
+
+## Evaluation and privacy
+
+The planned comparison uses rules-only B0, whole-document LLM B1 and hybrid B2 on a rights-cleared frozen corpus: 8 development and at least 20 unique held-out manuscripts. Metrics include violation macro-F1, coverage/abstention, supported evidence, stability, latency, cost and usability. No benchmark result is claimed.
+
+The repository is public; selected YouTrack guest views were verified for reading. API keys belong in server-side environment variables. Private manuscripts, original interview records and supervisor correspondence are excluded from Git. External processing and deletion requirements are specified in the architecture and API contract. Contribution workflow is in [CONTRIBUTING.md](CONTRIBUTING.md).

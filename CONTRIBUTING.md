@@ -8,7 +8,6 @@ Team members are responsible for project decisions, implementation, source verif
 4. Open a pull request with the problem, change, checks and task link.
 5. The other team member reviews. Resolve comments and retain review history.
 6. Merge reviewed work into main; update the actual task with the PR and decision.
-7. After review and integration, freeze the final submission with pre-defense-1. Preserve the existing prob-period-1 tag at its historical commit; obtain the receiving party's decision on the form's conflicting tag name before submission. See docs/VERSIONING.md.
+7. After review and integration, freeze the final submission with pre-defense-1. Preserve the existing prob-period-1 tag at its historical commit; obtain the receiving party's decision on the form's conflicting tag name before submission. See docs/10_management.md#submission-version.
 
 Close tasks when their acceptance criteria are met. Use live YouTrack issue IDs and retain actual dates, source records, review decisions and test results.
-

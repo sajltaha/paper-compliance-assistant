@@ -4,7 +4,7 @@
     [
       [
         "p",
-        "Version note: this report is built from source revision {{REVISION}}. It includes three participant discussions dated 20 October 2026. PRs #5–#7 are integrated into main. Final submission tagging and form completion are separate steps; the historical prob-period-1 snapshot is retained unchanged."
+        "Source revision: {{REVISION}}. This report includes three participant discussions dated 20 October 2026. The historical prob-period-1 snapshot remains unchanged; final submission tagging and receipt are recorded separately."
       ],
       [
         "p",
@@ -16,7 +16,7 @@
       ],
       [
         "p",
-        "This revision corrects the checkpoint audit. Research and design artifacts are prepared; the separate user-discussion condition, substantive supervisor evidence and other-participant review remain open. Representative acceptance is recorded separately from those external conditions."
+        "Research and design materials are prepared. Three participant discussions dated 20 October 2026 are documented with consent, findings and requirement mappings. Acceptance of those records, participant-review evidence, substantive supervisor feedback and final submission records remain separately tracked in docs/10_management.md and docs/11_supervisor_feedback.md."
       ],
       [
         "h",
@@ -500,7 +500,7 @@
       ],
       [
         "p",
-        "This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. This secondary-data study contains no interviews or product measurements; separately supplied participant notes are reported below with their own limitations. No local usability sessions or manuscript benchmark runs are claimed."
+        "This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. This secondary-data study contains no interviews or product measurements; participant findings are documented separately in docs/INTERVIEW_FINDINGS.md with their own limitations. No local usability sessions or manuscript benchmark runs are claimed."
       ],
       [
         "h",
@@ -512,7 +512,7 @@
       ],
       [
         "h",
-        "External evidence condition"
+        "User discussion evidence"
       ],
       [
         "p",
@@ -1378,7 +1378,7 @@
     [
       [
         "p",
-        "The public repository is https://github.com/sajltaha/paper-compliance-assistant. Task list: https://paper-compliance-assistant.youtrack.cloud/issues/PCA . Board: https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1 . The audit-corrected snapshot has 22 issues: 10 Done, 5 Review, 2 Develop and 5 Backlog. PCA-1, PCA-3, PCA-6, PCA-13 and PCA-14 are in Review because separate evidence conditions remain unverified. Representative acceptance is retained. PCA-22 tracks the external discussion/client-agreement condition separately from completed data analysis PCA-2."
+        "Repository: https://github.com/sajltaha/paper-compliance-assistant . Tasks: https://paper-compliance-assistant.youtrack.cloud/issues/PCA . Board: https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1 . The recorded task snapshot of 23 October 2026 contains 22 issues: 10 Done, 5 Review, 2 Develop and 5 Backlog. The dated register is docs/YOUTRACK_LIVE_TASKS.md; live YouTrack records subsequent changes."
       ],
       [
         "p",
@@ -1386,11 +1386,11 @@
       ],
       [
         "p",
-        "PRs #1–#4 were integrated at the historical baseline 86141520e74e46f433be94ae29639844ec4e3760. prob-period-1 remains at that commit. PRs #5–#7 were subsequently merged; the checked main revision is deca7d761aa449f7f8223c8514707706fb44d034. The source assignment requests pre-defense-1, while the inspected form requests prob-period-1. Preserve review records with their actual dates and checked revisions. docs/VERSIONING.md describes the tag-name conflict and finalization sequence."
+        "PRs #1–#4 were integrated at 86141520e74e46f433be94ae29639844ec4e3760, the historical prob-period-1 revision. PRs #5–#7 were integrated on 24 October 2026 at deca7d761aa449f7f8223c8514707706fb44d034. Task-to-artifact and PR links are recorded in docs/TRACEABILITY.md. The recorded development history starts on 22 October 2026."
       ],
       [
         "p",
-        "A cookie-free, authorization-free HTTP check on 23 October 2026 identified login=guest and returned HTTP 200 for the PCA project, board and PCA-2 description. This establishes anonymous read access at the API level; it does not test every browser presentation or claim anonymous edit rights. See docs/ACCESS_VERIFICATION.md. A subsequent guest Chrome check opened the live board and full PCA-18/PCA-16 descriptions with Sign in visible and guest actions disabled. The 22-issue totals matched the register. A separate board-and-tasks PDF preserves selected screenshots; it must be refreshed after final version or evidence changes. Live PCA-16 still needs an authorized editor to add follow-up PR #6 and final-version links."
+        "Public access was checked on 23 October 2026. Requests without Cookie or Authorization identified the YouTrack user as guest and returned HTTP 200 for project PCA, board 204-1 and the full PCA-2 description. Selected browser views of the board and PCA-18/PCA-16 were also readable with guest actions disabled. This confirms those read-only views, not unrestricted page coverage or editing rights. Private manuscripts, interview originals and supervisor correspondence are excluded from the public repository."
       ],
       [
         "p",
@@ -1436,14 +1436,14 @@
           ]
         ],
         [
-          1.05,
-          2.85,
-          2.6
+          1.4,
+          2.2,
+          2.9
         ]
       ],
       [
         "p",
-        "Dates after the checkpoint are provisional internal planning targets, not university deadlines. Confirm them against the next university milestone and revise dependencies when implementation is decomposed into smaller tasks."
+        "Dates after the checkpoint are provisional internal planning targets, not university deadlines."
       ],
       [
         "table",
@@ -1490,90 +1490,96 @@
           ]
         ],
         [
-          1.5,
-          2.1,
+          1.4,
+          2.2,
           2.9
         ]
       ],
       [
         "p",
-        "Changes use task-linked branches and PRs. Keep main as the integrated baseline and retain the original contribution history. Do not move a submitted tag. Implementation tasks remain open until their acceptance criteria are met."
+        "Project changes and reviews are recorded through task-linked commits and PRs. Published submission tags identify immutable snapshots. Implementation status is determined by the corresponding acceptance criteria."
+      ],
+      [
+        "h",
+        "Review and evidence records"
       ],
       [
         "p",
-        "The recorded Git history covers 22–23 October 2026. Each significant artifact is mapped to a task, PR and immutable baseline in docs/TRACEABILITY.md. Team members maintain task-linked commits and review records as work progresses."
+        "The interview findings and consent record cover three participants and 15 observations from 20 October 2026; see docs/INTERVIEW_FINDINGS.md and docs/user_discussions_log.csv. PCA-22 acceptance is separate from the completed secondary-data analysis in PCA-2."
       ],
       [
         "p",
-        "Technical COMMENT reviews are recorded for PR #5 (5632920719) and PR #6 (5633430095). Talgat has not reviewed PR #6; the earlier contrary report was withdrawn. These comments do not fulfil the required other-participant review. PR #5/#6/#7 remain unmerged. A previous merge attempt was rejected by automatic approval review; main and the historical tag remain unchanged. PR #7 contains evaluation, mapping and retry corrections. The interview synthesis and anonymized observation log are included in this revision with the interviewer-confirmed date and publication consent. Substantive supervisor evidence, personal team review, authorized integration, final tag/form agreement and submission receipt remain open."
+        "Technical reviews are recorded at https://github.com/sajltaha/paper-compliance-assistant/pull/5#pullrequestreview-5632920719 and https://github.com/sajltaha/paper-compliance-assistant/pull/6#pullrequestreview-5633430095 . Their recorded scope is technical checking; they do not establish completion of the assignment's personal other-participant review condition. The historical merges of PRs #1/#3/#4 have no registered other-participant reviews, and the PR #2 review is explicitly qualified as AI-assisted. Later review does not change those historical dates. Participant acceptance is tracked in PCA-1, PCA-3, PCA-6 and PCA-14. Supervisor evidence is recorded separately in docs/11_supervisor_feedback.md and docs/supervisor_feedback_log.csv."
+      ],
+      [
+        "h",
+        "Submission version"
+      ],
+      [
+        "p",
+        "The assignment specifies pre-defense-1. The inspected submission form specifies prob-period-1 and requires its uploaded materials to match the referenced revision. The published prob-period-1 remains at 86141520e74e46f433be94ae29639844ec4e3760; it identifies the earlier package, not the later integrated sources. Agreement on the corrected submission reference, final tagging and a successful form receipt are not established by the current project records. PCA-16 tracks those conditions."
+      ],
+      [
+        "p",
+        "The submission includes the consolidated report and a PDF of the board and representative tasks. Report links use the exact source commit supplied to tools/build_report.py through --source-sha; source revisions and output checksums identify the corresponding package. The recorded board PDF is a dated snapshot, not a live view of task state."
       ]
     ]
   ],
   [
-    "11 Supervisor feedback and next steps",
+    "11 Supervisor feedback",
     [
       [
         "p",
-        "A general positive response to the consolidated report was relayed by the project representative. No specific corrections are recorded. The exact response date, original evidence reference and individual decisions reviewed have not been verified in the supplied package. This is not evidence of detailed approval of each technology, corpus, criterion or requirement."
+        "A general positive response to the consolidated report was relayed by the project representative. No specific corrections are recorded. The exact response date, original evidence reference and individual decisions reviewed have not been verified in the available package. Detailed approval of each technology, corpus, criterion or requirement is therefore not established."
       ],
       [
         "table",
         [
           "Evidence item",
-          "Verified state",
-          "Required action"
+          "Recorded state"
         ],
         [
           [
             "General response",
-            "Relayed; no specific correction requested.",
-            "Keep the statement limited to that fact."
+            "Relayed positive response; no specific correction requested."
           ],
           [
-            "Response date and primary record",
-            "Not verified.",
-            "Record the actual date and a private evidence reference with permission."
+            "Actual response date and primary record",
+            "Not verified in the available package."
           ],
           [
-            "Substantive decisions",
-            "Coverage not established.",
-            "Ask for review of scope, requirements, technical trade-offs and evaluation; record actual decisions."
+            "Scope of substantive review",
+            "Individual deliverables and decisions reviewed are not established."
           ],
           [
-            "Resulting improvements",
-            "No supervisor-specific revisions evidenced.",
-            "Attribute audit corrections to the audit; link future real comments to revisions or a reasoned no-change decision."
+            "Resulting changes",
+            "No supervisor-specific revisions evidenced; technical audit corrections are recorded separately in Git history."
           ]
         ],
         [
-          1.4,
-          2.1,
-          3
+          2.0,
+          4.5
         ]
       ],
       [
         "p",
-        "PCA-13 remains in Review. Templates in docs/REVIEW_HANDOFF.md make the remaining review concrete; their existence does not count as received feedback. No weekly meeting history is claimed."
+        "The feedback and decision log is docs/supervisor_feedback_log.csv. PCA-13 is Review in the recorded task snapshot. No weekly meeting history is evidenced by these records. Private correspondence is retained outside the public repository."
       ],
       [
         "h",
-        "Submission status"
+        "Project artifacts"
       ],
       [
         "p",
-        "The package corrects the audit findings that can be resolved from existing evidence. Completion still depends on personal other-participant review, substantive supervisor evidence, final version integration and form checks. Full application development remains next-stage work."
-      ],
-      [
-        "h",
-        "Direct artifact links"
+        "The following links use the immutable revision supplied to the report builder."
       ],
       [
         "p",
-        "Rendered links use the immutable revision supplied to the report builder. Prototype HTML: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/prototype/index.html"
+        "Prototype: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/prototype/index.html"
       ],
       [
         "p",
-        "Download that revision and open prototype/index.html locally. It uses synthetic results; file contents are not parsed and no model is called."
+        "The prototype uses synthetic results; selected file contents are not parsed and no model is called."
       ],
       [
         "p",
@@ -1589,7 +1595,7 @@
       ],
       [
         "p",
-        "Analysis and data: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/DATA_ANALYSIS.md"
+        "Relevance analysis: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/02_relevance.md"
       ],
       [
         "p",
@@ -1597,7 +1603,7 @@
       ],
       [
         "p",
-        "Audit resolution: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/AUDIT_RESOLUTION.md"
+        "Task and PR traceability: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/TRACEABILITY.md"
       ]
     ]
   ],

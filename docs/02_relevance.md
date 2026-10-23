@@ -137,17 +137,15 @@ Official rules contain meaningful variation. Published conference data show real
 
 ## What remains unknown
 
-This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. This secondary-data study contains no interviews or product measurements; separately supplied participant notes are reported below with their own limitations. No local usability sessions or manuscript benchmark runs are claimed.
+This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. This secondary-data study contains no interviews or product measurements; participant findings are documented separately in INTERVIEW_FINDINGS.md with their own limitations. No local usability sessions or manuscript benchmark runs are claimed.
 
 ## Conclusion
 
 The project addresses a documented document-checking problem with a bounded engineering response. Its defensible contribution is an inspectable mapping from confirmed conference rules to manuscript-level findings and revisions. Success should be assessed through correctly detected mismatches, useful evidence and appropriate uncertainty, rather than predicted acceptance or generic review scores.
 
-## External evidence condition
+## User discussion evidence
 
 Three anonymized participant records (U01–U03) were supplied in interview.docx. U01 consent is explicit in the notes; Kaisar separately confirmed U02/U03 consent. All three interviews took place on 20 October 2026, as confirmed by the interviewer. Consent to public publication of anonymized findings and the log was also confirmed. Fifteen observations are mapped to existing FR/NFR in docs/user_discussions_log.csv; three participants, not fifteen interviews, are counted. The findings support multi-source criteria, grounded explanations, explicit uncertainty, privacy controls and rechecking. See docs/INTERVIEW_FINDINGS.md. PCA-22 now has three dated records, consent, findings and requirement mappings prepared for acceptance review. The secondary-data analysis and interview evidence have distinct limitations.
-
-
 
 ## Participant evidence
 
@@ -160,6 +158,5 @@ U01 described returns caused by references and filenames; U02 described page cou
 U01 and U03 conditionally allow external processing. U02 is more likely to refuse processing of an unpublished method without laboratory permission. All ask about processing conditions. This supports FR12/NFR03: disclose the actual provider terms and obtain permission before transmission. Claims about retention or training require a verified provider policy. Consent to interview notes does not automatically cover manuscript processing. A local formal-checking mode is recorded as a future-stage proposal.
 
 U01 and U03 mention saving progress and rechecking, supporting FR08/FR10. U03 wants a report for a supervisor: FR09 provides structured JSON, with PDF export retained as an extension. Priorities and the distinction between critical and cosmetic findings support FR04/FR06.
-
 
 Full record and limitations: docs/INTERVIEW_FINDINGS.md.
