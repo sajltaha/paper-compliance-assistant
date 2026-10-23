@@ -9,9 +9,15 @@ const source=fs.readFileSync(require('path').join(__dirname,'../prototype/index.
  await get('runDemo').click();assert.match(get('error').textContent,/Select a manuscript/);
  await get('loadDemo').click();assert.match(get('criteriaInput').value,/abstract/);
  await get('runDemo').click();assert.match(get('error').textContent,/Review and confirm/);
- await get('reviewCriteria').click();assert.equal(get('criteriaList').children.length,4);
- get('confirmed').checked=true;await get('runDemo').click();assert(!get('resultsView').classList.contains('hidden'));
- assert.equal(get('findings').children.length,4);assert.equal(vm.runInContext('results.filter(r=>r.status==="fail").length',c),2);
+ await get('reviewCriteria').click();assert.equal(get('criteriaList').children.length,5);
+ get('confirmed').checked=true;const pending=get('runDemo').click();
+ ['runDemo','paperFile','loadDemo','criteriaInput','reviewCriteria','confirmed'].forEach(id=>assert(get(id).disabled));
+ await pending;assert(!get('resultsView').classList.contains('hidden'));
+ ['runDemo','paperFile','loadDemo','criteriaInput','reviewCriteria','confirmed'].forEach(id=>assert(!get(id).disabled));
+ assert.equal(get('findings').children.length,5);assert.equal(vm.runInContext('results.filter(r=>r.status==="fail").length',c),2);
+ assert.equal(vm.runInContext('results.filter(r=>r.status==="not_applicable").length',c),1);
+ get('statusFilter').value='not_applicable';await get('statusFilter').dispatch('change');assert.equal(get('findings').children.length,1);
+ get('statusFilter').value='all';await get('statusFilter').dispatch('change');
  const evButton=get('findings').children[0].children[2].children[0];await evButton.click();assert.equal(evButton.attributes['aria-expanded'],'true');
  get('statusFilter').value='fail';await get('statusFilter').dispatch('change');assert.equal(get('findings').children.length,2);
  await get('recheck').click();assert(!get('inputView').classList.contains('hidden'));
@@ -19,7 +25,16 @@ const source=fs.readFileSync(require('path').join(__dirname,'../prototype/index.
  await get('newCheck').click();get('paperFile').files=[{name:'bad.exe',size:10}];await get('paperFile').dispatch('change');assert.match(get('error').textContent,/PDF or DOCX/);
  get('paperFile').files=[{name:'large.pdf',size:21*1024*1024}];await get('paperFile').dispatch('change');assert.match(get('error').textContent,/20 MiB/);
  get('paperFile').files=[{name:'valid.docx',size:1024}];await get('paperFile').dispatch('change');assert.equal(vm.runInContext('selectedName',c),'valid.docx');
- console.log('PASS: empty input, confirmation, 4-result demo, evidence toggle, status filter, recheck, custom-criterion abstention and file validation.');
+ await get('loadDemo').click();
+ get('paperFile').files=[{name:'bad.exe',size:10}];await get('paperFile').dispatch('change');
+ assert.equal(vm.runInContext('selectedName',c),'','Invalid replacement must clear old manuscript');
+ await get('runDemo').click();assert.match(get('error').textContent,/Select a manuscript/);
+ await get('loadDemo').click();get('paperFile').files=[{name:'empty.pdf',size:0}];await get('paperFile').dispatch('change');assert.equal(vm.runInContext('selectedName',c),'');assert.match(get('error').textContent,/non-empty/);
+ get('paperFile').files=[{name:'boundary.pdf',size:20*1024*1024}];await get('paperFile').dispatch('change');assert.equal(vm.runInContext('selectedName',c),'boundary.pdf');
+ get('paperFile').files=[{name:'too-big.pdf',size:20*1024*1024+1}];await get('paperFile').dispatch('change');assert.equal(vm.runInContext('selectedName',c),'');assert.match(get('error').textContent,/20 MiB/);
+ await get('loadDemo').click();get('paperFile').files=[];await get('paperFile').dispatch('change');assert.equal(vm.runInContext('selectedName',c),'');
+ console.log('PASS: empty input, confirmation, 5-result demo with all four statuses, evidence toggle, status filter, recheck, custom-criterion abstention and file validation including stale replacements, empty files and exact byte boundaries.');
  console.log('Scope: JavaScript handlers in a minimal simulated DOM; not a visual browser test or AI evaluation.');
 })().catch(e=>{console.error(e);process.exit(1)});
+
 

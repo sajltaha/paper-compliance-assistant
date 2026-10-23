@@ -1,0 +1,27 @@
+name: Prototype checks
+
+on:
+  push:
+    paths:
+      - "prototype/**"
+      - "tests/**"
+      - ".github/workflows/prototype.yml"
+  pull_request:
+    paths:
+      - "prototype/**"
+      - "tests/**"
+      - ".github/workflows/prototype.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Prototype handler regressions
+        run: node tests/prototype_smoke.cjs

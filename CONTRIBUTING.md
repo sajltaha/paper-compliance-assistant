@@ -9,6 +9,7 @@ The first package is AI-assisted preparation, not proof of historical contributi
 4. Open a pull request with the problem, change, checks and task link.
 5. The other team member reviews. Resolve comments and retain review history.
 6. Merge reviewed work into main; update the actual task with the PR and decision.
-7. Freeze the agreed submission revision with prob-period-1 only after final report and evidence agree.
+7. After review and integration, freeze the final submission with pre-defense-1. Preserve the existing prob-period-1 tag at its historical commit; obtain the receiving party's decision on the form's conflicting tag name before submission. See docs/VERSIONING.md.
 
 Prepared files are not automatically completed tasks. A local planning key in the CSV is not an actual YouTrack issue ID. Do not manufacture old commit dates, interviews, approvals or completed tests.
+

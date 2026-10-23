@@ -14,7 +14,7 @@ No endpoints are implemented yet. The prototype does not call these endpoints.
 Error envelope: {"error":{"code":"UNSUPPORTED_FORMAT","message":"...","retryable":false}}.
 Use documented client errors for invalid files and criteria, explicit provider failures, and no successful placeholder output.
 
-Final response shape is defined in ai_contract.schema.json. A schema validator is necessary but insufficient: check exactly one finding per confirmed criterion, block ownership, quote matches and no ungrounded page numbers. Provider-specific schema compatibility must be tested during implementation.
+The completed findings payload {run_id, findings} is defined in ai_contract.schema.json. The GET run lifecycle envelope also contains status, configuration, failures and timing; it is not that findings-only schema. A completed envelope contains this payload as result; queued/processing/failed envelopes have result=null. FR09 export is a separate versioned envelope with document hash, criteria version and recorded configuration plus result. The prototype export is explicitly synthetic and is not the production export contract. A schema validator is necessary but insufficient: check exactly one finding per confirmed criterion, block ownership, quote matches and no ungrounded page numbers. Provider-specific schema compatibility must be tested during implementation.
 
 
 ## Proposed request and lifecycle examples
@@ -41,3 +41,4 @@ GET /api/analyses returns 200 {"items":[{"run_id":"r1","document_id":"d1","statu
 | 504 | PROVIDER_TIMEOUT | Explicit retryable failure; no generated assessment |
 
 Provider data is untrusted. Validate schema, one result per confirmed criterion, applicability, block ownership, normalized quotes and semantic evidence support. JSON schema alone cannot enforce these relational checks.
+

@@ -56,3 +56,8 @@ From the repository root run `node tests/prototype_smoke.cjs` with a current Nod
 Use [audit resolution](docs/AUDIT_RESOLUTION.md), [evidence register](docs/EVIDENCE_REGISTER.md), [task traceability](docs/TRACEABILITY.md) and [review guide](docs/REVIEW_HANDOFF_RU.md). Download this revision and open [prototype HTML](prototype/index.html); editable [diagram sources](diagrams/) and all report sections are included. Generated PDFs substitute their exact source commit into full artifact URLs. No private correspondence belongs in this public repository.
 
 The actual visible history is concentrated on 22–23 October 2026; no multi-week development history is claimed. Future changes must be meaningful, task-linked and reviewed before merge.
+
+
+## Follow-up technical audit
+
+The follow-up based on PR #5 fixes stale manuscript selection, empty-file handling and run/export filename consistency in the synthetic prototype, demonstrates all four result states, and adds prototype CI. It also corrects CONTRIBUTING version instructions and clarifies the findings payload versus API/export envelopes. See docs/FOLLOWUP_AUDIT_2026_10_23.md and docs/PROTOTYPE_VERIFICATION.md. These assistant-assisted checks do not close personal teammate review, supervisor feedback or external user evidence.

@@ -28,3 +28,8 @@ Baseline links below identify the historical prob-period-1 revision; current cha
 | [PCA-22](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-22) | docs/USER_EVIDENCE_PROTOCOL_RU.md | [PR #5](https://github.com/sajltaha/paper-compliance-assistant/pull/5) | New protocol in the audit-fix PR; no completed discussions |
 
 FR/NFR → component/data/API: ARCHITECTURE_TRACEABILITY.md. DA-R → FR/NFR → task: data_requirement_mapping.csv. T01–T20 contain planned fixtures, procedures and oracles in test_plan.csv. The data study was committed through sajltaha PR #3; its Kaisar assignment does not alone establish Kaisar authorship. Retain individual explanations and actual review evidence separately.
+
+
+## Follow-up correction scope
+
+PCA-16 tracks the supplemental technical audit based on PR #5; PCA-8 covers the corrected prototype and handler regression checks. The task-linked branch is PCA-16-followup-verification. CONTRIBUTING.md now preserves the historical tag; docs/API_CONTRACT.md distinguishes findings from lifecycle/export envelopes; docs/08_ux.md and report_content.json describe the same prototype behavior. See FOLLOWUP_AUDIT_2026_10_23.md. Actual teammate review and final integration remain pending.

@@ -175,7 +175,7 @@
           1.4,
           0.7,
           2.4,
-          2.0
+          2
         ]
       ],
       [
@@ -477,9 +477,9 @@
           ]
         ],
         [
-          2.0,
+          2,
           1.5,
-          3.0
+          3
         ]
       ],
       [
@@ -1198,7 +1198,7 @@
       ],
       [
         "p",
-        "The key journey is upload or load a synthetic example, enter criteria, confirm criteria, inspect the mock results and open the evidence for a finding. Empty input and unsupported file types expose validation messages. Keyboard focus and status announcements are included. The future Vue application will replace the demonstration data with the documented REST contract."
+        "The key journey is upload or load a synthetic example, enter criteria, confirm criteria, inspect the mock results and open the evidence for a finding. Empty input, zero-byte files, unsupported file types and files above 20 MiB expose validation messages. Invalid replacement clears the previous selection. Five synthetic findings illustrate all four result states, including not_applicable; all states can be filtered. Inputs are disabled during the mock run and exports retain its filename. Keyboard focus and status announcements are included. The future Vue application will replace the demonstration data with the documented REST contract."
       ],
       [
         "table",
@@ -1340,7 +1340,7 @@
       ],
       [
         "p",
-        "A cookie-free, authorization-free HTTP check on 23 October 2026 identified login=guest and returned HTTP 200 for the PCA project, board and PCA-2 description. This establishes anonymous read access at the API level; it does not test every browser presentation or claim anonymous edit rights. See docs/ACCESS_VERIFICATION.md."
+        "A cookie-free, authorization-free HTTP check on 23 October 2026 identified login=guest and returned HTTP 200 for the PCA project, board and PCA-2 description. This establishes anonymous read access at the API level; it does not test every browser presentation or claim anonymous edit rights. See docs/ACCESS_VERIFICATION.md. A subsequent guest Chrome check opened the live board and full PCA-18/PCA-16 descriptions with Sign in visible and guest actions disabled. The 22-issue totals matched the register. A separate board-and-tasks PDF preserves selected screenshots; it must be refreshed after final version or evidence changes. Live PCA-16 still needs an authorized editor to add follow-up PR #6 and final-version links."
       ],
       [
         "p",
