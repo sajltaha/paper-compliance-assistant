@@ -17,7 +17,7 @@ Supervisor: Солтан Гульжан Жексенбаевна.
 
 ## Scope and status
 Prepared: proposal, critical literature review (16 sources, 12 research entries), four-system comparison, six technology comparisons, 20 requirements with acceptance criteria, three source-editable diagrams, API/schema draft, interactive UX mockup, evaluation plan and task/evidence templates.
-Implemented foundation: PDF/DOCX intake validation, SHA-256 and unit tests in merged PR #2; CI passed. The PR is partial PCA-18 work, not PCA-19 criterion evaluation. Not implemented: text extraction, Go HTTP API, Vue application, database, OpenAI integration and Docker deployment. Still outstanding: supervisor feedback, final access checks and the tracker screenshot PDF. 
+Implemented foundation: PDF/DOCX intake validation, SHA-256 and unit tests in merged PR #2; CI passed. The PR is partial PCA-18 work, not PCA-19 criterion evaluation. Not implemented: text extraction, Go HTTP API, Vue application, database, OpenAI integration and Docker deployment. General supervisor feedback and the board screenshot PDF are available. Public PCA reading is configured. Remaining: participant confirmations, final PR integration, anonymous link verification, fixed tag and form checks. 
 
 In scope: author-supplied conference criteria, supported formal and semantic checks, uncertainty, evidence and saved versioned runs. Out of scope: replacing scientific peer review, autonomous acceptance decisions, plagiarism certification and unsupported formatting guarantees.
 
@@ -43,4 +43,14 @@ Submission tag: pending final reviewed revision; this form requires prob-period-
 Compare rules-only B0, whole-document LLM B1 and the hybrid evidence-validated pipeline B2 on a frozen rights-cleared corpus. Measure violation macro-F1, coverage/abstention, supported evidence, stability, latency, cost and usability. No benchmark has been run.
 
 ## Access and privacy
-The repository is public. GitHub content is publicly accessible; tracker access still requires verification. Do not commit API keys, private manuscripts, personal interview details or fabricated research evidence. Follow CONTRIBUTING.md for task branches and PRs.
+The repository is public. GitHub content is publicly accessible; PCA guest reading is configured without write permissions; anonymous opening still requires a separate-session check. Do not commit API keys, private manuscripts, personal interview details or fabricated research evidence. Follow CONTRIBUTING.md for task branches and PRs.
+
+
+## Current preparation links
+
+- [Prototype HTML](https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/prototype/index.html)
+- [Editable diagrams](https://github.com/sajltaha/paper-compliance-assistant/tree/PCA-16-submission-alignment/diagrams)
+- [Current task register](docs/YOUTRACK_LIVE_TASKS.md)
+- [Supervisor feedback](docs/11_supervisor_feedback.md)
+
+The current form requires `prob-period-1`. It is not created until the matching revision is integrated and ready.

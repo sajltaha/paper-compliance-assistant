@@ -8,7 +8,7 @@
       ],
       [
         "p",
-        "The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. The relevance analysis uses public conference policies and published screening data. Supervisor feedback and measured system performance remain outstanding."
+        "The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. The relevance analysis uses public conference policies and published screening data. General supervisor feedback has been received without specific correction requests. Measured system performance remains implementation-stage work."
       ],
       [
         "h",
@@ -16,7 +16,7 @@
       ],
       [
         "p",
-        "Conference requirements combine document structure, measurable limits and qualitative expectations. Authors must locate these rules, inspect a PDF or DOCX and explain what needs revision. The working problem hypothesis is that a reusable, criterion-level checking workflow can reduce missed requirements and make revision more systematic. Its local relevance still requires direct user evidence; literature and product pages alone do not establish demand among our intended users."
+        "Conference requirements combine document structure, measurable limits and qualitative expectations. Authors must locate these rules, inspect a PDF or DOCX and explain what needs revision. The working problem hypothesis is that a reusable, criterion-level checking workflow can reduce missed requirements and make revision more systematic. Section 2 analyses official policies and published screening data to ground the document-checking requirements; local user demand remains unmeasured."
       ],
       [
         "p",
@@ -86,16 +86,421 @@
     "2 Evidence of relevance",
     [
       [
-        "p",
-        "The relevance method is secondary-data analysis. The full study is versioned in docs/DATA_ANALYSIS.md, including references [A]-[N], five conference rule sets, six submission profiles, published CHI screening statistics and six recent research sources."
+        "h",
+        "Executive summary"
       ],
       [
         "p",
-        "The observations support configurable submission profiles, section-aware counting, explicit rule modality, evidence-linked findings, conversion-quality gates and qualified recommendations. User demand, local error rates and system performance remain unmeasured."
+        "Scientific submissions face a combination of measurable limits, venue-specific document rules and requirements that need interpretation. This study examines five official conference rule sets, covering six initial-submission profiles, and an independently published conference screening report. Six recent research publications provide a separate basis for choosing an evidence-oriented technical approach."
       ],
       [
         "p",
-        "The CHI report records 495 desk rejections among 5,014 complete submissions. Anonymization, template and length account for 229 reported cases. These are source statistics, not a measured preventable fraction or a forecast of this system's impact."
+        "The strongest operational evidence comes from CHI 2025: organisers report 495 desk rejections among 5,014 complete submissions. Anonymisation, template and length categories account for 229 reported cases. These data establish that submission compliance has observable consequences in at least one real conference process. They do not estimate how many cases our proposed system could prevent. [H]"
+      ],
+      [
+        "p",
+        "The policy comparison identifies different page limits and exclusion rules, while the research evidence cautions against treating fluent AI feedback as a verified judgement. Together, these findings support a narrowly scoped assistant: configurable criteria, deterministic checks where possible, evidence-linked interpretation where needed, and explicit uncertainty."
+      ],
+      [
+        "h",
+        "Research questions and method"
+      ],
+      [
+        "p",
+        "RQ1: Which submission constraints are shared across venues, and which require configurable rules? RQ2: Is there published operational evidence of compliance-related screening? RQ3: What does recent research imply for document processing and AI-generated recommendations?"
+      ],
+      [
+        "p",
+        "Sources were selected purposively for relevance to English-language computer-science manuscripts. The policy sample comprises ICML 2026, NeurIPS 2025, ACL 2026, CVPR 2026 and ICLR 2026. ACL long and short papers are separate profiles of one venue, not independent conferences. Policy fields were manually coded from explicit statements; unrecorded information means not coded, rather than no requirement. The comparison concerns initial submissions unless a stage change is explicitly discussed."
+      ],
+      [
+        "p",
+        "Operational counts are transcribed from the official CHI report and recomputed with declared denominators. Research findings are a targeted synthesis, not a pooled experiment or systematic review. The six research sources date from 2023-2025. Official policies cover 2025-2026 events; generic guidance is identified as a current web revision. Sources were accessed on 22 October 2026."
+      ],
+      [
+        "h",
+        "Conference policy comparison"
+      ],
+      [
+        "table",
+        [
+          "Initial-submission profile",
+          "Main-text limit",
+          "Excluded material recorded",
+          "Submission conditions"
+        ],
+        [
+          [
+            "ICML 2026 [A]",
+            "8 pages",
+            "References and appendices",
+            "Anonymous; ICML LaTeX style"
+          ],
+          [
+            "NeurIPS 2025 [B]",
+            "9 pages",
+            "References, checklist, technical appendices",
+            "Anonymous; NeurIPS style; checklist required"
+          ],
+          [
+            "ACL 2026 long [C,E,F]",
+            "8 pages",
+            "References and appendices; current ARR guidance additionally excludes Limitations and Ethical considerations",
+            "Anonymous; ACL format"
+          ],
+          [
+            "ACL 2026 short [C,E,F]",
+            "4 pages",
+            "Same recorded exclusions as long papers",
+            "Anonymous; ACL format"
+          ],
+          [
+            "CVPR 2026 [D]",
+            "8 pages",
+            "Extra reference-only pages; supplementary content is separate",
+            "Anonymous; CVPR template"
+          ],
+          [
+            "ICLR 2026 [G]",
+            "9 pages",
+            "References and appendices; optional ethics statement subject to its own conditions",
+            "Anonymous; ICLR LaTeX style"
+          ]
+        ],
+        [
+          1.4,
+          0.7,
+          2.4,
+          2.0
+        ]
+      ],
+      [
+        "h",
+        "Observations"
+      ],
+      [
+        "p",
+        "All five sampled rule sets specify a main-text limit, anonymity and a prescribed format or style. Across the six profiles, initial-submission limits take three values: 4, 8 and 9 pages. These are sample descriptions, not estimates of the wider conference population."
+      ],
+      [
+        "p",
+        "The main-text limit cannot be applied to the total PDF page count without identifying excluded sections. The rule configuration also needs a submission stage: ICLR allows 9 pages initially and 10 during discussion/rebuttal and camera-ready preparation. The same guide contains later wording that calls the limit identical while giving 10 pages; a parser must retain the stage-specific context instead of selecting the last number it sees. [G]"
+      ],
+      [
+        "p",
+        "Mandatory, recommended and optional are distinct statuses. For example, the NeurIPS checklist is required [B], while ICLR recommends an ethics statement where appropriate [G]. A missing optional statement must not become a generic violation."
+      ],
+      [
+        "h",
+        "Consequence for the product"
+      ],
+      [
+        "p",
+        "A single universal checklist is insufficient for this sample. A profile should retain venue, edition, track, paper type, stage, source location and rule status. Automatically extracted criteria should be editable before a run. This is a design inference from the comparison, not a finding about users' interface preferences."
+      ],
+      [
+        "p",
+        "The ACL event page delegates detailed rules to ARR. Current ARR and ACLPUB guidance can have changed since the event's submission cycle; historical runs require a frozen source version. This analysis records that temporal limitation rather than treating current guidance as an archived January snapshot. [C,E,F]"
+      ],
+      [
+        "h",
+        "Operational evidence CHI 2025"
+      ],
+      [
+        "p",
+        "The official Papers Track report, published in December 2024 for the 2025 conference, records 5,014 complete submissions and 495 desk rejections. It identifies the following categories. [H]"
+      ],
+      [
+        "table",
+        [
+          "Reported reason",
+          "Count",
+          "Share of 495 desk rejections"
+        ],
+        [
+          [
+            "Context",
+            "187",
+            "37.78%"
+          ],
+          [
+            "Anonymization",
+            "134",
+            "27.07%"
+          ],
+          [
+            "Template",
+            "86",
+            "17.37%"
+          ],
+          [
+            "Scope",
+            "34",
+            "6.87%"
+          ],
+          [
+            "Incomplete submission",
+            "19",
+            "3.84%"
+          ],
+          [
+            "Miscellaneous",
+            "16",
+            "3.23%"
+          ],
+          [
+            "Length",
+            "9",
+            "1.82%"
+          ],
+          [
+            "Incomplete paper",
+            "5",
+            "1.01%"
+          ],
+          [
+            "Plagiarism",
+            "5",
+            "1.01%"
+          ],
+          [
+            "Total",
+            "495",
+            "100.00% before rounding"
+          ]
+        ],
+        [
+          3.1,
+          0.8,
+          2.6
+        ]
+      ],
+      [
+        "h",
+        "Recalculated indicators"
+      ],
+      [
+        "p",
+        "Desk-rejection share: 495 / 5,014 x 100 = 9.87%. The organisers round this to 9.9%. The three categories directly relevant to formal screening in this analysis are anonymization, template and length: 134 + 86 + 9 = 229 cases. Their share is 46.26% of desk rejections and 4.57% of complete submissions."
+      ],
+      [
+        "p",
+        "These categories provide a prioritisation signal for potential checks. They are not a measured detection rate, preventable fraction or forecast of product impact. In particular, template compliance and anonymity can require information beyond extracted plain text. The source also notes missing data in some of its analyses; this calculation uses only the explicitly reported screening table."
+      ],
+      [
+        "h",
+        "Interpretation"
+      ],
+      [
+        "p",
+        "The context category is the largest and should not be relabelled as a formatting defect. Scope, scientific completeness and plagiarism likewise require different evidence and judgement. Our MVP should avoid collapsing every screening category into a general AI quality score."
+      ],
+      [
+        "p",
+        "CHI is used as operational evidence, not added to the five-venue policy denominator. Its statistics cannot establish rates for ML/NLP conferences or for our intended student users. Local error prevalence and time savings remain unmeasured."
+      ],
+      [
+        "h",
+        "Research evidence and engineering implications"
+      ],
+      [
+        "h",
+        "Reliable feedback is narrower than fluent feedback"
+      ],
+      [
+        "p",
+        "Zhou, Chen and Yu (2024) evaluate score prediction and review generation and introduce 197 review-revision multiple-choice questions. Their reported weaknesses include long-paper processing and critical feedback. This motivates evaluating specific failure types rather than assuming a plausible review is correct. The study concerns the models and tasks tested; it does not supply an accuracy estimate for our system. [S02]"
+      ],
+      [
+        "p",
+        "Li et al. (2025) analyse 1,683 papers and 6,495 expert reviews using five LLMs. They find stronger descriptive feedback than identification of weaknesses and quality-sensitive criticism. Therefore, our recommendations should be tied to explicit requirements and supporting passages. A conference compliance assistant has a more constrained target than autonomous scientific review. The source is the 2025 arXiv version, whose metadata reports acceptance as an ICDM short paper. [S12]"
+      ],
+      [
+        "h",
+        "Evidence and document position need separate evaluation"
+      ],
+      [
+        "p",
+        "Buchmann, Liu and Gurevych (2024) introduce LAB, covering six long-document tasks and experiments on five models. Their findings distinguish response quality from attribution quality, particularly for complex claims. A quoted passage should therefore be checked for support, not merely for existence in the document. In our design, citation validation and semantic support are separate checks. [S08]"
+      ],
+      [
+        "p",
+        "Liu et al. (2024) show position-sensitive performance in multi-document question answering and key-value retrieval, with weaker access to information in the middle of long contexts. This motivates testing relevant evidence at the beginning, middle and end of manuscripts. It does not prove that every current model has the same failure rate or that retrieval will always outperform whole-document input. [S07]"
+      ],
+      [
+        "h",
+        "Conversion is an independent source of uncertainty"
+      ],
+      [
+        "p",
+        "The Docling Technical Report (Auer et al., 2024) describes document conversion using layout and table-structure models. It offers a candidate conversion approach; its abstract does not establish accuracy on our manuscripts. Parser selection requires local evidence on reading order, headings and tables. [S10]"
+      ],
+      [
+        "p",
+        "Nougat (Blecher et al., 2023) investigates optical conversion of academic PDFs into markup, including the semantic difficulty of mathematical content. It supplies an alternative for comparison, not evidence that OCR or formula recovery is already implemented. Low-quality conversion must not silently become a successful compliance result. [S09]"
+      ],
+      [
+        "h",
+        "Synthesis"
+      ],
+      [
+        "p",
+        "The evidence supports a hybrid design hypothesis: deterministic rules for reliably measurable properties, document-aware evidence selection for interpretive criteria, and abstention when the available representation is inadequate. Whether that design improves accuracy, cost or usefulness must be established by the project's own benchmark."
+      ],
+      [
+        "h",
+        "Derived system requirements"
+      ],
+      [
+        "p",
+        "DA-R identifiers are local to this analysis. These are proposed acceptance conditions, not claims of implemented functionality."
+      ],
+      [
+        "table",
+        [
+          "Proposed requirement",
+          "Evidence",
+          "Acceptance condition"
+        ],
+        [
+          [
+            "DA-R1. Versioned submission profile",
+            "Different limits and stage changes [A-G]",
+            "Store venue, edition, type, stage and source. ACL long/short and ICLR initial/revised profiles retain distinct limits."
+          ],
+          [
+            "DA-R2. Section-aware counting",
+            "Different excluded sections [A-G]",
+            "A labelled PDF with 8 main-text pages plus 2 reference pages is not rejected solely because total length is 10 pages under the recorded ICML profile."
+          ],
+          [
+            "DA-R3. Rule modality",
+            "Required checklist versus optional statements [B,G]",
+            "Missing required content, optional content and unreadable content produce different states."
+          ],
+          [
+            "DA-R4. Traceable findings",
+            "Attribution research [S08]; policy consequences [D,H]",
+            "Each finding includes a rule source, manuscript location and supporting text, or a reason why it cannot be checked."
+          ],
+          [
+            "DA-R5. Qualified anonymity warnings",
+            "Anonymous submission rules and observed screening [A-D,G,H]",
+            "Explicit identifying content in a test fixture produces a located warning. No finding is not represented as guaranteed anonymity."
+          ],
+          [
+            "DA-R6. Conversion-quality gate",
+            "PDF conversion research [S10,S09]",
+            "Empty, scanned or structurally unreliable extraction triggers a declared unsupported/uncertain state rather than an automatic pass."
+          ],
+          [
+            "DA-R7. User-confirmed criteria",
+            "Ambiguous context and stage [C,G]",
+            "Show interpreted rules and their sources before execution; preserve confirmed edits with the run."
+          ],
+          [
+            "DA-R8. Evidence-grounded recommendations",
+            "Feedback limitations [S02,S12,S08]",
+            "A recommendation names the unmet rule and relevant evidence; unsupported novelty or acceptance predictions are excluded."
+          ]
+        ],
+        [
+          1.6,
+          1.5,
+          3.4
+        ]
+      ],
+      [
+        "h",
+        "Worked example identical PDF different rule contexts"
+      ],
+      [
+        "p",
+        "Consider a synthetic PDF with 9 pages of main text and 2 pages of references. Under the recorded initial ICML limit, the main-text count exceeds 8. Under initial NeurIPS or ICLR limits it does not exceed 9. Under an ICLR discussion-stage profile, a 10-page main text is permitted. This is a logical test fixture derived from policies, not an experiment on real submissions. [A,B,G]"
+      ],
+      [
+        "p",
+        "The correct workflow first confirms the applicable profile, then locates the body/reference boundary, and only then compares the count. If that boundary cannot be established, the result should expose uncertainty. The example explains why a simple total-page counter would produce misleading results."
+      ],
+      [
+        "h",
+        "Evaluation priorities and limits"
+      ],
+      [
+        "h",
+        "Planned verification based on the findings"
+      ],
+      [
+        "p",
+        "Freeze the exact rule texts and a rights-cleared manuscript corpus before evaluation. Label individual criteria as satisfied, violated or not assessable, and record rule evidence separately from manuscript evidence. Include different paper types, stage changes, optional statements, malformed files, difficult layouts and deliberately missing sections."
+      ],
+      [
+        "p",
+        "Compare three declared baselines: B0 deterministic checks only; B1 whole-document LLM input with the same criteria; B2 deterministic checks plus document-aware evidence and validated outputs. Hold documents, rule versions and applicable model settings constant. These are planned comparisons; no performance result is reported here."
+      ],
+      [
+        "table",
+        [
+          "Evaluation question",
+          "Proposed measure",
+          "Reason"
+        ],
+        [
+          [
+            "Are violations detected?",
+            "Per-criterion precision, recall and macro-F1",
+            "A fluent summary is insufficient [S02,S12]."
+          ],
+          [
+            "Is the result supported?",
+            "Rule-source accuracy; manuscript-anchor validity; support labels",
+            "Existing quotation and valid support differ [S08]."
+          ],
+          [
+            "Are uncertain cases handled?",
+            "Coverage, abstention rate and error rate on answered cases",
+            "Conversion failures should be visible [S10,S09]."
+          ],
+          [
+            "Does evidence position matter?",
+            "Results stratified by beginning/middle/end",
+            "Long-context behaviour can be position-sensitive [S07]."
+          ],
+          [
+            "Is the workflow practical?",
+            "Latency, cost per run, repeated-run stability",
+            "Engineering suitability requires project-specific measurement."
+          ]
+        ],
+        [
+          2.0,
+          1.5,
+          3.0
+        ]
+      ],
+      [
+        "h",
+        "What the evidence establishes"
+      ],
+      [
+        "p",
+        "Official rules contain meaningful variation. Published conference data show real screening cases in categories relevant to compliance checks. Recent research identifies document-conversion, feedback-reliability and evidence-attribution concerns that affect implementation choices."
+      ],
+      [
+        "h",
+        "What remains unknown"
+      ],
+      [
+        "p",
+        "This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. No interviews, local usability sessions or manuscript benchmark runs are represented as completed."
+      ],
+      [
+        "h",
+        "Conclusion"
+      ],
+      [
+        "p",
+        "The project addresses a documented document-checking problem with a bounded engineering response. Its defensible contribution is an inspectable mapping from confirmed conference rules to manuscript-level findings and revisions. Success should be assessed through correctly detected mismatches, useful evidence and appropriate uncertainty, rather than predicted acceptance or generic review scores."
       ]
     ]
   ],
@@ -669,7 +1074,7 @@
       ],
       [
         "p",
-        "The prototype is a UX artefact and does not establish usability or analysis quality. Ask actual target users to complete one task and record time, confusion and comments; the relevance interview kit includes this activity."
+        "The prototype is a UX artefact and does not establish usability or analysis quality. Usability validation is a later activity: ask target users to complete a task and record time, confusion and comments."
       ]
     ]
   ],
@@ -764,55 +1169,64 @@
     [
       [
         "p",
-        "The public repository is https://github.com/sajltaha/paper-compliance-assistant. The live YouTrack project is https://paper-compliance-assistant.youtrack.cloud/issues/PCA and the Kanban board is https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1. The board contains 21 real issues, PCA-1 to PCA-21, covering checkpoint preparation and later implementation. Eight tasks are assigned to Kaisar Nuryshev and the Talgat tasks to Talgat Sailaubekov. PCA-13 remains shared and unassigned. PCA-14 is shared work coordinated by Talgat after the tracker assigned it on entering Development. docs/YOUTRACK_LIVE_TASKS.md maps local planning keys to real issue IDs; the original import CSV is a planning artefact, not the live status source."
+        "The public repository is https://github.com/sajltaha/paper-compliance-assistant. The task list is https://paper-compliance-assistant.youtrack.cloud/issues/PCA and the board is https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1. The 21 assigned issues cover checkpoint preparation and later implementation. The verified snapshot contains 11 Done, 3 Review, 3 Develop and 4 Backlog tasks. PCA-13 is assigned to the checkpoint coordinator."
       ],
       [
         "p",
-        "PR #2 provides PDF/DOCX intake validation, a size limit, filename checks, metadata and SHA-256. GitHub Actions format and unit-test checks passed. Extraction and criterion evaluation remain separate implementation tasks."
+        "PRs #1, #2 and #3 are merged into main. This report and the corrected source sections are prepared in PCA-16-submission-alignment. The fixed prob-period-1 tag must identify the agreed integrated revision before submission. The public-reader role in YouTrack is limited to the PCA project and includes only basic project reading, issue reading and issue-comment reading. Anonymous opening of the supplied links still needs a separate session check."
       ],
       [
         "p",
-        "Traceability correction: PR #2 was originally labelled PCA-19, but the live task PCA-19 covers criterion normalization and evaluation. Document processing belongs to PCA-18. PR metadata now points to PCA-18; historical branch and commit names remain unchanged. Intake validation is only prerequisite work: text extraction, provenance, scanned-file handling, upload/archive hardening, the HTTP API, database, Vue application, LLM evaluator and Docker startup are not delivered by this PR. Neither PCA-18 nor PCA-19 is complete."
+        "PR #2 provides PDF/DOCX intake validation, a 20 MiB default limit, filename checks, metadata and SHA-256. Its format and unit checks passed. It is partial PCA-18 work; extraction, provenance, OCR policy and criterion evaluation remain unfinished. The original PCA-19 branch label is historical and does not change the actual task mapping."
       ],
       [
         "table",
         [
-          "Milestone",
+          "Stage",
           "Deliverable",
-          "Dependency"
+          "Target and dependency"
         ],
         [
           [
-            "22 October",
-            "Research/design draft, local prototype, repository initialization",
-            "Team justification and checkpoint requirements."
+            "Checkpoint",
+            "Research/design package, data analysis, report, board evidence and versioned submission.",
+            "24 October 2026, 18:00 Asia/Almaty; final alignment and form checks."
           ],
           [
-            "23 October",
-            "Secondary-data analysis, supervisor comments and resulting changes",
-            "Source verification, supervisor availability and live tracker."
+            "PCA-18",
+            "Document extraction and source anchors.",
+            "31 October 2026; provisional internal target."
           ],
           [
-            "24 October before 18:00",
-            "Reviewed matching report, board PDF, accessible links and prob-period-1 version",
-            "Team reviews, source verification, permissions and final checks."
+            "PCA-17",
+            "Upload and persistence API.",
+            "7 November 2026; provisional internal target."
           ],
           [
-            "Next implementation stage",
-            "Real upload, parsing, judgment and saved results",
-            "Approved requirements, parser pilot, database and model configuration."
+            "PCA-19",
+            "Criterion normalization and evaluation.",
+            "14 November 2026; extraction and API integration."
           ],
           [
-            "Evaluation stage",
-            "Frozen corpus, baseline comparison and documented results",
-            "Implementation, labelled corpus and budget-controlled API runs."
+            "PCA-21",
+            "Vue interface and Docker startup.",
+            "21 November 2026; integrated API and evaluator."
+          ],
+          [
+            "PCA-20",
+            "Frozen-corpus evaluation and error analysis.",
+            "28 November 2026; working implementation and agreed corpus."
           ]
         ],
         [
-          1.4,
-          3,
-          2.1
+          1.05,
+          2.85,
+          2.6
         ]
+      ],
+      [
+        "p",
+        "Dates after the checkpoint are provisional internal planning targets, not university deadlines. Confirm them against the next university milestone and revise dependencies when implementation is decomposed into smaller tasks."
       ],
       [
         "table",
@@ -855,7 +1269,7 @@
           [
             "Contribution traceability",
             "Generated package mistaken for individual completed work.",
-            "Real owner revisions, task-linked branches and peer PR reviews. Both."
+            "Task-linked commits, descriptive branches and linked PRs. Both."
           ]
         ],
         [
@@ -866,53 +1280,81 @@
       ],
       [
         "p",
-        "Changes use task-linked branches and PRs. Integrate the checkpoint package into main while preserving commit history. Finalise the submission tag only when the selected revision and submitted documents agree."
+        "Changes use task-linked branches and PRs. Keep main as the integrated baseline and retain the original contribution history. Do not move a submitted tag. Implementation tasks remain open until their acceptance criteria are met."
       ]
     ]
   ],
   [
-    "11 Supervisor feedback and outstanding evidence",
+    "11 Supervisor feedback and next steps",
     [
       [
         "p",
-        "Supervisor feedback has not yet been obtained. The team justification names the supervisor and describes intended oversight, but it does not demonstrate review of this newly prepared package. No approval, signature or review date is invented."
-      ],
-      [
-        "p",
-        "Submit the proposal, comparison decisions, requirements, diagrams, prototype and evaluation plan for substantive review. Ask which users and conference criteria are appropriate, whether the MVP boundaries are realistic, and how ground-truth labels should be checked. Log each real comment, the affected artefact, the decision to accept or reject it with reasons, and the revision link."
+        "General supervisor feedback on the consolidated report has been received. No specific corrections were requested. This does not separately approve every technical choice."
       ],
       [
         "table",
         [
-          "Evidence still required",
-          "Completion condition"
+          "Feedback",
+          "Decision",
+          "Result"
         ],
         [
           [
-            "Relevance evidence",
-            "Secondary-data analysis is documented in docs/DATA_ANALYSIS.md."
+            "General positive response; no specific requested correction.",
+            "Retain the research and design content.",
+            "Feedback recorded in the source section and feedback log; the original conversation screenshot is retained privately."
           ],
           [
-            "Supervisor review",
-            "Dated genuine comments and linked revisions or justified decisions."
-          ],
-          [
-            "Live YouTrack and screenshot PDF",
-            "Live board and 21 tasks exist. Confirm the PCA-13 coordinator and produce a separate PDF of real board and representative task screenshots."
-          ],
-          [
-            "Final repository revision and access",
-            "Links work for supervisor and committee; final documents match prob-period-1."
+            "Final consistency check.",
+            "Update administrative facts and access/source links.",
+            "Task status, provisional implementation targets, direct artifact links and submission packaging updated. These are consistency corrections, not attributed supervisor requests."
           ]
         ],
         [
-          2.2,
-          4.3
+          2.0,
+          1.8,
+          2.7
         ]
       ],
       [
         "p",
-        "This report is a prepared working version. The technical analysis and prototype can be reviewed now. It should not be represented as a fully evidenced completed submission until the missing external evidence and team review are added. The final form must distinguish delivered artefacts, unimplemented features and remaining limitations."
+        "Before submission, complete the outstanding participant confirmations and PR step, integrate the matching materials, create prob-period-1 and verify all form fields and files. The current supervisor response does not replace these separate checks."
+      ],
+      [
+        "p",
+        "Text extraction, an HTTP API, persistence, a Vue application, external LLM integration, Docker startup and controlled system evaluation remain implementation work."
+      ],
+      [
+        "h",
+        "Direct artifact links"
+      ],
+      [
+        "p",
+        "Prototype HTML: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/prototype/index.html"
+      ],
+      [
+        "p",
+        "Download the repository and open prototype/index.html locally. It uses synthetic results and requires no installation or API key."
+      ],
+      [
+        "p",
+        "Context diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/01_context.svg"
+      ],
+      [
+        "p",
+        "Use case diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/02_use_cases.svg"
+      ],
+      [
+        "p",
+        "Component diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/03_components.svg"
+      ],
+      [
+        "p",
+        "Analysis and supporting data: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/docs/DATA_ANALYSIS.md"
+      ],
+      [
+        "p",
+        "Task register and provisional schedule: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/docs/YOUTRACK_LIVE_TASKS.md"
       ]
     ]
   ],
@@ -968,9 +1410,6 @@
         "[S12] Li et al.. 2025. Unveiling the Merits and Defects of LLMs in Automatic Review Generation for Scientific Papers. Research preprint; reports IEEE ICDM short-paper acceptance. https://arxiv.org/abs/2509.19326"
       ],
       [
-        "p"
-      ],
-      [
         "p",
         "[D01] Penelope.ai. accessed 2026-10-22. Official product features. Product documentation. https://www.penelope.ai/"
       ],
@@ -985,6 +1424,38 @@
       [
         "p",
         "[D04] OpenAI. accessed 2026-10-22. Structured model outputs. Technical documentation. https://developers.openai.com/api/docs/guides/structured-outputs"
+      ],
+      [
+        "p",
+        "[A] ICML. 2026. Author Instructions. Sections: Paper Submissions; Camera-ready Instructions. https://icml.cc/Conferences/2026/AuthorInstructions"
+      ],
+      [
+        "p",
+        "[B] NeurIPS. 2025. Call for Papers. Sections: Paper Formatting Instructions; Paper Checklist; Double-blind Reviewing. https://nips.cc/Conferences/2025/CallForPapers"
+      ],
+      [
+        "p",
+        "[C] ACL. 2026. Main Conference. Section: Paper Submission Details. https://2026.aclweb.org/calls/main_conference_papers/"
+      ],
+      [
+        "p",
+        "[D] CVPR. 2026. Author Guidelines. Section: Submission Policies. https://cvpr.thecvf.com/Conferences/2026/AuthorGuidelines"
+      ],
+      [
+        "p",
+        "[E] ACL Rolling Review. Current web revision. Authors Beware: Common Submission Problems. Section: Paper Format. https://aclrollingreview.org/authorchecklist"
+      ],
+      [
+        "p",
+        "[F] ACLPUB. Current web revision. Paper formatting guidelines. Sections: Paper Length; Style Files. https://acl-org.github.io/ACLPUB/formatting.html"
+      ],
+      [
+        "p",
+        "[G] ICLR. 2026. Author Guide. Sections: Paper length; Double-blind submission; Recommended: Ethics statement. https://iclr.cc/Conferences/2026/AuthorGuide"
+      ],
+      [
+        "p",
+        "[H] Zagermann, J. 2024. CHI 2025 - Papers Track, post-review report (Round 1). Official conference report, 20 December 2024. https://chi2025.acm.org/chi-2025-papers-track-post-review-report-round-1/"
       ]
     ]
   ]
