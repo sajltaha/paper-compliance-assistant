@@ -20,6 +20,6 @@ U01 and U03 mention saving progress and rechecking, supporting FR08/FR10. U03 wa
 
 The log contains 15 observations from three unique participants. U01's preparation-time estimate of 2–3 hours, U02's estimate of about one hour or 4–5 hours when problems arise, and U03's estimate of 3–4 hours are self-reports. They do not measure system time savings. Some examples concern Russian-language events; transfer to the English PDF/DOCX MVP requires separate checking. These discussions provide neither usability-test nor benchmark results.
 
-Substantive responses, consent and requirement mappings are documented for three participants dated 20 October 2026. PCA-22 records their acceptance. Its stage was Backlog in the dated 23 October task snapshot; that snapshot does not establish later acceptance.
+PCA-22 is Done in the live 24 October 2026, 02:58 Asia/Almaty snapshot. Three participant records dated 20 October 2026, consent and 15 mapped observations were accepted through Talgat's PR #7 review: https://github.com/sajltaha/paper-compliance-assistant/pull/7#issuecomment-6373878035 . The accepted records remain distinct from product usability or benchmark results.
 
 Detailed log: docs/user_discussions_log.csv. The decisions above confirm and refine existing scope; proposed features remain implementation-stage work.

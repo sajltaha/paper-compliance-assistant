@@ -66,9 +66,9 @@ These commands do not start an HTTP server, database or AI service. Handler test
 
 Technical specifications: [API contract](docs/API_CONTRACT.md), [findings schema](docs/ai_contract.schema.json) and [requirement/component/data mapping](docs/ARCHITECTURE_TRACEABILITY.md).
 
-Research evidence: [interview findings](docs/INTERVIEW_FINDINGS.md), [anonymized discussion log](docs/user_discussions_log.csv), [conference profiles](docs/conference_policy_data.csv), [CHI counts](docs/chi2025_screening_data.csv) and [analysis-to-requirement mapping](docs/data_requirement_mapping.csv). Three discussions dated 20 October 2026 provide 15 observations; self-reported preparation times are not measured product improvements.
+Research evidence: [interview findings](docs/INTERVIEW_FINDINGS.md), [anonymized discussion log](docs/user_discussions_log.csv), [conference profiles](docs/conference_policy_data.csv), [CHI counts](docs/chi2025_screening_data.csv) and [analysis-to-requirement mapping](docs/data_requirement_mapping.csv). Three discussions dated 20 October 2026 provide 15 observations and are accepted under completed PCA-22; self-reported preparation times are not measured product improvements.
 
-Tracking: [task register](docs/YOUTRACK_LIVE_TASKS.md) and [task/PR traceability](docs/TRACEABILITY.md). Live [YouTrack tasks](https://paper-compliance-assistant.youtrack.cloud/issues/PCA) and [board](https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1) record subsequent changes. Supervisor responses are recorded in [the feedback log](docs/supervisor_feedback_log.csv); substantive dated evidence remains unverified in the available records.
+Tracking: [task register](docs/YOUTRACK_LIVE_TASKS.md) and [task/PR traceability](docs/TRACEABILITY.md). The 24 October 2026, 02:58 Asia/Almaty snapshot contains 22 issues: 11 Done, 5 Review, 2 Develop and 4 Backlog. Live [YouTrack tasks](https://paper-compliance-assistant.youtrack.cloud/issues/PCA) and [board](https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1) record subsequent changes. Supervisor responses are recorded in [the feedback log](docs/supervisor_feedback_log.csv); substantive dated evidence remains unverified in the available records.
 
 ## Structure and report source
 
@@ -86,10 +86,10 @@ Report generation requires Python and python-docx:
 python3 tools/build_report.py --source-sha <40-character-source-commit> --output-dir <output-directory>
 ```
 
-The generated DOCX can be exported to PDF. The source commit identifies the matching report links and project snapshot. Historical `prob-period-1` remains at `86141520e74e46f433be94ae29639844ec4e3760`; the assignment/form version-name constraint and submission record are described in [Management](docs/10_management.md#submission-version).
+The generated DOCX can be exported to PDF. The source commit identifies the matching report links and project snapshot. The team-selected `prob-period-1` points to `deca7d761aa449f7f8223c8514707706fb44d034`. The original `86141520e74e46f433be94ae29639844ec4e3760` target is retained under `prob-period-1-before-update` and `archive/prob-period-1-before-update`. Later main documentation is a different source snapshot. The assignment/form naming difference and outstanding submission records are described in [Management](docs/10_management.md#submission-version).
 
 ## Evaluation and privacy
 
 The planned comparison uses rules-only B0, whole-document LLM B1 and hybrid B2 on a rights-cleared frozen corpus: 8 development and at least 20 unique held-out manuscripts. Metrics include violation macro-F1, coverage/abstention, supported evidence, stability, latency, cost and usability. No benchmark result is claimed.
 
-The repository is public; selected YouTrack guest views were verified for reading. API keys belong in server-side environment variables. Private manuscripts, original interview records and supervisor correspondence are excluded from Git. External processing and deletion requirements are specified in the architecture and API contract. Contribution workflow is in [CONTRIBUTING.md](CONTRIBUTING.md).
+The repository is public; selected YouTrack guest views were verified for reading. API keys belong in server-side environment variables. Private manuscripts, original interview records and supervisor correspondence are excluded from Git. External processing and deletion requirements are specified in the architecture and API contract.
