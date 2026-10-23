@@ -52,6 +52,7 @@ def make_doc():
     cap=d.add_paragraph(b[2]);cap.style='Caption';cap.runs[0].font.color.rgb=RGBColor(0,0,0)
    elif b[0]=='table':
     heads,rows,widths=b[1:];t=d.add_table(rows=1,cols=len(heads));t.autofit=False
+    if heads==['Analysis','Requirements','Implementation tasks','Design consequence']:widths=[.75,1.25,1.4,3.1]
     if widths:
      for c,w in zip(t.columns,widths):c.width=Inches(w)
     for j,h in enumerate(heads):t.rows[0].cells[j].text=h

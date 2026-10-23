@@ -18,4 +18,6 @@ The 24 October 2026 handler check also passed on Node v24.19.0, Linux x86_64. Th
 
 ## Scope
 
+The final synchronization commit a962f675b23f36b2517e457139f3818d9b820280 also passed the GitHub Actions Prototype checks workflow: https://github.com/sajltaha/paper-compliance-assistant/actions/runs/40036505515 . This run includes the new export regression.
+
 These results cover handler behavior, not visual layout, accessibility, real PDF/DOCX parsing, backend semantic validation or AI quality. No product benchmark is established. T01–T20 in docs/test_plan.csv remain planned implementation-stage procedures. Backend intake tests and their instructions are in backend/README.md and backend/internal/document/validator_test.go. Personal review acceptance is recorded in the relevant PR and task records.
