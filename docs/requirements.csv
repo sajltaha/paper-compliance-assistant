@@ -9,7 +9,7 @@ FR07,Must,Keep formal and semantic checks distinct,Results identify engine=rule 
 FR08,Must,Save and retrieve analysis history,"Restarting the local system preserves document metadata, criterion versions, results and run configuration; a run can be reopened.",UC5,T08,Talgat
 FR09,Should,Export a structured result,"An analysis can be downloaded as JSON with document hash, criterion version and model/prompt configuration; PDF export is a later enhancement.",UC4,T09,Talgat
 FR10,Must,Recheck a revised manuscript,A new manuscript creates a new document version and run; the earlier result remains identifiable.,UC6,T10,Both
-FR11,Must,Handle external AI failures,"Timeout, refusal, invalid JSON and provider errors produce a retryable failure state; no successful assessment is invented.",UC3,T11,Both
+FR11,Must,Handle external AI failures,"Timeout, refusal, invalid JSON and provider errors produce explicit failed states with a documented retryable flag. Transient failures allow bounded retry; refusals and permanent errors require an appropriate input/configuration change and are not retried automatically. No successful assessment is invented.",UC3,T11,Both
 FR12,Must,Explain processing and deletion controls,"Before external analysis, UI explains that extracted content goes to the configured provider; user can delete stored files and results.",UC1,T12,Talgat
 NFR01,Must,Reproducible evaluation,"Each run records document hash, confirmed criteria, parser/model ID and version, prompt/schema version, sampling settings and timestamp.",All,T13,Both
 NFR02,Must,Validate structured data,All accepted results satisfy the shared JSON schema; each criterion occurs once; all cited block IDs exist and quoted text matches source text after documented whitespace normalization.,UC3,T14,Both
@@ -19,3 +19,4 @@ NFR05,Should,Measure user-visible latency and cost,"Report p50/p95 latency, prov
 NFR06,Must,Assess correctness against human labels,"Evaluate >= 20 rights-cleared manuscripts with 8-12 criteria each using a frozen test split; report macro-F1, abstention coverage and supported-evidence rate. These are planned measurements, not achieved results.",All,T18,Kaisar
 NFR07,Should,Make key flows accessible,"Core controls support keyboard navigation, visible focus and labeled error/status messages on desktop and narrow screens.",UC1-UC6,T19,Both
 NFR08,Must,Expose unsupported capabilities honestly,"UI and reports distinguish unavailable OCR/layout checks from checked failures, and demonstrate that unknown evidence is not treated as a pass. Failed conversion and unreadable/scanned content pass a quality gate before rule evaluation.",UC4,T20,Both
+

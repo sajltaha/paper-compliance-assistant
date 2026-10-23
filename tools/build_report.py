@@ -8,6 +8,7 @@ from docx.opc.constants import RELATIONSHIP_TYPE as RT
 ap=argparse.ArgumentParser()
 ap.add_argument('--source-sha',required=True)
 ap.add_argument('--output-dir',required=True)
+ap.add_argument('--local-amendments',default='')
 args=ap.parse_args()
 if not re.fullmatch(r'[0-9a-f]{40}',args.source_sha):raise SystemExit('Use the exact immutable 40-character source commit')
 ROOT=Path(__file__).resolve().parents[1]
@@ -28,13 +29,13 @@ def make_doc():
    for border in list(pr.findall(qn('w:pBdr'))):pr.remove(border)
  header=sec.header.paragraphs[0];header.text='AITU  |  SOFTWARE ENGINEERING  |  FIRST PROBATIONARY PERIOD';header.style='Caption';header.runs[0].font.size=Pt(8);header.runs[0].font.color.rgb=RGBColor(0,0,0)
  foot=sec.footer.paragraphs[0];foot.alignment=2
- foot.add_run('Audit corrected candidate 23 October 2026  |  ')
+ foot.add_run('Audit corrected candidate 24 October 2026  |  ')
  fld=OxmlElement('w:fldSimple');fld.set(qn('w:instr'),'PAGE');foot._p.append(fld)
  for r in foot.runs:r.font.size=Pt(8)
  d.add_paragraph('Scientific Paper Compliance Assistant','Title')
  d.add_paragraph('First probationary period report','Subtitle')
- d.add_paragraph('Prepared for supervisor and committee review\nСайлаубеков Талғат Ерханұлы  |  SE-2429\nНұрышев Қайсар Серікұлы  |  SE-2413\nSupervisor  Солтан Гульжан Жексенбаевна\n23 October 2026')
- p=d.add_paragraph();r=p.add_run('Status  ');r.bold=True;p.add_run('Research and design prepared. Audit corrections are ready for review; separate external relevance evidence, substantive supervision and other-participant review remain open. Source revision ' + args.source_sha[:12] + '.')
+ d.add_paragraph('Prepared for supervisor and committee review\nСайлаубеков Талғат Ерханұлы  |  SE-2429\nНұрышев Қайсар Серікұлы  |  SE-2413\nSupervisor  Солтан Гульжан Жексенбаевна\n24 October 2026')
+ p=d.add_paragraph();r=p.add_run('Status  ');r.bold=True;p.add_run('Research and design prepared. Audit corrections are ready for review; substantive supervision and other-participant review remain open. Source revision ' + args.source_sha[:12] + ('; local amendments ' + args.local_amendments[:12] if args.local_amendments else '') + '.')
  d.add_paragraph('Contents','Heading 2')
  d.add_paragraph('1 Proposal   2 Relevance   3 Literature   4 Existing systems   5 Technologies\n6 Requirements   7 Architecture   8 UX prototype   9 Evaluation\n10 Management and risks   11 Supervisor feedback   References')
  for si,(title,blocks) in enumerate(sections):
@@ -88,3 +89,4 @@ for para in d.paragraphs:
   if part[len(url):]:para.add_run(part[len(url):])
 d.save(p)
 print(p)
+

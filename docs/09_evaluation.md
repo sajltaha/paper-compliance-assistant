@@ -8,7 +8,7 @@ Baseline B0 runs deterministic checks only and abstains on semantic criteria. Ba
 
 ## Corpus and annotation
 
-Plan at least 20 rights-cleared text-based English manuscripts with 8-12 criteria each. Use permitted public papers or author-consented drafts, plus explicitly synthetic controlled variants. Preserve base-document groups so variants never cross development/test boundaries. A proposed split is 8 development and 12 held-out documents. Freeze test labels before tuning prompts. Use two annotators; record initial labels, disagreements and adjudicated labels. Synthetic variants test known violations but cannot substitute for evaluation on real papers.
+Plan at least 28 unique rights-cleared text-based English manuscripts with 8-12 criteria each: 8 development documents and at least 20 held-out documents for the final evaluation required by NFR06. Use permitted public papers or author-consented drafts, plus explicitly synthetic controlled variants. Preserve base-document groups so variants never cross development/test boundaries. The proposed split is 8 development and 20 held-out documents; variants remain in their base-document group and do not increase the count of unique held-out manuscripts. Freeze test labels before tuning prompts. Use two annotators; record initial labels, disagreements and adjudicated labels. Synthetic variants test known violations but cannot substitute for evaluation on real papers.
 
 Create criteria from real, dated conference guidelines, respecting applicable reuse terms. Include missing required sections, abstract-length violations, absent limitations, weakly specified methodology, ambiguous rules, cross-section evidence, unsupported layout requirements and adversarial embedded instructions. Confirm ground-truth semantics with the supervisor or a qualified reviewer. Do not assume the two student annotators alone establish scientific correctness.
 
@@ -26,3 +26,14 @@ Create criteria from real, dated conference guidelines, respecting applicable re
 Record hardware, operating system, Docker and parser versions, model identifier, provider settings, input hashes, rubric/prompt/schema versions, corpus manifest and date. Use document-level paired results and report uncertainty where the sample permits; do not treat multiple criteria from one paper as independent papers. Categorize errors as extraction, interpretation, evidence selection, rule execution, LLM judgment, schema or interface failure. All tests in test_plan.csv are planned and unexecuted until the corresponding implementation exists.
 
 The prototype can be checked now for navigation, form validation, filtering, evidence display and honest demo labelling. These checks do not validate the AI pipeline. Budget-controlled external API runs require a configured key and an approved spending limit before execution.
+
+
+## Metric calculation protocol
+
+Freeze each criterion type and gold applicability before evaluation. The primary analysis uses the 20 held-out unique manuscripts; development results are diagnostic and are not pooled into the final test result. Keep synthetic variants grouped and report them separately.
+
+For each criterion type, fail is the positive class: precision = TP/(TP+FP), recall = TP/(TP+FN), and F1 = 2TP/(2TP+FP+FN). Report the unweighted mean of per-type F1 values for predeclared types with gold positives. If a type has no gold positives, report its counts and false positives separately, mark its F1 undefined, and disclose how many types enter the mean. A type with gold positives but no predicted positives has F1=0. No observed applicable cases means no estimated score.
+
+Report two views. Conditional F1 uses gold-assessable criteria with pass/fail predictions and must be accompanied by coverage = answered gold-assessable criteria / all gold-assessable applicable criteria. End-to-end violation recall counts abstentions on true violations as missed detections. Show abstained positives and negatives explicitly so dropping difficult criteria cannot improve an unqualified accuracy claim. Evaluate not_applicable and gold-not-assessable cases separately; never count them as true passes.
+
+Report a pooled confusion matrix and per-type counts alongside document-level paired results. Any confidence intervals or resampling use base-document groups, not independently resampled criteria or synthetic variants. These are future evaluation instructions, not measured results.

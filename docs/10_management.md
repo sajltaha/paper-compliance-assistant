@@ -32,3 +32,10 @@ Dates after the checkpoint are provisional internal planning targets, not univer
 Changes use task-linked branches and PRs. Keep main as the integrated baseline and retain the original contribution history. Do not move a submitted tag. Implementation tasks remain open until their acceptance criteria are met.
 
 The visible Git history is concentrated on 22-23 October 2026; it does not establish weeks of progressive work. Keep the existing history unchanged, record future substantive work as it happens and avoid artificial commits or backdated evidence. Every significant artifact is mapped to a task, historical PR and immutable baseline in docs/TRACEABILITY.md. Assigned roles are not proof of personal authorship or understanding.
+
+
+## Repeat audit status
+
+Technical COMMENT reviews are recorded for PR #5 (5632920719) and PR #6 (5633430095). Talgat has not reviewed PR #6; the earlier contrary report was withdrawn. These comments do not fulfil the required other-participant review. PR #5/#6/#7 remain unmerged. A previous merge attempt was rejected by automatic approval review; main and the historical tag remain unchanged. PR #7 contains evaluation, mapping and retry corrections. The interview synthesis and anonymized observation log are included in this revision with the interviewer-confirmed date and publication consent. Substantive supervisor evidence, personal team review, authorized integration, final tag/form agreement and submission receipt remain open.
+
+See docs/REPEAT_AUDIT_2026_10_23.md and docs/PCA22_ACTION_GUIDE_RU.md.

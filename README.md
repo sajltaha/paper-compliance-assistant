@@ -61,3 +61,7 @@ The actual visible history is concentrated on 22–23 October 2026; no multi-wee
 ## Follow-up technical audit
 
 The follow-up based on PR #5 fixes stale manuscript selection, empty-file handling and run/export filename consistency in the synthetic prototype, demonstrates all four result states, and adds prototype CI. It also corrects CONTRIBUTING version instructions and clarifies the findings payload versus API/export envelopes. See docs/FOLLOWUP_AUDIT_2026_10_23.md and docs/PROTOTYPE_VERIFICATION.md. These assistant-assisted checks do not close personal teammate review, supervisor feedback or external user evidence.
+
+## Repeat audit and user discussions
+
+See [repeat audit](docs/REPEAT_AUDIT_2026_10_23.md) for the full 22-task assessment, PR #5 technical findings and integration limits. [PCA-22 action guide](docs/PCA22_ACTION_GUIDE_RU.md) provides a practical protocol for real discussions; it contains no fabricated responses. The new document corrections require review and do not alter the already checked PR #6.
