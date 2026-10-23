@@ -40,3 +40,9 @@ Go, a local browser binary and a JSON Schema validator were unavailable; no loca
 ## Remaining external evidence and finalization
 
 Keep PCA-1/3/6/13/14/22 open as applicable. Obtain genuine personal review and real stakeholder/supervisor evidence, resolve findings, integrate the checked version, create pre-defense-1 without moving the historical tag, settle the form's tag-name conflict, and rebuild final PDFs plus board evidence from that exact version. The required board PDF and a successful form receipt were not among the four attachments. They are not represented as produced or submitted by this audit. No private correspondence was accessed or sent, and no final merge, release tag or form submission was performed.
+
+## Subsequent guest browser evidence
+
+After the initial technical audit, the live board and full PCA-18/PCA-16 pages were opened as a guest in the connected Chrome browser. The board totals match the register. A separate seven-page YouTrack_Board_and_Tasks.pdf was prepared from screenshots; assignees are anonymized in guest view. This is browser access evidence for these selected pages, not a product-prototype browser test. Live PCA-16 still needs an authorized editor to add PR #6/final-version links. The form was not sent. See ACCESS_VERIFICATION.md.
+
+Prototype checks on code commit 13b7abe87f941d416886e9daaff2535544c94a8c passed on both GitHub push and pull_request events (runs 39999575759 and 39999594482). This subsequent documentation update changes no prototype/backend code; it does not claim a new Go run.

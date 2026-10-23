@@ -1340,7 +1340,7 @@
       ],
       [
         "p",
-        "A cookie-free, authorization-free HTTP check on 23 October 2026 identified login=guest and returned HTTP 200 for the PCA project, board and PCA-2 description. This establishes anonymous read access at the API level; it does not test every browser presentation or claim anonymous edit rights. See docs/ACCESS_VERIFICATION.md."
+        "A cookie-free, authorization-free HTTP check on 23 October 2026 identified login=guest and returned HTTP 200 for the PCA project, board and PCA-2 description. This establishes anonymous read access at the API level; it does not test every browser presentation or claim anonymous edit rights. See docs/ACCESS_VERIFICATION.md. A subsequent guest Chrome check opened the live board and full PCA-18/PCA-16 descriptions with Sign in visible and guest actions disabled. The 22-issue totals matched the register. A separate board-and-tasks PDF preserves selected screenshots; it must be refreshed after final version or evidence changes. Live PCA-16 still needs an authorized editor to add follow-up PR #6 and final-version links."
       ],
       [
         "p",
