@@ -1,153 +1,23 @@
-﻿Summary,Description,Priority,Due Date
-Confirm proposal and scope,"Live issue: PCA-1
-Owner: Talgat
-Stage snapshot: Review
-Expected outcome: Confirm proposal and scope
-Acceptance criteria: Proposal identifies users, scope and exclusions; both members confirm.
-Deliverable: docs/01_proposal.md
-Target: 2026-10-23",High,2026-10-23
-Analyse public conference requirements and published screening data,"Live issue: PCA-2
-Owner: Kaisar
-Stage snapshot: Done
-Expected outcome: Analyse public conference requirements and published screening data
-Acceptance criteria: Analyse official conference policies and published screening data; retain source links, computations, limitations and derived requirements.
-Deliverable: docs/02_relevance.md
-Target: 2026-10-23",Critical,2026-10-23
-Review scientific literature and matrix,"Live issue: PCA-3
-Owner: Kaisar
-Stage snapshot: Review
-Expected outcome: Review scientific literature and matrix
-Acceptance criteria: >=12 used sources, >=8 scientific; each has limitation and project implication; team reads and verifies core papers.
-Deliverable: docs/literature_matrix.csv
-Target: 2026-10-23",High,2026-10-23
-Review comparison of four existing systems,"Live issue: PCA-4
-Owner: Kaisar
-Stage snapshot: Done
-Expected outcome: Review comparison of four existing systems
-Acceptance criteria: 4 systems, 8 common criteria, primary source for capability claims; not-documented is not absent.
-Deliverable: docs/04_existing_systems.md
-Target: 2026-10-23",High,2026-10-23
-Select storage and document parser after review,"Live issue: PCA-5
-Owner: Talgat
-Stage snapshot: Done
-Expected outcome: Select storage and document parser after review
-Acceptance criteria: Compare >=3 technical decisions with 2-3 alternatives; record trade-offs and remaining pilot decisions.
-Deliverable: docs/05_technology.md
-Target: 2026-10-23",High,2026-10-23
-Review functional and non-functional requirements,"Live issue: PCA-6
-Owner: Talgat
-Stage snapshot: Review
-Expected outcome: Review functional and non-functional requirements
-Acceptance criteria: Every Must has acceptance criteria and test; Kaisar reviews AI requirements.
-Deliverable: docs/requirements.csv
-Target: 2026-10-23",Critical,2026-10-23
-Review architecture and API contract,"Live issue: PCA-7
-Owner: Talgat
-Stage snapshot: Done
-Expected outcome: Review architecture and API contract
-Acceptance criteria: Three diagrams have editable sources and exports; API, components and data entities agree.
-Deliverable: diagrams/
-Target: 2026-10-23",High,2026-10-23
-Review interactive UX prototype,"Live issue: PCA-8
-Owner: Kaisar
-Stage snapshot: Done
-Expected outcome: Review interactive UX prototype
-Acceptance criteria: User can follow upload, confirmed criteria, results/evidence and error flow; mock mode visibly identified.
-Deliverable: prototype/index.html
-Target: 2026-10-23",High,2026-10-23
-Approve verification corpus and baselines,"Live issue: PCA-9
-Owner: Kaisar
-Stage snapshot: Done
-Expected outcome: Approve verification corpus and baselines
-Acceptance criteria: Rights-cleared corpus plan, two annotators, frozen split, metrics and baseline protocols recorded.
-Deliverable: docs/09_evaluation.md
-Target: 2026-10-23",High,2026-10-23
-Connect GitHub and configure team access,"Live issue: PCA-10
-Owner: Talgat
-Stage snapshot: Done
-Expected outcome: Connect GitHub and configure team access
-Acceptance criteria: Repo accessible to both students; supervisor and committee access verified; GitHub connection can upload.
-Deliverable: README.md
-Target: 2026-10-23",Critical,2026-10-23
-Create YouTrack project and import work items,"Live issue: PCA-11
-Owner: Talgat
-Stage snapshot: Done
-Expected outcome: Create YouTrack project and import work items
-Acceptance criteria: Actual tasks have real IDs, owners, priorities, acceptance criteria, due dates and links.
-Deliverable: docs/youtrack_tasks.csv
-Target: 2026-10-23",Critical,2026-10-23
-Review risks and project milestones,"Live issue: PCA-12
-Owner: Talgat
-Stage snapshot: Done
-Expected outcome: Review risks and project milestones
-Acceptance criteria: Risk register covers parsing, cost, hallucination, access and evaluation dependencies.
-Deliverable: docs/10_management.md
-Target: 2026-10-23",High,2026-10-23
-Obtain supervisor review and apply revisions,"Live issue: PCA-13
-Owner: Both
-Stage snapshot: Done
-Expected outcome: Obtain supervisor review and apply revisions
-Acceptance criteria: Supervisor comments are dated and linked to explicit decisions and actual revisions.
-Deliverable: docs/11_supervisor_feedback.md
-Target: 2026-10-23",Critical,2026-10-23
-Make individual contributions and peer PR reviews,"Live issue: PCA-14
-Owner: Both
-Stage snapshot: Develop
-Expected outcome: Make individual contributions and peer PR reviews
-Acceptance criteria: Each student makes a genuine substantive change using own account; teammate reviews PR; changes link to actual tasks.
-Deliverable: CONTRIBUTING.md
-Target: 2026-10-24",Critical,2026-10-24
-Prepare PDF of live YouTrack board and tasks,"Live issue: PCA-15
-Owner: Talgat
-Stage snapshot: Done
-Expected outcome: Prepare PDF of live YouTrack board and tasks
-Acceptance criteria: One PDF shows actual board plus representative task details, including assignees and acceptance criteria.
-Deliverable: docs/SUBMISSION_CHECKLIST.md
-Target: 2026-10-24",Critical,2026-10-24
-"Finalize report, access checks and submission tag","Live issue: PCA-16
-Owner: Talgat
-Stage snapshot: Develop
-Expected outcome: Finalize report, access checks and submission tag
-Acceptance criteria: Replace pending evidence, resolve comments, verify links; create prob-period-1 only at final agreed revision and export matching PDFs.
-Deliverable: docs/SUBMISSION_CHECKLIST.md
-Target: 2026-10-24",Critical,2026-10-24
-Implement Go upload and persistence API,"Live issue: PCA-17
-Owner: Talgat
-Stage snapshot: Backlog; provisional internal target
-Expected outcome: Implement Go upload and persistence API
-Acceptance criteria: FR01, FR08, FR10-12 and relevant security tests pass on documented local setup.
-Deliverable: backend/ HTTP API, persistence and tests
-Target: 2026-11-07
-Target is provisional internal planning, not a university deadline.",Normal,2026-11-07
-Implement PDF DOCX extraction adapter,"Live issue: PCA-18
-Owner: Kaisar
-Stage snapshot: Develop; provisional internal target
-Expected outcome: Implement PDF DOCX extraction adapter
-Acceptance criteria: FR02 and parser evaluation cases pass; retain provenance and reject unsupported scans.
-Deliverable: PDF/DOCX extraction adapter and source-anchor tests
-Target: 2026-10-31
-Target is provisional internal planning, not a university deadline.",Normal,2026-10-31
-Implement criterion normalization and evaluation,"Live issue: PCA-19
-Owner: Kaisar
-Stage snapshot: Backlog; provisional internal target
-Expected outcome: Implement criterion normalization and evaluation
-Acceptance criteria: FR03-07, FR11 and schema/evidence validation pass against fixtures; provider key server-side.
-Deliverable: ai/ evaluator and schema/evidence integration tests
-Target: 2026-11-14
-Target is provisional internal planning, not a university deadline.",Normal,2026-11-14
-Implement Vue interface and Docker startup,"Live issue: PCA-21
-Owner: Talgat
-Stage snapshot: Backlog; provisional internal target
-Expected outcome: Implement Vue interface and Docker startup
-Acceptance criteria: Real API integration replaces mock; error/empty/loading states and startup checks pass.
-Deliverable: frontend/ Vue application and Docker Compose startup
-Target: 2026-11-21
-Target is provisional internal planning, not a university deadline.",Normal,2026-11-21
-Run controlled evaluation and analyse errors,"Live issue: PCA-20
-Owner: Kaisar
-Stage snapshot: Backlog; provisional internal target
-Expected outcome: Run controlled evaluation and analyse errors
-Acceptance criteria: Frozen test protocol executed; metrics and failures reported without tuning on test data.
-Deliverable: Evaluation results, frozen-corpus manifest and error analysis
-Target: 2026-11-28
-Target is provisional internal planning, not a university deadline.",Normal,2026-11-28
+﻿Live issue,Summary,Owner,Stage,Target date,Artifact
+PCA-1,Confirm proposal and scope,Talgat,Review,2026-10-23,docs/01_proposal.md
+PCA-2,Analyse public conference requirements and published screening data,Kaisar,Done,2026-10-23,docs/DATA_ANALYSIS.md
+PCA-3,Review scientific literature and matrix,Kaisar,Review,2026-10-23,docs/literature_matrix.csv
+PCA-4,Review comparison of four existing systems,Kaisar,Done,2026-10-23,docs/04_existing_systems.md
+PCA-5,Compare storage and document parser alternatives,Talgat,Done,2026-10-23,docs/05_technology.md
+PCA-6,Review functional and non-functional requirements,Talgat,Review,2026-10-23,docs/requirements.csv
+PCA-7,Review architecture and API contract,Talgat,Done,2026-10-23,docs/07_architecture.md
+PCA-8,Review interactive UX prototype,Kaisar,Done,2026-10-23,prototype/index.html
+PCA-9,Approve verification corpus and baselines,Kaisar,Done,2026-10-23,docs/09_evaluation.md
+PCA-10,Connect GitHub and configure team access,Talgat,Done,2026-10-23,README.md
+PCA-11,Create YouTrack project and import work items,Talgat,Done,2026-10-23,docs/YOUTRACK_LIVE_TASKS.md
+PCA-12,Review risks and project milestones,Talgat,Done,2026-10-23,docs/10_management.md
+PCA-13,Obtain supervisor review and apply revisions,Talgat,Review,2026-10-24,docs/11_supervisor_feedback.md
+PCA-14,Make individual contributions and peer PR reviews,Talgat,Review,2026-10-24,CONTRIBUTING.md
+PCA-15,Prepare PDF of live YouTrack board and tasks,Talgat,Done,2026-10-24,docs/SUBMISSION_CHECKLIST.md
+PCA-16,"Finalize report, access checks and submission tag",Talgat,Develop,2026-10-24,docs/AUDIT_RESOLUTION.md
+PCA-17,Implement Go upload and persistence API,Talgat,Backlog,2026-11-07,docs/API_CONTRACT.md
+PCA-18,Implement PDF DOCX extraction adapter,Kaisar,Develop,2026-10-31,backend/internal/document/validator.go
+PCA-19,Implement criterion normalization and evaluation,Kaisar,Backlog,2026-11-14,docs/ai_contract.schema.json
+PCA-20,Run controlled evaluation and analyse errors,Kaisar,Backlog,2026-11-28,docs/09_evaluation.md
+PCA-21,Implement Vue interface and Docker startup,Talgat,Backlog,2026-11-21,prototype/index.html
+PCA-22,Resolve user-discussion or client-agreement evidence,Talgat,Backlog,2026-10-24,docs/USER_EVIDENCE_PROTOCOL_RU.md

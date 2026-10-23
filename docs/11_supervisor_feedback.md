@@ -1,28 +1,34 @@
 # 11 Supervisor feedback and next steps
 
-General supervisor feedback on the consolidated report has been received. No specific corrections were requested. This does not separately approve every technical choice.
+A general positive response to the consolidated report was relayed by the project representative. No specific corrections are recorded. The exact response date, original evidence reference and individual decisions reviewed have not been verified in the supplied package. This is not evidence of detailed approval of each technology, corpus, criterion or requirement.
 
-| Feedback | Decision | Result |
+| Evidence item | Verified state | Required action |
 | --- | --- | --- |
-| General positive response; no specific requested correction. | Retain the research and design content. | Feedback recorded in the source section and feedback log; the original conversation screenshot is retained privately. |
-| Final consistency check. | Update administrative facts and access/source links. | Task status, provisional implementation targets, direct artifact links and submission packaging updated. These are consistency corrections, not attributed supervisor requests. |
+| General response | Relayed; no specific correction requested. | Keep the statement limited to that fact. |
+| Response date and primary record | Not verified. | Record the actual date and a private evidence reference with permission. |
+| Substantive decisions | Coverage not established. | Ask for review of scope, requirements, technical trade-offs and evaluation; record actual decisions. |
+| Resulting improvements | No supervisor-specific revisions evidenced. | Attribute audit corrections to the audit; link future real comments to revisions or a reasoned no-change decision. |
 
-Before submission, complete the outstanding participant confirmations and PR step, integrate the matching materials, create prob-period-1 and verify all form fields and files. The current supervisor response does not replace these separate checks.
+PCA-13 remains in Review. Templates in docs/REVIEW_HANDOFF_RU.md make the remaining review concrete; their existence does not count as received feedback. No weekly meeting history is claimed.
 
-Text extraction, an HTTP API, persistence, a Vue application, external LLM integration, Docker startup and controlled system evaluation remain implementation work.
+## Submission status
+
+The package corrects the audit findings that can be resolved from existing evidence. Completion still depends on genuine other-participant review, external relevance evidence or explicit substitution approval, substantive supervisor evidence, final version integration and form checks. Full application development remains next-stage work.
 
 ## Direct artifact links
 
-Prototype HTML: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/prototype/index.html
+Rendered links use the immutable revision supplied to the report builder. Prototype HTML: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/prototype/index.html
 
-Download the repository and open prototype/index.html locally. It uses synthetic results and requires no installation or API key.
+Download that revision and open prototype/index.html locally. It uses synthetic results; file contents are not parsed and no model is called.
 
-Context diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/01_context.svg
+Context SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/01_context.svg
 
-Use case diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/02_use_cases.svg
+Use case SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/02_use_cases.svg
 
-Component diagram SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/diagrams/03_components.svg
+Component SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/03_components.svg
 
-Analysis and supporting data: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/docs/DATA_ANALYSIS.md
+Analysis and data: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/DATA_ANALYSIS.md
 
-Task register and provisional schedule: https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/docs/YOUTRACK_LIVE_TASKS.md
+Task register: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/YOUTRACK_LIVE_TASKS.md
+
+Audit resolution: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/AUDIT_RESOLUTION.md

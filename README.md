@@ -10,14 +10,14 @@ Authors need to check a manuscript against conference requirements and understan
 ## Team and supervisor
 | Member | Group | GitHub | Planned role |
 |---|---|---|---|
-| Сайлаубеков Талғат Ерханұлы | SE-2429 | [sajltaha](https://github.com/sajltaha) | Frontend, Backend, storage, integration, DevOps |
+| Сайлаубеков Талғат Ерханұлы | SE-2429 | [sajltaha](https://github.com/sajltaha) | Frontend, Backend, storage, integration, DevOps, functional QA |
 | Нұрышев Қайсар Серікұлы | SE-2413 | [stqnlee](https://github.com/stqnlee) | UI/UX, document processing, AI/LLM, AI quality checks |
 
 Supervisor: Солтан Гульжан Жексенбаевна.
 
 ## Scope and status
 Prepared: proposal, critical literature review (16 sources, 12 research entries), four-system comparison, six technology comparisons, 20 requirements with acceptance criteria, three source-editable diagrams, API/schema draft, interactive UX mockup, evaluation plan and task/evidence templates.
-Implemented foundation: PDF/DOCX intake validation, SHA-256 and unit tests in merged PR #2; CI passed. The PR is partial PCA-18 work, not PCA-19 criterion evaluation. Not implemented: text extraction, Go HTTP API, Vue application, database, OpenAI integration and Docker deployment. General supervisor feedback and the board screenshot PDF are available. Public PCA reading is configured. Remaining: participant confirmations, final PR integration, anonymous link verification, fixed tag and form checks. 
+Implemented foundation: PDF/DOCX intake validation, SHA-256 and unit tests in merged PR #2; CI passed. The PR is partial PCA-18 work, not PCA-19 criterion evaluation. Not implemented: text extraction, Go HTTP API, Vue application, database, OpenAI integration and Docker deployment. General supervisor feedback and the board screenshot PDF are available. Public PCA reading is configured. Audit correction: representative acceptance is retained; separate other-participant review, substantive supervisor evidence and external discussion/substitution evidence remain open. See docs/EVIDENCE_REGISTER.md. PRs #1-#4 are merged; this correction branch awaits genuine other-participant review. 
 
 In scope: author-supplied conference criteria, supported formal and semantic checks, uncertainty, evidence and saved versioned runs. Out of scope: replacing scientific peer review, autonomous acceptance decisions, plagiarism certification and unsupported formatting guarantees.
 
@@ -36,21 +36,23 @@ Open prototype/index.html in a current browser; no installation, API key or netw
 
 ## Documentation and tracking
 Start with docs/01_proposal.md and docs/SUBMISSION_CHECKLIST.md. Report sections are in docs/01_*.md through docs/11_*.md; references are in docs/references.md. The report DOCX/PDF is provided in the preparation package. The main branch contains the checkpoint documentation, interactive prototype and intake-validation foundation. Detailed relevance evidence and source links are in docs/DATA_ANALYSIS.md.
-YouTrack workspace: https://paper-compliance-assistant.youtrack.cloud/ (created). Live project and 21 issues exist. See docs/YOUTRACK_LIVE_TASKS.md for the verified mapping and current progress. The import CSV is historical planning data.
-Submission tag: pending final reviewed revision; this form requires prob-period-1.
+YouTrack project: https://paper-compliance-assistant.youtrack.cloud/issues/PCA . Board: https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1 . There are 22 live issues after the audit correction. See docs/YOUTRACK_LIVE_TASKS.md for the verified mapping and current progress. The import CSV is historical planning data.
+Historical tag: prob-period-1 at 86141520e74e46f433be94ae29639844ec4e3760. Assignment tag pre-defense-1 is reserved for the final reviewed revision; see docs/VERSIONING.md for the separate form-name conflict.
 
 ## Evaluation
 Compare rules-only B0, whole-document LLM B1 and the hybrid evidence-validated pipeline B2 on a frozen rights-cleared corpus. Measure violation macro-F1, coverage/abstention, supported evidence, stability, latency, cost and usability. No benchmark has been run.
 
 ## Access and privacy
-The repository is public. GitHub content is publicly accessible; PCA guest reading is configured without write permissions; anonymous opening still requires a separate-session check. Do not commit API keys, private manuscripts, personal interview details or fabricated research evidence. Follow CONTRIBUTING.md for task branches and PRs.
+The repository is public. GitHub content is publicly accessible; PCA guest reading is configured without write permissions; anonymous API reading is verified with a cookie-free guest request; see docs/ACCESS_VERIFICATION.md. Do not commit API keys, private manuscripts, personal interview details or fabricated research evidence. Follow CONTRIBUTING.md for task branches and PRs.
 
 
-## Current preparation links
 
-- [Prototype HTML](https://github.com/sajltaha/paper-compliance-assistant/blob/PCA-16-submission-alignment/prototype/index.html)
-- [Editable diagrams](https://github.com/sajltaha/paper-compliance-assistant/tree/PCA-16-submission-alignment/diagrams)
-- [Current task register](docs/YOUTRACK_LIVE_TASKS.md)
-- [Supervisor feedback](docs/11_supervisor_feedback.md)
+## Run available checks
 
-The current form requires `prob-period-1`. It is not created until the matching revision is integrated and ready.
+From the repository root run `node tests/prototype_smoke.cjs` with a current Node runtime. This tests handlers in a simulated DOM and is not an AI or full visual browser test. For Go use `go test ./...` from backend with Go 1.23 or compatible newer Go. No HTTP server, database, LLM service or Compose application is available yet.
+
+## Review and submission
+
+Use [audit resolution](docs/AUDIT_RESOLUTION.md), [evidence register](docs/EVIDENCE_REGISTER.md), [task traceability](docs/TRACEABILITY.md) and [review guide](docs/REVIEW_HANDOFF_RU.md). Download this revision and open [prototype HTML](prototype/index.html); editable [diagram sources](diagrams/) and all report sections are included. Generated PDFs substitute their exact source commit into full artifact URLs. No private correspondence belongs in this public repository.
+
+The actual visible history is concentrated on 22–23 October 2026; no multi-week development history is claimed. Future changes must be meaningful, task-linked and reviewed before merge.

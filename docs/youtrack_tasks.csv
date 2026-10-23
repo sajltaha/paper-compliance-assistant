@@ -1,22 +1,23 @@
-﻿Local planning key NOT a real YouTrack ID,Summary,Proposed owner,Priority,Due date,Preparation status,Acceptance criteria,Deliverable
-P01,Confirm proposal and scope,Talgat,High,2026-10-23,Review,"Proposal identifies users, scope and exclusions; both members confirm.",docs/01_proposal.md
-P02,Analyse public conference requirements and published screening data,Kaisar,Critical,2026-10-23,Done,"Analyse official conference policies and published screening data; retain source links, computations, limitations and derived requirements.",docs/02_relevance.md
-P03,Review scientific literature and matrix,Kaisar,High,2026-10-23,Review,">=12 used sources, >=8 scientific; each has limitation and project implication; team reads and verifies core papers.",docs/literature_matrix.csv
-P04,Review comparison of four existing systems,Kaisar,High,2026-10-23,Done,"4 systems, 8 common criteria, primary source for capability claims; not-documented is not absent.",docs/04_existing_systems.md
-P05,Select storage and document parser after review,Talgat,High,2026-10-23,Done,Compare >=3 technical decisions with 2-3 alternatives; record trade-offs and remaining pilot decisions.,docs/05_technology.md
-P06,Review functional and non-functional requirements,Talgat,Critical,2026-10-23,Review,Every Must has acceptance criteria and test; Kaisar reviews AI requirements.,docs/requirements.csv
-P07,Review architecture and API contract,Talgat,High,2026-10-23,Done,"Three diagrams have editable sources and exports; API, components and data entities agree.",diagrams/
-P08,Review interactive UX prototype,Kaisar,High,2026-10-23,Done,"User can follow upload, confirmed criteria, results/evidence and error flow; mock mode visibly identified.",prototype/index.html
-P09,Approve verification corpus and baselines,Kaisar,High,2026-10-23,Done,"Rights-cleared corpus plan, two annotators, frozen split, metrics and baseline protocols recorded.",docs/09_evaluation.md
-P10,Connect GitHub and configure team access,Talgat,Critical,2026-10-23,Done,Repo accessible to both students; supervisor and committee access verified; GitHub connection can upload.,README.md
-P11,Create YouTrack project and import work items,Talgat,Critical,2026-10-23,Done,"Actual tasks have real IDs, owners, priorities, acceptance criteria, due dates and links.",docs/youtrack_tasks.csv
-P12,Review risks and project milestones,Talgat,High,2026-10-23,Done,"Risk register covers parsing, cost, hallucination, access and evaluation dependencies.",docs/10_management.md
-P13,Obtain supervisor review and apply revisions,Both,Critical,2026-10-23,Done,Supervisor comments are dated and linked to explicit decisions and actual revisions.,docs/11_supervisor_feedback.md
-P14,Make individual contributions and peer PR reviews,Both,Critical,2026-10-24,Develop,Each student makes a genuine substantive change using own account; teammate reviews PR; changes link to actual tasks.,CONTRIBUTING.md
-P15,Prepare PDF of live YouTrack board and tasks,Talgat,Critical,2026-10-24,Done,"One PDF shows actual board plus representative task details, including assignees and acceptance criteria.",docs/SUBMISSION_CHECKLIST.md
-P16,"Finalize report, access checks and submission tag",Talgat,Critical,2026-10-24,Develop,"Replace pending evidence, resolve comments, verify links; create prob-period-1 only at final agreed revision and export matching PDFs.",docs/SUBMISSION_CHECKLIST.md
-P17,Implement Go upload and persistence API,Talgat,Normal,2026-11-07,Backlog; provisional internal target,"FR01, FR08, FR10-12 and relevant security tests pass on documented local setup.","backend/ HTTP API, persistence and tests"
-P18,Implement PDF DOCX extraction adapter,Kaisar,Normal,2026-10-31,Develop; provisional internal target,FR02 and parser evaluation cases pass; retain provenance and reject unsupported scans.,PDF/DOCX extraction adapter and source-anchor tests
-P19,Implement criterion normalization and evaluation,Kaisar,Normal,2026-11-14,Backlog; provisional internal target,"FR03-07, FR11 and schema/evidence validation pass against fixtures; provider key server-side.",ai/ evaluator and schema/evidence integration tests
-P20,Implement Vue interface and Docker startup,Talgat,Normal,2026-11-21,Backlog; provisional internal target,Real API integration replaces mock; error/empty/loading states and startup checks pass.,frontend/ Vue application and Docker Compose startup
-P21,Run controlled evaluation and analyse errors,Kaisar,Normal,2026-11-28,Backlog; provisional internal target,Frozen test protocol executed; metrics and failures reported without tuning on test data.,"Evaluation results, frozen-corpus manifest and error analysis"
+﻿Issue,Outcome,Owner,Stage,Target date,Artifact
+PCA-1,Confirm proposal and scope,Talgat,Review,2026-10-23,docs/01_proposal.md
+PCA-2,Analyse public conference requirements and published screening data,Kaisar,Done,2026-10-23,docs/DATA_ANALYSIS.md
+PCA-3,Review scientific literature and matrix,Kaisar,Review,2026-10-23,docs/literature_matrix.csv
+PCA-4,Review comparison of four existing systems,Kaisar,Done,2026-10-23,docs/04_existing_systems.md
+PCA-5,Compare storage and document parser alternatives,Talgat,Done,2026-10-23,docs/05_technology.md
+PCA-6,Review functional and non-functional requirements,Talgat,Review,2026-10-23,docs/requirements.csv
+PCA-7,Review architecture and API contract,Talgat,Done,2026-10-23,docs/07_architecture.md
+PCA-8,Review interactive UX prototype,Kaisar,Done,2026-10-23,prototype/index.html
+PCA-9,Approve verification corpus and baselines,Kaisar,Done,2026-10-23,docs/09_evaluation.md
+PCA-10,Connect GitHub and configure team access,Talgat,Done,2026-10-23,README.md
+PCA-11,Create YouTrack project and import work items,Talgat,Done,2026-10-23,docs/YOUTRACK_LIVE_TASKS.md
+PCA-12,Review risks and project milestones,Talgat,Done,2026-10-23,docs/10_management.md
+PCA-13,Obtain supervisor review and apply revisions,Talgat,Review,2026-10-24,docs/11_supervisor_feedback.md
+PCA-14,Make individual contributions and peer PR reviews,Talgat,Review,2026-10-24,CONTRIBUTING.md
+PCA-15,Prepare PDF of live YouTrack board and tasks,Talgat,Done,2026-10-24,docs/SUBMISSION_CHECKLIST.md
+PCA-16,"Finalize report, access checks and submission tag",Talgat,Develop,2026-10-24,docs/AUDIT_RESOLUTION.md
+PCA-17,Implement Go upload and persistence API,Talgat,Backlog,2026-11-07,docs/API_CONTRACT.md
+PCA-18,Implement PDF DOCX extraction adapter,Kaisar,Develop,2026-10-31,backend/internal/document/validator.go
+PCA-19,Implement criterion normalization and evaluation,Kaisar,Backlog,2026-11-14,docs/ai_contract.schema.json
+PCA-20,Run controlled evaluation and analyse errors,Kaisar,Backlog,2026-11-28,docs/09_evaluation.md
+PCA-21,Implement Vue interface and Docker startup,Talgat,Backlog,2026-11-21,prototype/index.html
+PCA-22,Resolve user-discussion or client-agreement evidence,Talgat,Backlog,2026-10-24,docs/USER_EVIDENCE_PROTOCOL_RU.md

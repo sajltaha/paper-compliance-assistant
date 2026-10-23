@@ -1,8 +1,10 @@
 # 10 Project management and risks
 
-The public repository is https://github.com/sajltaha/paper-compliance-assistant. The task list is https://paper-compliance-assistant.youtrack.cloud/issues/PCA and the board is https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1. The 21 assigned issues cover checkpoint preparation and later implementation. The verified snapshot contains 11 Done, 3 Review, 3 Develop and 4 Backlog tasks. PCA-13 is assigned to the checkpoint coordinator.
+The public repository is https://github.com/sajltaha/paper-compliance-assistant. Task list: https://paper-compliance-assistant.youtrack.cloud/issues/PCA . Board: https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1 . The audit-corrected snapshot has 22 issues: 10 Done, 5 Review, 2 Develop and 5 Backlog. PCA-1, PCA-3, PCA-6, PCA-13 and PCA-14 are in Review because separate evidence conditions remain unverified. Representative acceptance is retained. PCA-22 tracks the external discussion/client-agreement condition separately from completed data analysis PCA-2.
 
-PRs #1, #2 and #3 are merged into main. This report and the corrected source sections are prepared in PCA-16-submission-alignment. The fixed prob-period-1 tag must identify the agreed integrated revision before submission. The public-reader role in YouTrack is limited to the PCA project and includes only basic project reading, issue reading and issue-comment reading. Anonymous opening of the supplied links still needs a separate session check.
+PRs #1-#4 are merged into main at 86141520e74e46f433be94ae29639844ec4e3760. prob-period-1 identifies that historical baseline and is retained unchanged. The source assignment requests pre-defense-1, while the inspected form requests prob-period-1. The audit-fix revision must pass actual other-participant review before integration and final tagging; do not pretend the historical merges had that review. docs/VERSIONING.md documents the exact-name conflict and the finalization sequence.
+
+A cookie-free, authorization-free HTTP check on 23 October 2026 identified login=guest and returned HTTP 200 for the PCA project, board and PCA-2 description. This establishes anonymous read access at the API level; it does not test every browser presentation or claim anonymous edit rights. See docs/ACCESS_VERIFICATION.md.
 
 PR #2 provides PDF/DOCX intake validation, a 20 MiB default limit, filename checks, metadata and SHA-256. Its format and unit checks passed. It is partial PCA-18 work; extraction, provenance, OCR policy and criterion evaluation remain unfinished. The original PCA-19 branch label is historical and does not change the actual task mapping.
 
@@ -28,3 +30,5 @@ Dates after the checkpoint are provisional internal planning targets, not univer
 | Contribution traceability | Generated package mistaken for individual completed work. | Task-linked commits, descriptive branches and linked PRs. Both. |
 
 Changes use task-linked branches and PRs. Keep main as the integrated baseline and retain the original contribution history. Do not move a submitted tag. Implementation tasks remain open until their acceptance criteria are met.
+
+The visible Git history is concentrated on 22-23 October 2026; it does not establish weeks of progressive work. Keep the existing history unchanged, record future substantive work as it happens and avoid artificial commits or backdated evidence. Every significant artifact is mapped to a task, historical PR and immutable baseline in docs/TRACEABILITY.md. Assigned roles are not proof of personal authorship or understanding.

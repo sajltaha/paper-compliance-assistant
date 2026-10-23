@@ -142,3 +142,7 @@ This study does not measure demand among our target users, their willingness to 
 ## Conclusion
 
 The project addresses a documented document-checking problem with a bounded engineering response. Its defensible contribution is an inspectable mapping from confirmed conference rules to manuscript-level findings and revisions. Success should be assessed through correctly detected mismatches, useful evidence and appropriate uncertainty, rather than predicted acceptance or generic review scores.
+
+## External evidence condition
+
+The assignment separately specifies 3-5 discussions with user representatives or a substantive agreement with the actual client. No completed discussions or client agreement are evidenced. The data analysis remains valid in its narrower scope, but it is not automatically a replacement for that separate condition. PCA-22 tracks actual anonymized discussion records, a substantive client agreement, or explicit approval to accept the analysis instead. No interview findings are claimed.

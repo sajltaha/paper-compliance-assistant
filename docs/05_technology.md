@@ -1,30 +1,37 @@
 # 5 Technology comparison and decisions
 
-Six technical decisions are compared with three reasonable alternatives each. Vue 3, TypeScript, Tailwind CSS, Pinia, Go, REST and Docker Compose are already specified in the team justification. Storage, parsing, model choice and evidence selection remain proposals until the team and supervisor review them.
+The following comparisons use the same requirement-driven criteria for each alternative. They are qualitative design judgements, not measured benchmarks. Vue, Go, REST and local Docker Compose follow the team justification. Storage and parser choices remain provisional until a pilot and substantive review.
 
-| Decision | Alternative A | Alternative B | Alternative C |
+## Backend alternatives
+
+| Option | Local setup and team maintenance | Document processing and validation | Decision |
 | --- | --- | --- | --- |
-| Backend | Go net/http or Gin | Python FastAPI | Node.js with TypeScript |
-| Data storage | PostgreSQL | SQLite | MongoDB |
-| Document conversion | Docling adapter | GROBID plus DOCX parser | Plain PDF text plus DOCX parser |
-| Evaluation strategy | Rules plus schema-validated LLM | Rules only | Single unconstrained LLM prompt |
-| Component interaction | REST and JSON | gRPC | Direct in-process library calls |
-| Evidence selection | Section/block selection | Whole document context | Vector retrieval |
+| Go | Fits the agreed stack; a compiled server is straightforward to package. | Explicit API and concurrency boundaries; Python parsers require an adapter. | Selected by the team justification; keep application orchestration here. |
+| FastAPI | Would add a different application stack to the planned Vue/Go project. | Direct access to Python parsing libraries; still needs schema and provenance checks. | Retain as a possible internal parser adapter, not a second application backend. |
+| Node TypeScript | Shares language with the frontend; would replace the agreed Go backend. | External parsing still required; runtime validation remains necessary. | Reasonable alternative, but insufficient benefit to justify changing the agreed stack. |
 
-Backend: Go selected in team justification; keep orchestration, storage and validation here. Python remains a possible internal parser adapter, not a replacement backend.
+## Storage alternatives
 
-Data storage: Propose PostgreSQL for relational versioned runs; SQLite is a simpler local alternative. Decision requires pilot and supervisor review; no database implemented yet.
+| Option | Local operation and maintenance | Versions provenance and consistency | Trade-off |
+| --- | --- | --- | --- |
+| PostgreSQL | Extra service and configuration in Compose. | Relational constraints and transactions fit documents, criterion versions, runs and findings. | Proposed reference design for FR08, FR10 and NFR01; pilot not yet run. |
+| SQLite | Simplest single-machine deployment; no database service. | Can represent the same relations; concurrent writes and worker access need explicit tests. | Strong fallback for the single-user MVP; choose if reduced setup outweighs concurrency needs. |
+| MongoDB | Another database service and operational model. | Flexible nested results, but cross-version references and consistency still need application design. | No demonstrated need for schema flexibility; not the initial proposal. |
 
-Document conversion: Propose Docling pilot for layout; compare GROBID on scholarly PDFs. Plain text baseline cannot verify fonts/margins. [S09,S10,D03]
+## Document conversion alternatives
 
-Evaluation strategy: Propose hybrid checks: deterministic for counts/structure, LLM for semantic criteria; compare both baselines. [S02,S05,D04]
+| Option | PDF DOCX and source anchors | Local cost and maintainability | Decision and pilot condition |
+| --- | --- | --- | --- |
+| Docling adapter | Candidate for layout-aware conversion; PDF pages and DOCX paragraph/table anchors must be verified. | Python dependency behind a Go-facing interface; conversion errors still possible. | Proposed pilot; compare reading order, section retention, tables, failure signals and anchors. |
+| GROBID plus DOCX parser | Scholarly PDF structure; separate DOCX path adds mapping work. | More adapter integration; no universal DOCX/page guarantee. | Compare on the same permitted fixtures; select if scholarly structure improves measurable extraction quality. |
+| Plain PDF text plus DOCX parser | Useful simple baseline; cannot certify fonts, margins or complex reading order. | Lowest initial integration complexity but weaker layout evidence. | Keep as baseline; do not use unsupported formatting checks to claim compliance. |
 
-Component interaction: REST/JSON selected in justification; easier boundary inspection and language-independent parser interface. No latency advantage claimed.
+## Interaction and evaluation choices
 
-Evidence selection: Start with section/block selection and explicit limits; compare full-context baseline; vector retrieval only if tests show need. [S07,S08,S11]
+| Decision | Alternatives and common criteria | Current rationale |
+| --- | --- | --- |
+| Interaction | REST JSON / gRPC / in-process; inspectability, language boundary, local maintenance. | REST JSON matches the planned UI/API and parser boundary. gRPC adds schema/tooling overhead without a measured need. In-process calls are useful inside one service but cannot be the browser API. |
+| Evaluation | Hybrid / rules only / one whole-document LLM prompt; supported checks, evidence and reproducibility. | Hybrid is proposed: rules for measurable supported checks, LLM for semantic criteria, backend validates evidence. Keep both simpler methods as experimental baselines. |
+| Evidence | Section/block selection / whole context / vector retrieval; source anchors, context limits and complexity. | Start with blocks and explicit limits. Whole context is a baseline. Add vector retrieval only if a pilot demonstrates benefit; retrieval does not itself validate support. |
 
-## Model and deployment boundary
-
-The OpenAI model identifier is configured through the server environment and recorded in every run. Select an available model that supports the chosen structured-output workflow after a small pilot; this report does not lock a model, token price or context limit. There is no paid model call in the prototype and no purchased cloud hosting. Local deployment still requires internet and an API key for external AI analysis; local startup does not mean the AI model runs offline.
-
-Parser dependencies should remain behind a stable interface. A Python adapter is a proposed implementation route for Docling, while Go remains the application backend. Keep a rules-only mode for baseline evaluation and for checks supported without an LLM. A pilot must establish extraction quality before adding OCR or retrieval complexity.
+No parser, database or model performance result has been measured on the project corpus. Record versions, rights-cleared fixtures, reading-order/anchor errors and setup effort before selecting the parser. Model identifiers are configured and recorded at implementation time; no particular model, price or context limit is promised. Local startup requires an internet connection and a server-side API key for external AI processing.

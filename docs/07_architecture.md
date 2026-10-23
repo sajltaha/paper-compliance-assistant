@@ -25,3 +25,11 @@ Proposed REST resources are POST /api/documents, POST /api/criteria-sets, POST /
 ## Reliability boundaries
 
 Uploaded article and requirement text are untrusted data: instructions embedded in them must not change the system prompt, trigger tools or override the rubric. Do not execute document macros. Validate model-generated anchors against extraction output; keep unsupported checks visible. Store keys server-side and exclude raw private manuscripts from Git. These controls are requirements to implement and test, not security guarantees already achieved.
+
+## Storage history deletion and provider consent
+
+The Go API owns persistence. It writes original files and extracted blocks to generated local paths, and metadata, immutable criteria versions, runs and findings to relational storage. GET history and GET run read saved data through Go; they do not invoke the LLM again. The component diagram shows direct bidirectional Go/storage connections.
+
+UC1/UC3: explain the configured external provider and the extracted content to be sent, require confirmation for that run, and make no provider request after cancellation. UC5: list saved run IDs, reopen a run using its stored version/configuration and clearly show a missing document. Deletion requires confirmation of the document and dependent runs, removes linked blocks/findings/local files and reports failure honestly; original private content is never committed to Git.
+
+The complete FR to component/data/API mapping and request/error examples are in docs/ARCHITECTURE_TRACEABILITY.md and docs/API_CONTRACT.md. These are design contracts, not implemented endpoints.
