@@ -4,6 +4,10 @@
     [
       [
         "p",
+        "Version note: this report is built from the exact review candidate {{REVISION}}. It includes three participant discussions dated 20 October 2026. The candidate awaits integration and final submission tagging; it is not the historical prob-period-1 version."
+      ],
+      [
+        "p",
         "Development of an Intelligent Web System for Analyzing Scientific Articles for Compliance with Scientific Conference Requirements and Generating Recommendations. This report prepares the first probationary-period submission due on 24 October 2026 at 18:00 Asia/Almaty. The project assists authors in checking a manuscript against explicitly supplied conference requirements and produces evidence-linked recommendations."
       ],
       [
@@ -496,7 +500,7 @@
       ],
       [
         "p",
-        "This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. No interviews, local usability sessions or manuscript benchmark runs are represented as completed."
+        "This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. This secondary-data study contains no interviews or product measurements; separately supplied participant notes are reported below with their own limitations. No local usability sessions or manuscript benchmark runs are claimed."
       ],
       [
         "h",
@@ -512,7 +516,45 @@
       ],
       [
         "p",
-        "The assignment separately specifies 3-5 discussions with user representatives or a substantive agreement with the actual client. No completed discussions or client agreement are evidenced. The data analysis remains valid in its narrower scope, but it is not automatically a replacement for that separate condition. PCA-22 tracks actual anonymized discussion records, a substantive client agreement, or explicit approval to accept the analysis instead. No interview findings are claimed."
+        "Three anonymized participant records (U01–U03) were supplied in interview.docx. U01 consent is explicit in the notes; Kaisar separately confirmed U02/U03 consent. All three interviews took place on 20 October 2026, as confirmed by the interviewer. Consent to public publication of anonymized findings and the log was also confirmed. Fifteen observations are mapped to existing FR/NFR in docs/user_discussions_log.csv; three participants, not fifteen interviews, are counted. The findings support multi-source criteria, grounded explanations, explicit uncertainty, privacy controls and rechecking. See docs/INTERVIEW_FINDINGS_RU.md. PCA-22 now has three dated records, consent, findings and requirement mappings prepared for acceptance review. The secondary-data analysis and interview evidence have distinct limitations."
+      ],
+      [
+        "h",
+        "Findings from three participant records"
+      ],
+      [
+        "table",
+        [
+          "ID",
+          "Reported experience",
+          "Requirement decision"
+        ],
+        [
+          [
+            "U01",
+            "Multiple rule sources; references and filename caused a return; evidence and rechecking requested.",
+            "FR03/04/06/08/10; keep user-confirmed interpretation."
+          ],
+          [
+            "U02",
+            "Page-count and anonymity difficulties; external processing restricted by laboratory permission.",
+            "FR02/06/07/12 and NFR03; no anonymity guarantee or raw LaTeX promise."
+          ],
+          [
+            "U03",
+            "Conflicting formatting instructions; captions, bibliography and progress saving matter.",
+            "FR03/04/07/08/09/10; layout and full GOST checks remain future work."
+          ]
+        ],
+        [
+          0.7,
+          3.2,
+          2.5
+        ]
+      ],
+      [
+        "p",
+        "All three request traceable findings and manual review of ambiguity. U01/U03 conditionally accept external processing; U02 tends to refuse without permission. Consent to notes is distinct from manuscript-processing consent. The sample is small and author-focused, includes Russian-language venues, and is not representative. Reported preparation times are self-estimates; no measured product time saving, usability result or accuracy result is claimed. All three interviews are dated 20 October 2026; the interviewer confirmed consent to publication of anonymized project materials."
       ]
     ]
   ],
@@ -1459,7 +1501,7 @@
       ],
       [
         "p",
-        "On 23 October 2026, a repeat AI-assisted technical review of PR #5 was posted as COMMENT review 5632920719, not independent human approval. Kaisar reports that Talgat reviewed PR #6; no registered GitHub review was present. PR #6 is now ready for review. Its merge was rejected by automatic approval review; main and the historical tag remain unchanged. Separate follow-up documentation corrects the evaluation split, requirement/component mapping and retry classification. Real user/supervisor evidence, authorized integration, final tag/form agreement and receipt remain open."
+        "Technical COMMENT reviews are recorded for PR #5 (5632920719) and PR #6 (5633430095). Talgat has not reviewed PR #6; the earlier contrary report was withdrawn. These comments do not fulfil the required other-participant review. PR #5/#6/#7 remain unmerged. A previous merge attempt was rejected by automatic approval review; main and the historical tag remain unchanged. PR #7 contains evaluation, mapping and retry corrections. The interview synthesis and anonymized observation log are included in this revision with the interviewer-confirmed date and publication consent. Substantive supervisor evidence, personal team review, authorized integration, final tag/form agreement and submission receipt remain open."
       ]
     ]
   ],
@@ -1515,7 +1557,7 @@
       ],
       [
         "p",
-        "The package corrects the audit findings that can be resolved from existing evidence. Completion still depends on genuine other-participant review, external relevance evidence or explicit substitution approval, substantive supervisor evidence, final version integration and form checks. Full application development remains next-stage work."
+        "The package corrects the audit findings that can be resolved from existing evidence. Completion still depends on personal other-participant review, substantive supervisor evidence, final version integration and form checks. Full application development remains next-stage work."
       ],
       [
         "h",

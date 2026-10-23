@@ -149,7 +149,7 @@ Official rules contain meaningful variation. Published conference data show real
 
 ## What remains unknown
 
-This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. No interviews, local usability sessions or manuscript benchmark runs are represented as completed.
+This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. This secondary-data study contains no interviews or product measurements; separately supplied participant notes are reported below with their own limitations. No local usability sessions or manuscript benchmark runs are claimed.
 
 ## Conclusion
 
@@ -188,3 +188,4 @@ Policy and operational sources are distinct from research publications. All rese
 [M] Auer, C., et al. 2024. Docling Technical Report. arXiv:2408.09869v5, technical report. https://arxiv.org/abs/2408.09869
 
 [N] Blecher, L., Cucurull, G., Scialom, T., and Stojnic, R. 2023. Nougat: Neural Optical Understanding for Academic Documents. arXiv:2308.13418, research preprint. https://arxiv.org/abs/2308.13418
+

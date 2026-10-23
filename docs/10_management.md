@@ -36,6 +36,6 @@ The visible Git history is concentrated on 22-23 October 2026; it does not estab
 
 ## Repeat audit status
 
-On 23 October 2026, a repeat AI-assisted technical review of PR #5 was posted as COMMENT review 5632920719, not independent human approval. Kaisar reports that Talgat reviewed PR #6; no registered GitHub review was present. PR #6 is now ready for review. Its merge was rejected by automatic approval review; main and the historical tag remain unchanged. Separate follow-up documentation corrects the evaluation split, requirement/component mapping and retry classification. Real user/supervisor evidence, authorized integration, final tag/form agreement and receipt remain open.
+Technical COMMENT reviews are recorded for PR #5 (5632920719) and PR #6 (5633430095). Talgat has not reviewed PR #6; the earlier contrary report was withdrawn. These comments do not fulfil the required other-participant review. PR #5/#6/#7 remain unmerged. A previous merge attempt was rejected by automatic approval review; main and the historical tag remain unchanged. PR #7 contains evaluation, mapping and retry corrections. The interview synthesis and anonymized observation log are included in this revision with the interviewer-confirmed date and publication consent. Substantive supervisor evidence, personal team review, authorized integration, final tag/form agreement and submission receipt remain open.
 
 See docs/REPEAT_AUDIT_2026_10_23.md and docs/PCA22_ACTION_GUIDE_RU.md.

@@ -137,7 +137,7 @@ Official rules contain meaningful variation. Published conference data show real
 
 ## What remains unknown
 
-This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. No interviews, local usability sessions or manuscript benchmark runs are represented as completed.
+This study does not measure demand among our target users, their willingness to send manuscripts to an external API, their preferred interface, actual time savings or the accuracy of the proposed system. It does not infer a causal reduction in desk rejection from the CHI counts. This secondary-data study contains no interviews or product measurements; separately supplied participant notes are reported below with their own limitations. No local usability sessions or manuscript benchmark runs are claimed.
 
 ## Conclusion
 
@@ -145,4 +145,21 @@ The project addresses a documented document-checking problem with a bounded engi
 
 ## External evidence condition
 
-The assignment separately specifies 3-5 discussions with user representatives or a substantive agreement with the actual client. No completed discussions or client agreement are evidenced. The data analysis remains valid in its narrower scope, but it is not automatically a replacement for that separate condition. PCA-22 tracks actual anonymized discussion records, a substantive client agreement, or explicit approval to accept the analysis instead. No interview findings are claimed.
+Three anonymized participant records (U01–U03) were supplied in interview.docx. U01 consent is explicit in the notes; Kaisar separately confirmed U02/U03 consent. All three interviews took place on 20 October 2026, as confirmed by the interviewer. Consent to public publication of anonymized findings and the log was also confirmed. Fifteen observations are mapped to existing FR/NFR in docs/user_discussions_log.csv; three participants, not fifteen interviews, are counted. The findings support multi-source criteria, grounded explanations, explicit uncertainty, privacy controls and rechecking. See docs/INTERVIEW_FINDINGS_RU.md. PCA-22 now has three dated records, consent, findings and requirement mappings prepared for acceptance review. The secondary-data analysis and interview evidence have distinct limitations.
+
+
+
+## Participant evidence
+
+Все трое собирают требования из нескольких источников и приводят примеры противоречий. Это поддерживает FR03–FR04: хранить исходный текст и источник, выделять противоречия и получать подтверждение трактовки до запуска.
+
+Все трое требуют связь замечания с правилом и конкретным местом статьи. Это поддерживает FR06/NFR02. При недостаточных данных или неоднозначном правиле они предпочитают ручную проверку, что поддерживает FR05/NFR08. Автоматическое решение о научной ценности, принятии статьи и переписывание текста не входят в подтверждённую потребность текущего MVP.
+
+U01 описал возврат из-за ссылок и имени файла; U02 — из-за подсчёта страниц вместе с литературой; U03 — из-за подписей и шрифтов таблиц. Эти случаи обосновывают формальные проверки, но не доказывают реализуемость всех проверок. Текстовое извлечение не подтверждает шрифт и поля. Полная проверка ГОСТ, metadata-анонимности и исходных LaTeX-файлов требует отдельной реализации и испытаний.
+
+U01 и U03 условно допускают внешнюю обработку, U02 скорее отказывается для неопубликованного метода без разрешения лаборатории. Все спрашивают об условиях обработки. Это поддерживает FR12/NFR03: до передачи раскрыть фактические условия провайдера и получить разрешение. Обещать отсутствие хранения или обучения без подтверждённой политики нельзя. Согласие на заметки не распространяется автоматически на обработку рукописей. Локальный режим формальных проверок зарегистрирован как предложение будущего этапа.
+
+U01 и U03 упоминают сохранение прогресса и повторную проверку, что поддерживает FR08/FR10. U03 хочет отчёт для руководителя: FR09 предусматривает структурированный JSON, PDF-экспорт остаётся расширением. Приоритеты и различение критических/косметических замечаний поддерживают FR04/FR06.
+
+
+Full record and limitations: docs/INTERVIEW_FINDINGS_RU.md.
