@@ -916,12 +916,12 @@
           [
             "FR03\nMust",
             "Enter or attach conference requirements",
-            "A user can paste criteria or attach PDF/DOCX; original wording and source identifiers are retained."
+            "A user can paste criteria or attach PDF/DOCX; original wording and source identifiers are retained. Source metadata records venue, edition, track/paper type, submission stage, rule source/version and capture date; unknown fields are explicitly unknown."
           ],
           [
             "FR04\nMust",
             "Confirm normalized criteria before analysis",
-            "User can edit criterion wording, category, threshold, priority and applicability; analysis uses the confirmed version."
+            "User can edit criterion wording, category, threshold, priority and applicability; analysis uses the confirmed version. Preserve mandatory/recommended/optional modality and user-confirmed applicability."
           ],
           [
             "FR05\nMust",
@@ -931,7 +931,7 @@
           [
             "FR06\nMust",
             "Show grounded findings and recommendations",
-            "Each evaluable finding includes criterion ID, explanation, valid source anchors and an actionable recommendation when appropriate; invalid anchors are rejected."
+            "Each evaluable finding includes criterion ID, explanation, valid source anchors and an actionable recommendation when appropriate; invalid anchors are rejected. Findings identify both the requirement source and manuscript anchor; anonymity warnings do not guarantee anonymity."
           ],
           [
             "FR07\nMust",
@@ -1001,7 +1001,7 @@
           [
             "NFR08\nMust",
             "Expose unsupported capabilities honestly",
-            "UI and reports distinguish unavailable OCR/layout checks from checked failures, and demonstrate that unknown evidence is not treated as a pass."
+            "UI and reports distinguish unavailable OCR/layout checks from checked failures, and demonstrate that unknown evidence is not treated as a pass. Failed conversion and unreadable/scanned content pass a quality gate before rule evaluation."
           ]
         ],
         [
