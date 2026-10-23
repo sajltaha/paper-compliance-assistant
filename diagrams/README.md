@@ -1,2 +1,5 @@
-# Diagram sources
-The SVG files are editable vector sources. PNG exports are generated from the same SVG. Components are proposals, not implemented services. Source is in the submission package builder; SVG is the canonical versionable diagram source.
+# Architecture diagrams
+
+The SVG files are the editable sources. Each PNG is an export of the corresponding SVG for reports.
+
+The diagrams describe the system context, use cases and proposed components. They show the intended architecture, including components that have not been implemented. Update the SVG first and regenerate its PNG when a diagram changes.
