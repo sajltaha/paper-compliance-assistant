@@ -14,7 +14,7 @@ Requirements use Must, Should and Could priorities. The current MVP has 12 funct
 | FR08 Must | Save and retrieve analysis history | Restarting the local system preserves document metadata, criterion versions, results and run configuration; a run can be reopened. |
 | FR09 Should | Export a structured result | An analysis can be downloaded as JSON with document hash, criterion version and model/prompt configuration; PDF export is a later enhancement. |
 | FR10 Must | Recheck a revised manuscript | A new manuscript creates a new document version and run; the earlier result remains identifiable. |
-| FR11 Must | Handle external AI failures | Timeout, refusal, invalid JSON and provider errors produce a retryable failure state; no successful assessment is invented. |
+| FR11 Must | Handle external AI failures | Timeout, refusal, invalid JSON and provider errors produce explicit failed states with a documented retryable flag. Transient failures allow bounded retry; refusals and permanent errors require an appropriate input/configuration change and are not retried automatically. No successful assessment is invented. |
 | FR12 Must | Explain processing and deletion controls | Before external analysis, UI explains that extracted content goes to the configured provider; user can delete stored files and results. |
 | NFR01 Must | Reproducible evaluation | Each run records document hash, confirmed criteria, parser/model ID and version, prompt/schema version, sampling settings and timestamp. |
 | NFR02 Must | Validate structured data | All accepted results satisfy the shared JSON schema; each criterion occurs once; all cited block IDs exist and quoted text matches source text after documented whitespace normalization. |
@@ -41,3 +41,4 @@ The versioned result contract requires criterion_id, status, engine, explanation
 | DA-R6 | FR02 NFR08 | PCA-18 | Conversion failures cannot become a pass. |
 | DA-R7 | FR03 FR04 NFR01 | PCA-17 PCA-19 PCA-21 | Confirm editable source-derived rules and preserve version. |
 | DA-R8 | FR06 NFR02 | PCA-19 PCA-20 | Check evidence support separately from quote existence. |
+

@@ -175,7 +175,7 @@
           1.4,
           0.7,
           2.4,
-          2
+          2.0
         ]
       ],
       [
@@ -477,9 +477,9 @@
           ]
         ],
         [
-          2,
+          2.0,
           1.5,
-          3
+          3.0
         ]
       ],
       [
@@ -956,7 +956,7 @@
           [
             "FR11\nMust",
             "Handle external AI failures",
-            "Timeout, refusal, invalid JSON and provider errors produce a retryable failure state; no successful assessment is invented."
+            "Timeout, refusal, invalid JSON and provider errors produce explicit failed states with a documented retryable flag. Transient failures allow bounded retry; refusals and permanent errors require an appropriate input/configuration change and are not retried automatically. No successful assessment is invented."
           ],
           [
             "FR12\nMust",
@@ -1262,7 +1262,7 @@
       ],
       [
         "p",
-        "Plan at least 20 rights-cleared text-based English manuscripts with 8-12 criteria each. Use permitted public papers or author-consented drafts, plus explicitly synthetic controlled variants. Preserve base-document groups so variants never cross development/test boundaries. A proposed split is 8 development and 12 held-out documents. Freeze test labels before tuning prompts. Use two annotators; record initial labels, disagreements and adjudicated labels. Synthetic variants test known violations but cannot substitute for evaluation on real papers."
+        "Plan at least 28 unique rights-cleared text-based English manuscripts with 8-12 criteria each: 8 development and at least 20 held-out documents for NFR06. Use permitted public papers or author-consented drafts, plus explicitly synthetic controlled variants. Preserve base-document groups so variants never cross development/test boundaries. The proposed split is 8 development and 20 held-out documents; synthetic variants stay in their base-document group and do not increase the unique held-out count. Freeze test labels before tuning prompts. Use two annotators; record initial labels, disagreements and adjudicated labels. Synthetic variants test known violations but cannot substitute for evaluation on real papers."
       ],
       [
         "p",
@@ -1324,6 +1324,10 @@
       [
         "p",
         "The prototype can be checked now for navigation, form validation, filtering, evidence display and honest demo labelling. These checks do not validate the AI pipeline. Budget-controlled external API runs require a configured key and an approved spending limit before execution."
+      ],
+      [
+        "p",
+        "Metric definitions are fixed in docs/09_evaluation.md: fail-positive per-type F1 with declared averaging, conditional coverage and end-to-end violation recall including abstained violations. Undefined/no-positive types and not-applicable cases are reported separately. Final metrics use at least 20 unique held-out manuscripts; development and synthetic variants are not pooled as independent test documents. No results are claimed."
       ]
     ]
   ],
@@ -1452,6 +1456,10 @@
       [
         "p",
         "The visible Git history is concentrated on 22-23 October 2026; it does not establish weeks of progressive work. Keep the existing history unchanged, record future substantive work as it happens and avoid artificial commits or backdated evidence. Every significant artifact is mapped to a task, historical PR and immutable baseline in docs/TRACEABILITY.md. Assigned roles are not proof of personal authorship or understanding."
+      ],
+      [
+        "p",
+        "On 23 October 2026, a repeat AI-assisted technical review of PR #5 was posted as COMMENT review 5632920719, not independent human approval. Kaisar reports that Talgat reviewed PR #6; no registered GitHub review was present. PR #6 is now ready for review. Its merge was rejected by automatic approval review; main and the historical tag remain unchanged. Separate follow-up documentation corrects the evaluation split, requirement/component mapping and retry classification. Real user/supervisor evidence, authorized integration, final tag/form agreement and receipt remain open."
       ]
     ]
   ],

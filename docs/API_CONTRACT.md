@@ -42,3 +42,7 @@ GET /api/analyses returns 200 {"items":[{"run_id":"r1","document_id":"d1","statu
 
 Provider data is untrusted. Validate schema, one result per confirmed criterion, applicability, block ownership, normalized quotes and semantic evidence support. JSON schema alone cannot enforce these relational checks.
 
+
+## Retry classification
+
+The error envelope always reports retryable explicitly. Timeouts, rate limits and transient provider failures can allow bounded retry with backoff and a recorded new attempt. A provider refusal or permanent request/authentication error is not retried automatically with the same inputs; explain the failure and require an appropriate input/configuration change. Invalid model output permits only a bounded validation/retry policy, never a fabricated success. Failure records remain part of the run history.
