@@ -175,7 +175,7 @@
           1.4,
           0.7,
           2.4,
-          2.0
+          2
         ]
       ],
       [
@@ -477,9 +477,9 @@
           ]
         ],
         [
-          2.0,
+          2,
           1.5,
-          3.0
+          3
         ]
       ],
       [
@@ -1198,7 +1198,7 @@
       ],
       [
         "p",
-        "The key journey is upload or load a synthetic example, enter criteria, confirm criteria, inspect the mock results and open the evidence for a finding. Empty input and unsupported file types expose validation messages. Keyboard focus and status announcements are included. The future Vue application will replace the demonstration data with the documented REST contract."
+        "The key journey is upload or load a synthetic example, enter criteria, confirm criteria, inspect the mock results and open the evidence for a finding. Empty input, zero-byte files, unsupported file types and files above 20 MiB expose validation messages. Invalid replacement clears the previous selection. Five synthetic findings illustrate all four result states, including not_applicable; all states can be filtered. Inputs are disabled during the mock run and exports retain its filename. Keyboard focus and status announcements are included. The future Vue application will replace the demonstration data with the documented REST contract."
       ],
       [
         "table",
