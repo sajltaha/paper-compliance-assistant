@@ -145,21 +145,21 @@ The project addresses a documented document-checking problem with a bounded engi
 
 ## External evidence condition
 
-Three anonymized participant records (U01–U03) were supplied in interview.docx. U01 consent is explicit in the notes; Kaisar separately confirmed U02/U03 consent. All three interviews took place on 20 October 2026, as confirmed by the interviewer. Consent to public publication of anonymized findings and the log was also confirmed. Fifteen observations are mapped to existing FR/NFR in docs/user_discussions_log.csv; three participants, not fifteen interviews, are counted. The findings support multi-source criteria, grounded explanations, explicit uncertainty, privacy controls and rechecking. See docs/INTERVIEW_FINDINGS_RU.md. PCA-22 now has three dated records, consent, findings and requirement mappings prepared for acceptance review. The secondary-data analysis and interview evidence have distinct limitations.
+Three anonymized participant records (U01–U03) were supplied in interview.docx. U01 consent is explicit in the notes; Kaisar separately confirmed U02/U03 consent. All three interviews took place on 20 October 2026, as confirmed by the interviewer. Consent to public publication of anonymized findings and the log was also confirmed. Fifteen observations are mapped to existing FR/NFR in docs/user_discussions_log.csv; three participants, not fifteen interviews, are counted. The findings support multi-source criteria, grounded explanations, explicit uncertainty, privacy controls and rechecking. See docs/INTERVIEW_FINDINGS.md. PCA-22 now has three dated records, consent, findings and requirement mappings prepared for acceptance review. The secondary-data analysis and interview evidence have distinct limitations.
 
 
 
 ## Participant evidence
 
-Все трое собирают требования из нескольких источников и приводят примеры противоречий. Это поддерживает FR03–FR04: хранить исходный текст и источник, выделять противоречия и получать подтверждение трактовки до запуска.
+All three collect requirements from several sources and describe contradictions. This supports FR03–FR04: retain original wording and sources, highlight conflicts and confirm the interpretation before a run.
 
-Все трое требуют связь замечания с правилом и конкретным местом статьи. Это поддерживает FR06/NFR02. При недостаточных данных или неоднозначном правиле они предпочитают ручную проверку, что поддерживает FR05/NFR08. Автоматическое решение о научной ценности, принятии статьи и переписывание текста не входят в подтверждённую потребность текущего MVP.
+All three want each finding linked to a rule and a specific manuscript location. This supports FR06/NFR02. They prefer manual review when evidence is insufficient or a rule is ambiguous, supporting FR05/NFR08. Autonomous scientific-merit decisions, acceptance decisions and text rewriting remain outside the confirmed need for the current MVP.
 
-U01 описал возврат из-за ссылок и имени файла; U02 — из-за подсчёта страниц вместе с литературой; U03 — из-за подписей и шрифтов таблиц. Эти случаи обосновывают формальные проверки, но не доказывают реализуемость всех проверок. Текстовое извлечение не подтверждает шрифт и поля. Полная проверка ГОСТ, metadata-анонимности и исходных LaTeX-файлов требует отдельной реализации и испытаний.
+U01 described returns caused by references and filenames; U02 described page counting that included references; U03 described captions and table fonts. These cases motivate formal checks, while feasibility still needs testing. Text extraction alone cannot establish fonts or margins. Full GOST bibliography checking, metadata-based anonymity checking and source LaTeX processing require separate implementation and tests.
 
-U01 и U03 условно допускают внешнюю обработку, U02 скорее отказывается для неопубликованного метода без разрешения лаборатории. Все спрашивают об условиях обработки. Это поддерживает FR12/NFR03: до передачи раскрыть фактические условия провайдера и получить разрешение. Обещать отсутствие хранения или обучения без подтверждённой политики нельзя. Согласие на заметки не распространяется автоматически на обработку рукописей. Локальный режим формальных проверок зарегистрирован как предложение будущего этапа.
+U01 and U03 conditionally allow external processing. U02 is more likely to refuse processing of an unpublished method without laboratory permission. All ask about processing conditions. This supports FR12/NFR03: disclose the actual provider terms and obtain permission before transmission. Claims about retention or training require a verified provider policy. Consent to interview notes does not automatically cover manuscript processing. A local formal-checking mode is recorded as a future-stage proposal.
 
-U01 и U03 упоминают сохранение прогресса и повторную проверку, что поддерживает FR08/FR10. U03 хочет отчёт для руководителя: FR09 предусматривает структурированный JSON, PDF-экспорт остаётся расширением. Приоритеты и различение критических/косметических замечаний поддерживают FR04/FR06.
+U01 and U03 mention saving progress and rechecking, supporting FR08/FR10. U03 wants a report for a supervisor: FR09 provides structured JSON, with PDF export retained as an extension. Priorities and the distinction between critical and cosmetic findings support FR04/FR06.
 
 
-Full record and limitations: docs/INTERVIEW_FINDINGS_RU.md.
+Full record and limitations: docs/INTERVIEW_FINDINGS.md.

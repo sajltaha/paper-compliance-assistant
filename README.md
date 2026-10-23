@@ -10,14 +10,14 @@ Authors need to check a manuscript against conference requirements and understan
 ## Team and supervisor
 | Member | Group | GitHub | Planned role |
 |---|---|---|---|
-| Сайлаубеков Талғат Ерханұлы | SE-2429 | [sajltaha](https://github.com/sajltaha) | Frontend, Backend, storage, integration, DevOps, functional QA |
-| Нұрышев Қайсар Серікұлы | SE-2413 | [stqnlee](https://github.com/stqnlee) | UI/UX, document processing, AI/LLM, AI quality checks |
+| Saylaubekov Talgat Yerkhanuly | SE-2429 | [sajltaha](https://github.com/sajltaha) | Frontend, Backend, storage, integration, DevOps, functional QA |
+| Nuryshev Kaisar Serikuly | SE-2413 | [stqnlee](https://github.com/stqnlee) | UI/UX, document processing, AI/LLM, AI quality checks |
 
-Supervisor: Солтан Гульжан Жексенбаевна.
+Supervisor: Soltan Gulzhan Zheksenbayevna.
 
 ## Scope and status
 Prepared: proposal, critical literature review (16 sources, 12 research entries), four-system comparison, six technology comparisons, 20 requirements with acceptance criteria, three source-editable diagrams, API/schema draft, interactive UX mockup, evaluation plan and task/evidence templates.
-Implemented foundation: PDF/DOCX intake validation, SHA-256 and unit tests in merged PR #2; CI passed. The PR is partial PCA-18 work, not PCA-19 criterion evaluation. Not implemented: text extraction, Go HTTP API, Vue application, database, OpenAI integration and Docker deployment. General supervisor feedback and the board screenshot PDF are available. Public PCA reading is configured. Audit correction: representative acceptance is retained; separate other-participant review, substantive supervisor evidence and external discussion/substitution evidence remain open. See docs/EVIDENCE_REGISTER.md. PRs #1-#4 are merged; this correction branch awaits genuine other-participant review. 
+Implemented foundation: PDF/DOCX intake validation, SHA-256 and unit tests in merged PR #2; CI passed. The PR is partial PCA-18 work, not PCA-19 criterion evaluation. Not implemented: text extraction, Go HTTP API, Vue application, database, OpenAI integration and Docker deployment. General supervisor feedback and the board screenshot PDF are available. Public PCA reading is configured. Audit correction: representative acceptance is retained; separate other-participant review, substantive supervisor evidence and external discussion/substitution evidence remain open. See docs/EVIDENCE_REGISTER.md. PRs #1–#7 are merged. PRs #5–#7 were integrated on 24 October 2026 (Asia/Almaty); the checked main revision is deca7d761aa449f7f8223c8514707706fb44d034. Review acceptance and submission evidence remain tracked in their own records.
 
 In scope: author-supplied conference criteria, supported formal and semantic checks, uncertainty, evidence and saved versioned runs. Out of scope: replacing scientific peer review, autonomous acceptance decisions, plagiarism certification and unsupported formatting guarantees.
 
@@ -53,15 +53,15 @@ From the repository root run `node tests/prototype_smoke.cjs` with a current Nod
 
 ## Review and submission
 
-Use [audit resolution](docs/AUDIT_RESOLUTION.md), [evidence register](docs/EVIDENCE_REGISTER.md), [task traceability](docs/TRACEABILITY.md) and [review guide](docs/REVIEW_HANDOFF_RU.md). Download this revision and open [prototype HTML](prototype/index.html); editable [diagram sources](diagrams/) and all report sections are included. Generated PDFs substitute their exact source commit into full artifact URLs. No private correspondence belongs in this public repository.
+Use [audit resolution](docs/AUDIT_RESOLUTION.md), [evidence register](docs/EVIDENCE_REGISTER.md), [task traceability](docs/TRACEABILITY.md) and [review guide](docs/REVIEW_HANDOFF.md). Download this revision and open [prototype HTML](prototype/index.html); editable [diagram sources](diagrams/) and all report sections are included. Generated PDFs substitute their exact source commit into full artifact URLs. No private correspondence belongs in this public repository.
 
 The actual visible history is concentrated on 22–23 October 2026; no multi-week development history is claimed. Future changes must be meaningful, task-linked and reviewed before merge.
 
 
 ## Follow-up technical audit
 
-The follow-up based on PR #5 fixes stale manuscript selection, empty-file handling and run/export filename consistency in the synthetic prototype, demonstrates all four result states, and adds prototype CI. It also corrects CONTRIBUTING version instructions and clarifies the findings payload versus API/export envelopes. See docs/FOLLOWUP_AUDIT_2026_10_23.md and docs/PROTOTYPE_VERIFICATION.md. These assistant-assisted checks do not close personal teammate review, supervisor feedback or external user evidence.
+The follow-up based on PR #5 fixes stale manuscript selection, empty-file handling and run/export filename consistency in the synthetic prototype, demonstrates all four result states, and adds prototype CI. It also corrects CONTRIBUTING version instructions and clarifies the findings payload versus API/export envelopes. See docs/FOLLOWUP_AUDIT_2026_10_23.md and docs/PROTOTYPE_VERIFICATION.md. Technical checks, teammate review, supervisor feedback and user evidence have separate acceptance records.
 
 ## Repeat audit and user discussions
 
-See [repeat audit](docs/REPEAT_AUDIT_2026_10_23.md) for the full 22-task assessment, PR #5 technical findings and integration limits. [PCA-22 action guide](docs/PCA22_ACTION_GUIDE_RU.md) provides a practical protocol for real discussions; it contains no fabricated responses. The new document corrections require review and do not alter the already checked PR #6.
+See [repeat audit](docs/REPEAT_AUDIT_2026_10_23.md) for the full 22-task assessment, PR #5 technical findings and integration limits. [PCA-22 action guide](docs/PCA22_ACTION_GUIDE.md) provides a practical protocol for real discussions; participant findings are documented in the separate interview log. The new document corrections require review and do not alter the already checked PR #6.

@@ -3,7 +3,7 @@
 | Condition | Evidence available | Remaining condition | Task |
 | --- | --- | --- | --- |
 | Relevance analysis | Official conference policy comparison and published CHI data | None for the completed analysis itself | PCA-2 |
-| External discussion condition | 3 participant records; 15 mapped observations; U01 explicit consent, U02/U03 consent confirmed by interviewer | All three dated 2026-10-20; acceptance review and live issue update remain; see INTERVIEW_FINDINGS_RU.md | PCA-22 |
+| External discussion condition | 3 participant records; 15 mapped observations; U01 explicit consent, U02/U03 consent confirmed by interviewer | All three dated 2026-10-20; acceptance review and live issue update remain; see INTERVIEW_FINDINGS.md | PCA-22 |
 | Proposal and literature acceptance | Representative acceptance retained | Other-participant substantive check and traceable decisions | PCA-1 PCA-3 PCA-14 |
 | Requirements review | Initial specification and representative acceptance | Other-participant AI requirement check | PCA-6 PCA-14 |
 | Supervisor feedback | Relayed general positive response without specific correction requests | Actual date, private original evidence reference and substantive coverage/decisions | PCA-13 |

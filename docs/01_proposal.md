@@ -23,7 +23,7 @@ The aim is to design and evaluate a locally runnable web system that identifies 
 
 | Member | Roles | Planned responsibility |
 | --- | --- | --- |
-| Сайлаубеков Талғат Ерханұлы SE-2429  /  sajltaha | Frontend, Backend, DevOps, functional QA | Vue 3/TypeScript/Tailwind/Pinia, Go REST API, database and file storage, integration, local Docker Compose and functional tests. |
-| Нұрышев Қайсар Серікұлы SE-2413  /  stqnlee | UI/UX, document processing, AI/LLM, QA | UX scenarios, PDF/DOCX conversion, criterion interpretation, OpenAI integration, prompt design and AI quality evaluation. |
+| Saylaubekov Talgat Yerkhanuly SE-2429  /  sajltaha | Frontend, Backend, DevOps, functional QA | Vue 3/TypeScript/Tailwind/Pinia, Go REST API, database and file storage, integration, local Docker Compose and functional tests. |
+| Nuryshev Kaisar Serikuly SE-2413  /  stqnlee | UI/UX, document processing, AI/LLM, QA | UX scenarios, PDF/DOCX conversion, criterion interpretation, OpenAI integration, prompt design and AI quality evaluation. |
 
-Supervisor: Солтан Гульжан Жексенбаевна. Expected outcomes are a functioning local web application in the implementation phase, a traceable evaluation dataset and protocol, and documentation explaining limitations. The team justification fixes Vue 3 and Go; detailed parser, storage and model decisions below are engineering proposals pending review.
+Supervisor: Soltan Gulzhan Zheksenbayevna. Expected outcomes are a functioning local web application in the implementation phase, a traceable evaluation dataset and protocol, and documentation explaining limitations. The team justification fixes Vue 3 and Go; detailed parser, storage and model decisions below are engineering proposals pending review.

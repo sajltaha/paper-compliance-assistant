@@ -9,11 +9,11 @@ A general positive response to the consolidated report was relayed by the projec
 | Substantive decisions | Coverage not established. | Ask for review of scope, requirements, technical trade-offs and evaluation; record actual decisions. |
 | Resulting improvements | No supervisor-specific revisions evidenced. | Attribute audit corrections to the audit; link future real comments to revisions or a reasoned no-change decision. |
 
-PCA-13 remains in Review. Templates in docs/REVIEW_HANDOFF_RU.md make the remaining review concrete; their existence does not count as received feedback. No weekly meeting history is claimed.
+PCA-13 remains in Review. Templates in docs/REVIEW_HANDOFF.md make the remaining review concrete; their existence does not count as received feedback. No weekly meeting history is claimed.
 
 ## Submission status
 
-The package corrects the audit findings that can be resolved from existing evidence. Completion still depends on genuine other-participant review, external relevance evidence or explicit substitution approval, substantive supervisor evidence, final version integration and form checks. Full application development remains next-stage work.
+The package corrects the audit findings that can be resolved from existing evidence. Completion still depends on other-participant review, external relevance evidence or explicit substitution approval, substantive supervisor evidence, final version integration and form checks. Full application development remains next-stage work.
 
 ## Direct artifact links
 

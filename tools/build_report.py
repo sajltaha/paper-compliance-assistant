@@ -34,7 +34,7 @@ def make_doc():
  for r in foot.runs:r.font.size=Pt(8)
  d.add_paragraph('Scientific Paper Compliance Assistant','Title')
  d.add_paragraph('First probationary period report','Subtitle')
- d.add_paragraph('Prepared for supervisor and committee review\nСайлаубеков Талғат Ерханұлы  |  SE-2429\nНұрышев Қайсар Серікұлы  |  SE-2413\nSupervisor  Солтан Гульжан Жексенбаевна\n24 October 2026')
+ d.add_paragraph('Prepared for supervisor and committee review\nSaylaubekov Talgat Yerkhanuly  |  SE-2429\nNuryshev Kaisar Serikuly  |  SE-2413\nSupervisor  Soltan Gulzhan Zheksenbayevna\n24 October 2026')
  p=d.add_paragraph();r=p.add_run('Status  ');r.bold=True;p.add_run('Research and design prepared. Audit corrections are ready for review; substantive supervision and other-participant review remain open. Source revision ' + args.source_sha[:12] + ('; local amendments ' + args.local_amendments[:12] if args.local_amendments else '') + '.')
  d.add_paragraph('Contents','Heading 2')
  d.add_paragraph('1 Proposal   2 Relevance   3 Literature   4 Existing systems   5 Technologies\n6 Requirements   7 Architecture   8 UX prototype   9 Evaluation\n10 Management and risks   11 Supervisor feedback   References')

@@ -4,7 +4,7 @@
     [
       [
         "p",
-        "Version note: this report is built from the exact review candidate {{REVISION}}. It includes three participant discussions dated 20 October 2026. The candidate awaits integration and final submission tagging; it is not the historical prob-period-1 version."
+        "Version note: this report is built from source revision {{REVISION}}. It includes three participant discussions dated 20 October 2026. PRs #5–#7 are integrated into main. Final submission tagging and form completion are separate steps; the historical prob-period-1 snapshot is retained unchanged."
       ],
       [
         "p",
@@ -68,12 +68,12 @@
         ],
         [
           [
-            "Сайлаубеков Талғат Ерханұлы\nSE-2429 | sajltaha",
+            "Saylaubekov Talgat Yerkhanuly\nSE-2429 | sajltaha",
             "Frontend, Backend, DevOps, functional QA",
             "Vue 3/TypeScript/Tailwind/Pinia, Go REST API, database and file storage, integration, local Docker Compose and functional tests."
           ],
           [
-            "Нұрышев Қайсар Серікұлы\nSE-2413 | stqnlee",
+            "Nuryshev Kaisar Serikuly\nSE-2413 | stqnlee",
             "UI/UX, document processing, AI/LLM, QA",
             "UX scenarios, PDF/DOCX conversion, criterion interpretation, OpenAI integration, prompt design and AI quality evaluation."
           ]
@@ -86,7 +86,7 @@
       ],
       [
         "p",
-        "Supervisor: Солтан Гульжан Жексенбаевна. Expected outcomes are a functioning local web application in the implementation phase, a traceable evaluation dataset and protocol, and documentation explaining limitations. The team justification fixes Vue 3 and Go; detailed parser, storage and model decisions below are engineering proposals pending review."
+        "Supervisor: Soltan Gulzhan Zheksenbayevna. Expected outcomes are a functioning local web application in the implementation phase, a traceable evaluation dataset and protocol, and documentation explaining limitations. The team justification fixes Vue 3 and Go; detailed parser, storage and model decisions below are engineering proposals pending review."
       ]
     ]
   ],
@@ -516,7 +516,7 @@
       ],
       [
         "p",
-        "Three anonymized participant records (U01–U03) were supplied in interview.docx. U01 consent is explicit in the notes; Kaisar separately confirmed U02/U03 consent. All three interviews took place on 20 October 2026, as confirmed by the interviewer. Consent to public publication of anonymized findings and the log was also confirmed. Fifteen observations are mapped to existing FR/NFR in docs/user_discussions_log.csv; three participants, not fifteen interviews, are counted. The findings support multi-source criteria, grounded explanations, explicit uncertainty, privacy controls and rechecking. See docs/INTERVIEW_FINDINGS_RU.md. PCA-22 now has three dated records, consent, findings and requirement mappings prepared for acceptance review. The secondary-data analysis and interview evidence have distinct limitations."
+        "Three anonymized participant records (U01–U03) were supplied in interview.docx. U01 consent is explicit in the notes; Kaisar separately confirmed U02/U03 consent. All three interviews took place on 20 October 2026, as confirmed by the interviewer. Consent to public publication of anonymized findings and the log was also confirmed. Fifteen observations are mapped to existing FR/NFR in docs/user_discussions_log.csv; three participants, not fifteen interviews, are counted. The findings support multi-source criteria, grounded explanations, explicit uncertainty, privacy controls and rechecking. See docs/INTERVIEW_FINDINGS.md. PCA-22 now has three dated records, consent, findings and requirement mappings prepared for acceptance review. The secondary-data analysis and interview evidence have distinct limitations."
       ],
       [
         "h",
@@ -1382,7 +1382,11 @@
       ],
       [
         "p",
-        "PRs #1-#4 are merged into main at 86141520e74e46f433be94ae29639844ec4e3760. prob-period-1 identifies that historical baseline and is retained unchanged. The source assignment requests pre-defense-1, while the inspected form requests prob-period-1. The audit-fix revision must pass actual other-participant review before integration and final tagging; do not pretend the historical merges had that review. docs/VERSIONING.md documents the exact-name conflict and the finalization sequence."
+        "Team members are responsible for project decisions, implementation, source verification and acceptance of changes. AI tools support consultation, suggestions, editorial work and technical checks. Contributions and reviews are recorded through linked tasks, commits and PRs."
+      ],
+      [
+        "p",
+        "PRs #1–#4 were integrated at the historical baseline 86141520e74e46f433be94ae29639844ec4e3760. prob-period-1 remains at that commit. PRs #5–#7 were subsequently merged; the checked main revision is deca7d761aa449f7f8223c8514707706fb44d034. The source assignment requests pre-defense-1, while the inspected form requests prob-period-1. Preserve review records with their actual dates and checked revisions. docs/VERSIONING.md describes the tag-name conflict and finalization sequence."
       ],
       [
         "p",
@@ -1481,7 +1485,7 @@
           ],
           [
             "Contribution traceability",
-            "Generated package mistaken for individual completed work.",
+            "Responsibilities and completed work become difficult to trace.",
             "Task-linked commits, descriptive branches and linked PRs. Both."
           ]
         ],
@@ -1497,7 +1501,7 @@
       ],
       [
         "p",
-        "The visible Git history is concentrated on 22-23 October 2026; it does not establish weeks of progressive work. Keep the existing history unchanged, record future substantive work as it happens and avoid artificial commits or backdated evidence. Every significant artifact is mapped to a task, historical PR and immutable baseline in docs/TRACEABILITY.md. Assigned roles are not proof of personal authorship or understanding."
+        "The recorded Git history covers 22–23 October 2026. Each significant artifact is mapped to a task, PR and immutable baseline in docs/TRACEABILITY.md. Team members maintain task-linked commits and review records as work progresses."
       ],
       [
         "p",
@@ -1549,7 +1553,7 @@
       ],
       [
         "p",
-        "PCA-13 remains in Review. Templates in docs/REVIEW_HANDOFF_RU.md make the remaining review concrete; their existence does not count as received feedback. No weekly meeting history is claimed."
+        "PCA-13 remains in Review. Templates in docs/REVIEW_HANDOFF.md make the remaining review concrete; their existence does not count as received feedback. No weekly meeting history is claimed."
       ],
       [
         "h",

@@ -13,4 +13,4 @@
 
 Quality improvements: equal-criterion technology trade-offs; exact 20 MiB limit; DA-R to FR/NFR/task mapping; concrete test fixtures/procedures/oracles; Go/storage/history/deletion/consent paths; API examples/errors; source-based demo guide; language correction of the private team justification without changing the approved topic, roles or signatures.
 
-No interviews, human reviews, supervisor comments, benchmark results or past meetings were fabricated. This register does not claim every external requirement has been completed.
+The register tracks documented corrections and the evidence still needed for acceptance.

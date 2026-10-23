@@ -1,7 +1,6 @@
 # Contribution workflow
 
-Every student uses their own GitHub account. Do not share credentials or impersonate another commit author.
-The first package is AI-assisted preparation, not proof of historical contribution by both students.
+Team members are responsible for project decisions, implementation, source verification and acceptance of changes. AI tools support consultation, suggestions, editorial work and technical checks. Record each member's work and reviews through linked tasks, commits and PRs. Each reviewer records their own assessment.
 
 1. Create an actual YouTrack issue with owner, priority, deadline, expected output and acceptance criteria.
 2. Create a branch such as ACTUAL-ID-requirements-review.
@@ -11,5 +10,5 @@ The first package is AI-assisted preparation, not proof of historical contributi
 6. Merge reviewed work into main; update the actual task with the PR and decision.
 7. After review and integration, freeze the final submission with pre-defense-1. Preserve the existing prob-period-1 tag at its historical commit; obtain the receiving party's decision on the form's conflicting tag name before submission. See docs/VERSIONING.md.
 
-Prepared files are not automatically completed tasks. A local planning key in the CSV is not an actual YouTrack issue ID. Do not manufacture old commit dates, interviews, approvals or completed tests.
+Close tasks when their acceptance criteria are met. Use live YouTrack issue IDs and retain actual dates, source records, review decisions and test results.
 

@@ -1,8 +1,10 @@
 # Follow-up audit of the first submission
 
+Historical technical audit: PR and task states below describe the checked revision before subsequent integration. Consult current GitHub and YouTrack records for later decisions.
+
 23 October 2026, Asia/Almaty. Tasks: [PCA-16](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-16) and [PCA-8](https://paper-compliance-assistant.youtrack.cloud/issue/PCA-8).
 
-This is AI-assisted technical checking requested by Kaisar, not his personal academic review or independent teammate acceptance. The four supplied files were read: the 24 October requirements DOCX, the 23-page report PDF, team justification DOCX and Remaining Audit. Repository base checked: PR #5, 80e850649725a3cccefde9a612926e4e7ea8ba31. Live GitHub returned PR #5 open with no submitted reviews, main and prob-period-1 at 86141520e74e46f433be94ae29639844ec4e3760, and no pre-defense-1 tag.
+Kaisar requested technical checking with AI support. The team retains responsibility for decisions and acceptance; participant review is recorded separately. The four supplied files were read: the 24 October requirements DOCX, the 23-page report PDF, team justification DOCX and Remaining Audit. Repository base checked: PR #5, 80e850649725a3cccefde9a612926e4e7ea8ba31. Live GitHub returned PR #5 open with no submitted reviews, main and prob-period-1 at 86141520e74e46f433be94ae29639844ec4e3760, and no pre-defense-1 tag.
 
 ## Additional corrections
 
@@ -12,7 +14,7 @@ This is AI-assisted technical checking requested by Kaisar, not his personal aca
 4. The prototype lacked a visible not_applicable example/filter. A fifth conditional synthetic criterion now demonstrates this state with a reason. It is explicitly demo data.
 5. Prototype handler tests now cover the new cases and exact 20 MiB boundaries. A path-filtered prototype GitHub Actions workflow was added; its server-side outcome is separate from the local test result.
 6. API_CONTRACT.md now distinguishes the findings-only schema from the run lifecycle envelope and future FR09 export. This clarifies a design contract; endpoints are still unimplemented.
-7. UX documentation and report source JSON reflect the corrected prototype. Verification/evidence/traceability records distinguish assistant checks from human review.
+7. UX documentation and report source JSON reflect the corrected prototype. Verification, evidence and traceability records identify technical checks and participant review separately.
 8. The supplied justification still contained grammatical errors despite the earlier audit's statement of completion. They were corrected in the private document, preserving the exact topic, identities, roles, GPA and unsigned fields. Its private contact information is not copied into Git.
 
 ## Requirement coverage
@@ -39,7 +41,7 @@ Go, a local browser binary and a JSON Schema validator were unavailable; no loca
 
 ## Remaining external evidence and finalization
 
-Keep PCA-1/3/6/13/14/22 open as applicable. Obtain genuine personal review and real stakeholder/supervisor evidence, resolve findings, integrate the checked version, create pre-defense-1 without moving the historical tag, settle the form's tag-name conflict, and rebuild final PDFs plus board evidence from that exact version. The required board PDF and a successful form receipt were not among the four attachments. They are not represented as produced or submitted by this audit. No private correspondence was accessed or sent, and no final merge, release tag or form submission was performed.
+Keep PCA-1/3/6/13/14/22 open as applicable. Record participant review and stakeholder/supervisor evidence, resolve findings, integrate the checked version, create pre-defense-1 without moving the historical tag, settle the form's tag-name conflict, and rebuild final PDFs plus board evidence from that exact version. The required board PDF and a successful form receipt were not among the four attachments. They are not represented as produced or submitted by this audit. No private correspondence was accessed or sent, and no final merge, release tag or form submission was performed.
 
 ## Subsequent guest browser evidence
 

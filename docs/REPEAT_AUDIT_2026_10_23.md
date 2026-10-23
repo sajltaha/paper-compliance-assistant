@@ -1,69 +1,68 @@
-# Повторный аудит первой сдачи
+# Repeat audit of the first submission
 
-Актуализировано 24 октября 2026 года, Asia/Almaty. Повторно сопоставлены исходное задание, отчёт, обоснование, журналы, документы репозитория, прототип, PR и живые данные YouTrack. Эта проверка не является официальной оценкой комиссии.
+Updated on 24 October 2026, Asia/Almaty. The assignment, report, justification, logs, repository documentation, prototype, PRs and live YouTrack data were compared again. This is a technical assessment of the available materials; the committee determines the official assessment. Integration and board details below describe the recorded audit snapshot, before subsequent merges.
 
-## Что завершено
+## Completed materials
 
-Получены и оформлены интервью U01–U03 от 20 октября 2026 года. Дату и согласие всех участников на публичное размещение обезличенных материалов подтвердил Кайсар. В журнале 15 наблюдений трёх участников, выводы и решения связаны с FR/NFR. Исходный частный interview.docx не публикуется. PCA-22 подготовлена к Review; проводить новые интервью по имеющимся данным не требуется.
+Interviews U01–U03 from 20 October 2026 are documented. Kaisar confirmed the date and all participants' consent to public anonymized findings. The log contains 15 observations from three participants with FR/NFR-linked conclusions and decisions. The private interview.docx remains outside the repository. PCA-22 is prepared for Review; the available records do not require additional interviews.
 
-В пакет входят proposal и scope, анализ публичных правил пяти конференций и статистики CHI, 16 источников (12 исследовательских), сравнение четырёх систем по восьми критериям, сравнение технологий, 12 FR и 8 NFR с T01–T20, три редактируемые диаграммы, прототип и план оценки. Все 11 компонентов задания сопоставлены с материалами. Подготовлено девять компонентов; управление/интеграция частично закрыты; содержательное датированное свидетельство руководителя остаётся открытым. Условный расчёт с равными весами: (9 + 0.5) / 11 = 86.4%. Это оценка материалов первой сдачи, не готовности приложения и не официальный балл.
+The package contains the proposal and scope, public rules from five conferences and CHI screening statistics, 16 sources including 12 research entries, four systems compared across eight criteria, technology comparisons, 12 FR and 8 NFR mapped to T01–T20, three editable diagrams, the prototype and an evaluation plan. All 11 assignment components are mapped to artifacts. Nine components were prepared, management/integration was partially complete, and substantive dated supervisor evidence remained open. With equal weights, the indicative calculation is (9 + 0.5) / 11 = 86.4%. This describes first-submission materials and does not measure application readiness or an official grade.
 
-Проверены исправления stale selection, пустых файлов, блокировки входов и экспорта завершённого запуска; прототип показывает пять синтетических результатов и четыре состояния. Handler smoke PASS. JSON читается, 20 требований сопоставлены с 20 тестовыми процедурами. Уточнены план 28 уникальных документов (8 development + 20 held-out), определения метрик, mapping требований и transient/permanent retry. Полноценные T01–T20, benchmark, product browser tests и реализация серверного анализа не объявлены выполненными. Самооценки времени из интервью не выданы за измеренный эффект продукта.
+Checks covered stale selection, empty files, disabled inputs and completed-run export. The prototype shows five synthetic findings and four states. Handler smoke checks passed. JSON parses and 20 requirements map to 20 test procedures. The plan specifies 28 unique documents, split into 8 development and 20 held-out documents, metric definitions, requirement mapping and transient/permanent retries. Full T01–T20 execution, the benchmark, product browser tests and server-side analysis remain implementation-stage work. Interview time estimates remain self-reports.
 
-## PR и интеграция
+## PRs and integration at the audit snapshot
 
-PR 5: 80e850649725a3cccefde9a612926e4e7ea8ba31, https://github.com/sajltaha/paper-compliance-assistant/pull/5 . Технический комментарий: https://github.com/sajltaha/paper-compliance-assistant/pull/5#pullrequestreview-5632920719 .
+PR #5: 80e850649725a3cccefde9a612926e4e7ea8ba31, https://github.com/sajltaha/paper-compliance-assistant/pull/5 . Technical review: https://github.com/sajltaha/paper-compliance-assistant/pull/5#pullrequestreview-5632920719 .
 
-PR 6: f9282959be1045934c890afa465102fb2717f2cf, https://github.com/sajltaha/paper-compliance-assistant/pull/6 . Технический комментарий: https://github.com/sajltaha/paper-compliance-assistant/pull/6#pullrequestreview-5633430095 . Талгат эту версию не проверял; прежнее утверждение отозвано. Технические комментарии не заменяют предусмотренное заданием личное ревью другим участником команды.
+PR #6: f9282959be1045934c890afa465102fb2717f2cf, https://github.com/sajltaha/paper-compliance-assistant/pull/6 . Technical review: https://github.com/sajltaha/paper-compliance-assistant/pull/6#pullrequestreview-5633430095 . At this checked revision, Talgat's personal review had not occurred; the earlier contrary statement was withdrawn. Participant review was tracked as a separate assignment condition.
 
-PR 7: https://github.com/sajltaha/paper-compliance-assistant/pull/7 . Содержит последующие уточнения плана оценки и требований; подготовлено дополнение с датированными интервью и обновлённым отчётом. Ссылки в отчёте используют точный source commit при сборке.
+PR #7: https://github.com/sajltaha/paper-compliance-assistant/pull/7 . Includes later evaluation and requirement clarifications, dated interview evidence and report updates. Report links use the exact source commit supplied during the build.
 
-Предыдущее слияние PR 6 отклонено автоматической проверкой: не было зарегистрированного ревью и достаточного разрешения на конкретное слияние. Обходов не выполнено. PR 5–7 пока открыты; main и исторический prob-period-1 остаются на 86141520e74e46f433be94ae29639844ec4e3760. pre-defense-1 не создан. Готовый пакет для проверки не назван отправленной версией.
+A previous PR #6 merge attempt was rejected by automatic approval review because a recorded review and sufficient authorization for that specific merge were missing. No bypass was performed. At this historical snapshot, PRs #5–#7 were open, main and prob-period-1 pointed to 86141520e74e46f433be94ae29639844ec4e3760, and pre-defense-1 had not been created. A review package was prepared; submission was still pending. Consult current GitHub records for subsequent integration.
 
-## Все задачи
+## All tasks at the audit snapshot
 
-По живой доске 10 Done, 5 Review, 2 Develop и 5 Backlog: 10/22 = 45.5%. Это состояние задач всего проекта, а не процент первой сдачи. Новые записи интервью ещё не приняты через live-задачу.
+The board showed 10 Done, 5 Review, 2 Develop and 5 Backlog: 10/22 = 45.5%. This is the task distribution for the entire project. Interview records had not yet been accepted in the live task.
 
-| Task | Live stage | Результат повторной проверки и следующий шаг |
+| Task | Recorded stage | Audit finding and next step |
 | --- | --- | --- |
-| PCA-1 | Review | Proposal технически проверен; необходимо личное объяснение scope и traceable acceptance |
-| PCA-2 | Done | Secondary-data analysis есть; не заменяет PCA-22 автоматически |
-| PCA-3 | Review | Матрица и источники проверены технически; личное чтение и review остаются отдельными |
-| PCA-4 | Done | Четыре системы, восемь критериев, ограниченные claims |
-| PCA-5 | Done | Альтернативы и trade-offs есть; parser/storage не выданы за измеренный выбор |
-| PCA-6 | Review | FR/NFR и mapping проверены; добавлены документальные уточнения, нужен review |
-| PCA-7 | Done | Диаграммы и API есть; уточнён mapping, endpoints не реализованы |
-| PCA-8 | Done | Synthetic prototype и handlers PASS; browser/user evaluation не заявлены |
-| PCA-9 | Done | План есть; исправлен split и уточнены метрики, нужна проверка новых правок |
-| PCA-10 | Done | Два GitHub автора и публичный repo; доступ supervisor/committee не равен подтверждению, что они открыли материалы |
-| PCA-11 | Done | Живая доска доступна; 22 задачи с владельцами/приоритетами/сроками |
-| PCA-12 | Done | Риски, ответственность, зависимости и provisional milestones есть |
-| PCA-13 | Review | Нужны фактическая дата, оригинал и содержательные решения руководителя |
-| PCA-14 | Review | Ссылки на вклад и технические проверки есть; личное ревью PR 5–7 участниками остаётся открытым |
-| PCA-15 | Done | Board/tasks PDF существует; после окончательных изменений обновить снимок/ссылки |
-| PCA-16 | Develop | Merge заблокирован; final tag, согласование формы и receipt отсутствуют |
-| PCA-17 | Backlog | Go upload/persistence API — будущий этап |
-| PCA-18 | Develop | Intake validator есть; parsing, blocks/anchors и OCR policy ещё нужны |
-| PCA-19 | Backlog | Criterion normalization/evaluation — будущий этап |
-| PCA-20 | Backlog | Corpus, labels, controlled evaluation — будущий этап |
-| PCA-21 | Backlog | Vue integration/Docker startup — будущий этап |
-| PCA-22 | Backlog | Три интервью 20.10.2026, 15 наблюдений, согласие и mapping оформлены; готово к Review |
+| PCA-1 | Review | Proposal checked technically; record scope explanation and traceable acceptance. |
+| PCA-2 | Done | Secondary-data analysis available; PCA-22 has a separate acceptance condition. |
+| PCA-3 | Review | Matrix and sources checked technically; record participant source review separately. |
+| PCA-4 | Done | Four systems, eight criteria and bounded claims. |
+| PCA-5 | Done | Alternatives and trade-offs documented; parser/storage pilots remain planned. |
+| PCA-6 | Review | FR/NFR and mappings checked; review the added clarifications. |
+| PCA-7 | Done | Diagrams and API design available; mappings clarified; endpoints still planned. |
+| PCA-8 | Done | Synthetic prototype and handler checks passed; browser/user evaluation remains planned. |
+| PCA-9 | Done | Plan available; split and metrics corrected; review new changes. |
+| PCA-10 | Done | Two GitHub contributors and public repository; access does not establish that a recipient opened the materials. |
+| PCA-11 | Done | Live board available with 22 tasks, owners, priorities and dates. |
+| PCA-12 | Done | Risks, responsibilities, dependencies and provisional milestones documented. |
+| PCA-13 | Review | Record actual date, original evidence and substantive supervisor decisions. |
+| PCA-14 | Review | Contribution links and technical checks available; participant review of PRs #5–#7 remained open. |
+| PCA-15 | Done | Board/tasks PDF available; refresh snapshot and links after final changes. |
+| PCA-16 | Develop | Integration, final tag, form agreement and receipt remained outstanding. |
+| PCA-17 | Backlog | Go upload/persistence API is a later stage. |
+| PCA-18 | Develop | Intake validator available; parsing, blocks/anchors and OCR policy remain. |
+| PCA-19 | Backlog | Criterion normalization/evaluation is a later stage. |
+| PCA-20 | Backlog | Corpus, labels and controlled evaluation are a later stage. |
+| PCA-21 | Backlog | Vue integration and Docker startup are a later stage. |
+| PCA-22 | Backlog | Three interviews dated 20 October 2026, 15 observations, consent and mappings ready for Review. |
 
+## YouTrack and form
 
-## YouTrack и форма
+YouTrack was readable as a guest, with editing disabled. Prepared texts for PCA-22/14/16/13 are in docs/YOUTRACK_UPDATE.md. No task status was changed in that session. Review was recommended for PCA-22 because dates, consent, records and mappings were documented.
 
-YouTrack доступен гостю для чтения; редактирование отключено. Готовые тексты для PCA-22/14/16/13 находятся в docs/YOUTRACK_UPDATE_RU.md. Статусы без прав редактирования не изменены. Для PCA-22 рекомендуемое следующее состояние Review: дата, согласие, записи и mapping уже оформлены.
+Form pages 1–2 were inspected and a verification draft was prepared with the project title, supervisor, team, repository, responsibilities and limitations. Page 3 requires one PDF of board/task screenshots below 10 MB. YouTrack_Board_and_Tasks.pdf was below that limit; proceeding required upload. Pages 4–5 were not checked in that pass. The form was not submitted and no receipt was available.
 
-Проверены страницы 1–2 формы и создан проверочный черновик с названием проекта, руководителем, командой, репозиторием, ответственностью и ограничениями. Страница 3 требует один PDF со снимками доски/задач до 10 MB; подготовленный YouTrack_Board_and_Tasks.pdf меньше лимита. Переход далее требует загрузки файла. Страницы 4–5 текущим проходом не проверены; форма не отправлена, receipt отсутствует.
+The form requests prob-period-1; the assignment requests pre-defense-1. The historical prob-period-1 identifies an earlier main snapshot. Agree the corrected version reference with the supervisor/coordinator while preserving that tag.
 
-Форма требует prob-period-1, исходное задание — pre-defense-1. Старый prob-period-1 соответствует прежнему main и не соответствует новой сборке. Нужно согласовать способ обозначения исправленной версии с руководителем/координатором, сохранив исторический тег. Самостоятельное переименование ссылки не решает конфликт.
+## Remaining submission actions recorded by the audit
 
-## Что действительно осталось перед сдачей
+1. Obtain substantive dated supervisor feedback on scope, requirements, technologies and evaluation; link decisions to revisions. Retain the general positive response within its documented scope.
+2. Complete participant review of the relevant PR revisions, recording checked SHAs, findings and decisions.
+3. Update YouTrack from an authorized editing account and accept PCA-22 and other evidence-dependent tasks as appropriate.
+4. Integrate reviewed changes, settle the tag names, freeze the exact revision and rebuild the matching package.
+5. Complete uploads and inspect all form pages; the representative submits once and retains the receipt.
 
-1. Получить содержательный датированный ответ руководителя по scope, требованиям, технологиям и оценке; записать решения и связь с исправлениями. Общий положительный ответ уже отражён в своём ограниченном объёме.
-2. Выполнить личное взаимное ревью актуальных изменений PR 5–7, записать проверенный SHA, замечания и решения.
-3. Из авторизованной учётной записи обновить YouTrack подготовленными текстами, принять PCA-22 и остальные evidence-зависимые задачи.
-4. Выполнить разрешённую интеграцию проверенных изменений, согласовать два названия тега, зафиксировать точную версию и пересобрать из неё пакет.
-5. Завершить загрузки и проверку всех страниц формы, отправить один раз от представителя команды и сохранить receipt.
-
-Полное приложение к первому этапу не требуется. PCA-17–21 остаются следующими этапами: парсинг и provenance, Go API и persistence, evaluator, Vue/Docker, корпус и контролируемая оценка. Подготовленные документы и прошедший smoke не подменяют их реализацию.
+The first checkpoint does not require the complete application. PCA-17–PCA-21 cover parsing/provenance, Go API/persistence, evaluator, Vue/Docker, corpus and controlled evaluation in later stages. Documentation and handler smoke checks establish only their stated scope.

@@ -9,7 +9,7 @@ Reproduce the handler check from the repository root with `node tests/prototype_
 
 ## 23 October follow-up verification
 
-AI-assisted technical verification against PR #5 base commit 80e850649725a3cccefde9a612926e4e7ea8ba31 and the follow-up working files. This is not Kaisar's personal review or independent teammate acceptance.
+Technical verification against PR #5 base commit 80e850649725a3cccefde9a612926e4e7ea8ba31 and the follow-up working files used AI support for checks. Participant review and acceptance are tracked separately from these test results.
 
 A regression reproduction failed on the base: choosing an unsupported file after loading the synthetic example left selectedName pointing to the old manuscript. The corrected handler clears selection on invalid replacement or an empty chooser and rejects zero-byte files. Exact 20 MiB and limit-plus-one byte cases are covered.
 

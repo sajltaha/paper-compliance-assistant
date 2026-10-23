@@ -2,7 +2,7 @@
 
 The assignment names the first pre-defense tag `pre-defense-1`. The inspected Microsoft form separately requests `prob-period-1`. These are two distinct requirements, not interchangeable spellings.
 
-Existing `prob-period-1` is retained at `86141520e74e46f433be94ae29639844ec4e3760`, including its historical report-source snapshot. It has not been moved or deleted. PRs #1-#4 are integrated there. This audit correction is in `PCA-16-audit-fixes`, awaiting a substantive review by the other participant before merge.
+Existing `prob-period-1` is retained at `86141520e74e46f433be94ae29639844ec4e3760`, including its historical report-source snapshot. It has not been moved or deleted. PRs #1-#4 are integrated there. Corrections from PRs #5–#7 are now integrated in main at `deca7d761aa449f7f8223c8514707706fb44d034`. Review acceptance, final submission tagging and form completion remain separately documented.
 
 After actual review, resolve findings, integrate the exact approved revision and create `pre-defense-1` on the final integrated commit. Do not create a final submission tag on an unreviewed candidate merely to make a checklist green. Rebuild PDFs from that exact revision and store their hashes in the packaging manifest.
 

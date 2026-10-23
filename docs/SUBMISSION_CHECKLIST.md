@@ -17,4 +17,4 @@
 - [ ] Rebuild matching PDFs and verify their source commit/hashes.
 - [ ] Replace both form attachments; inspect all five pages; representative submits.
 
-The generated audit-correction PDFs are review candidates while these external conditions remain open. A complete application is not required at this stage. No retrospective history or reviews are fabricated.
+The generated audit-correction PDFs are review candidates while these external conditions remain open. A complete application is not required at this stage. Review and submission records retain their actual dates.

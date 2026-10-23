@@ -20,4 +20,4 @@ PCA-18,Implement PDF DOCX extraction adapter,Kaisar,Develop,2026-10-31,backend/i
 PCA-19,Implement criterion normalization and evaluation,Kaisar,Backlog,2026-11-14,docs/ai_contract.schema.json
 PCA-20,Run controlled evaluation and analyse errors,Kaisar,Backlog,2026-11-28,docs/09_evaluation.md
 PCA-21,Implement Vue interface and Docker startup,Talgat,Backlog,2026-11-21,prototype/index.html
-PCA-22,Resolve user-discussion or client-agreement evidence,Talgat,Backlog,2026-10-24,docs/USER_EVIDENCE_PROTOCOL_RU.md
+PCA-22,Resolve user-discussion or client-agreement evidence,Talgat,Backlog,2026-10-24,docs/USER_EVIDENCE_PROTOCOL.md
