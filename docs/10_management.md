@@ -1,8 +1,8 @@
 # 10 Project management and risks
 
-Repository: https://github.com/sajltaha/paper-compliance-assistant . Tasks: https://paper-compliance-assistant.youtrack.cloud/issues/PCA . Board: https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1 . The live task snapshot of 24 October 2026, 02:58 Asia/Almaty contains 22 issues: 11 Done, 5 Review, 2 Develop and 4 Backlog. Issue fields, target dates, descriptions and comments are reflected in docs/YOUTRACK_LIVE_TASKS.md.
+Repository: https://github.com/sajltaha/paper-compliance-assistant . Tasks: https://paper-compliance-assistant.youtrack.cloud/issues/PCA . Board: https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1 . The live task snapshot of 24 October 2026, 03:24 Asia/Almaty contains 22 issues: 12 Done, 4 Review, 2 Develop and 4 Backlog. Issue fields, target dates, descriptions and comments are reflected in docs/YOUTRACK_LIVE_TASKS.md.
 
-Team members are responsible for project decisions, implementation, source verification and acceptance of changes. AI tools support consultation, suggestions, editorial work and technical checks. Contributions and reviews are recorded through linked tasks, commits and PRs.
+Team members are responsible for project decisions, implementation, source verification and acceptance of changes. Contributions and reviews are recorded through linked tasks, commits and PRs.
 
 PRs #1–#4 were integrated at 86141520e74e46f433be94ae29639844ec4e3760, the original checkpoint revision now retained as prob-period-1-before-update. PRs #5–#7 were integrated on 24 October 2026 at deca7d761aa449f7f8223c8514707706fb44d034. Task-to-artifact and PR links are recorded in docs/TRACEABILITY.md. The recorded development history starts on 22 October 2026.
 
@@ -42,22 +42,23 @@ Talgat (sajltaha) posted Approve with nits comments on 24 October 2026, Asia/Alm
 - PR #6: https://github.com/sajltaha/paper-compliance-assistant/pull/6#issuecomment-6373921286
 - PR #7: https://github.com/sajltaha/paper-compliance-assistant/pull/7#issuecomment-6373878035
 
-PCA-14 records those comments and completed merges, but remains Review for remaining package-level acceptance. PCA-1, PCA-3 and PCA-6 remain Review; the new comments do not establish personal reading or acceptance of every proposal/literature item. Earlier technical reviews remain available at https://github.com/sajltaha/paper-compliance-assistant/pull/5#pullrequestreview-5632920719 and https://github.com/sajltaha/paper-compliance-assistant/pull/6#pullrequestreview-5633430095 . Historical PRs #1/#3/#4 have no registered other-participant reviews, and PR #2's review is explicitly qualified as AI-assisted; subsequent comments do not change those dates. Supervisor evidence remains in docs/11_supervisor_feedback.md and docs/supervisor_feedback_log.csv.
+PCA-14 records those comments and completed merges, but remains Review for remaining package-level acceptance. PCA-1, PCA-3 and PCA-6 remain Review; the new comments do not establish personal reading or acceptance of every proposal/literature item. Earlier technical reviews remain available at https://github.com/sajltaha/paper-compliance-assistant/pull/5#pullrequestreview-5632920719 and https://github.com/sajltaha/paper-compliance-assistant/pull/6#pullrequestreview-5633430095 . Historical PRs #1/#3/#4 have no registered other-participant reviews. Later comments do not establish that those earlier merges had a team review beforehand. The supervisor’s positive response dated 24 October 2026, 03:00 Asia/Almaty is recorded in docs/11_supervisor_feedback.md and docs/supervisor_feedback_log.csv; PCA-13 is Done.
 
-The committed prototype suite does not yet exercise JSON export. PR #6's export regression recommendation remains a test follow-up; the three PR #7 wording/link issues are reflected in the current project documents. These follow-ups do not turn the synthetic prototype into a working analysis service.
+The committed prototype suite now checks JSON export, including preservation of the completed run’s filename and findings after selecting another manuscript. The 24 October handler run passed, closing PR #6’s export regression recommendation. The three PR #7 wording/link issues are resolved in current project documents. These corrections do not change the prototype’s synthetic scope.
 
 ## Submission version
 
-The assignment specifies pre-defense-1, while the inspected form specifies prob-period-1. PCA-16 now records the team's explicit decision to use the form's prob-period-1 name and authorization to correct its target. GitHub references confirm:
+The assignment specifies pre-defense-1, while the inspected submission form specifies prob-period-1. The team explicitly selected the form’s prob-period-1 name and authorized updating its target to include the final documentation synchronization. The earlier targets are preserved for traceability. The report records its exact 40-character source commit; the active release identifies the corresponding tag target.
 
 | Reference | Commit | Purpose |
 | --- | --- | --- |
-| prob-period-1 | deca7d761aa449f7f8223c8514707706fb44d034 | Reviewed integrated checkpoint selected by the team |
+| prob-period-1 | Exact source commit in the current release and report metadata | Final integrated checkpoint selected by the team |
+| prob-period-1-before-final-sync | deca7d761aa449f7f8223c8514707706fb44d034 | Integrated PR #5–#7 checkpoint before final documentation synchronization |
 | prob-period-1-before-update | 86141520e74e46f433be94ae29639844ec4e3760 | Original checkpoint tag target, retained as an archive |
 | archive/prob-period-1-before-update | 86141520e74e46f433be94ae29639844ec4e3760 | Archive branch retaining the original commit |
 
 Submission link: https://github.com/sajltaha/paper-compliance-assistant/tree/prob-period-1 . Release: https://github.com/sajltaha/paper-compliance-assistant/releases/tag/prob-period-1 . No pre-defense-1 tag is present in the checked GitHub references. The team's recorded naming decision is not documented here as university approval of the assignment's different tag name.
 
-Later documentation changes on main are distinct from the fixed deca7d761aa449f7f8223c8514707706fb44d034 checkpoint. PDFs uploaded for prob-period-1 must use that tagged source; a build from later main is a different source revision. PCA-16 remains Develop for substantive dated supervisor feedback, remaining package acceptance, refreshed matching PDFs, final uploads and a successful receipt. The task records inspection of form pages 1–2 and the mandatory board-PDF upload on page 3; no submission or receipt is claimed.
+The final report must be built from the same source commit selected by prob-period-1. PCA-16 remains Develop for remaining personal/package acceptance, final form uploads and a successful receipt. The dated supervisor response is now recorded under completed PCA-13. The task records inspection of form pages 1–2 and the mandatory board-PDF upload on page 3; no submission or receipt is claimed. Final documentation synchronization was explicitly authorized directly on main and does not retroactively establish earlier peer reviews.
 
 The submission includes the consolidated report and a PDF of the board and representative tasks. Report links use the exact source commit supplied to tools/build_report.py through --source-sha; source revisions and output checksums identify the corresponding package. The recorded board PDF is a dated snapshot, not a live view of task state.

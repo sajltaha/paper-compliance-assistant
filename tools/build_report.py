@@ -23,25 +23,29 @@ def make_doc():
  styles['Title'].font.size=Pt(23);styles['Title'].font.bold=True
  styles['Heading 1'].font.size=Pt(15);styles['Heading 1'].paragraph_format.space_before=Pt(15);styles['Heading 1'].paragraph_format.space_after=Pt(9)
  styles['Heading 2'].font.size=Pt(11);styles['Heading 2'].paragraph_format.space_before=Pt(9)
+ reference_style=styles.add_style('Reference text',1);reference_style.base_style=styles['Normal'];reference_style.font.size=Pt(9);reference_style.paragraph_format.space_after=Pt(5)
  for st in styles:
   pr=st.element.find(qn('w:pPr'))
   if pr is not None:
    for border in list(pr.findall(qn('w:pBdr'))):pr.remove(border)
  header=sec.header.paragraphs[0];header.text='AITU  |  SOFTWARE ENGINEERING  |  FIRST PROBATIONARY PERIOD';header.style='Caption';header.runs[0].font.size=Pt(8);header.runs[0].font.color.rgb=RGBColor(0,0,0)
  foot=sec.footer.paragraphs[0];foot.alignment=2
- foot.add_run('Audit corrected candidate 24 October 2026  |  ')
+ foot.add_run('Checkpoint report 24 October 2026  |  ')
  fld=OxmlElement('w:fldSimple');fld.set(qn('w:instr'),'PAGE');foot._p.append(fld)
  for r in foot.runs:r.font.size=Pt(8)
  d.add_paragraph('Scientific Paper Compliance Assistant','Title')
  d.add_paragraph('First probationary period report','Subtitle')
  d.add_paragraph('Prepared for supervisor and committee review\nSaylaubekov Talgat Yerkhanuly  |  SE-2429\nNuryshev Kaisar Serikuly  |  SE-2413\nSupervisor  Soltan Gulzhan Zheksenbayevna\n24 October 2026')
- p=d.add_paragraph();r=p.add_run('Status  ');r.bold=True;p.add_run('Research and design prepared. Audit corrections are ready for review; substantive supervision and other-participant review remain open. Source revision ' + args.source_sha[:12] + ('; local amendments ' + args.local_amendments[:12] if args.local_amendments else '') + '.')
+ p=d.add_paragraph();r=p.add_run('Status  ');r.bold=True;p.add_run('Research and design prepared. Supervisor response received on 24 October at 03:00; no revisions requested. Remaining personal acceptance and final submission are tracked in YouTrack. Source revision ' + args.source_sha[:12] + ('; local amendments ' + args.local_amendments[:12] if args.local_amendments else '') + '.')
  d.add_paragraph('Contents','Heading 2')
  d.add_paragraph('1 Proposal   2 Relevance   3 Literature   4 Existing systems   5 Technologies\n6 Requirements   7 Architecture   8 UX prototype   9 Evaluation\n10 Management and risks   11 Supervisor feedback   References')
  for si,(title,blocks) in enumerate(sections):
   d.add_heading(title,level=1)
   for b in blocks:
-   if b[0]=='p': d.add_paragraph(b[1])
+   if b[0]=='p':
+    paragraph=d.add_paragraph(b[1])
+    if title=='References':
+     paragraph.style='Reference text'
    elif b[0]=='h':d.add_heading(b[1],level=2)
    elif b[0]=='image':
     p=d.add_paragraph();p.paragraph_format.keep_with_next=True;p.add_run().add_picture(str(ROOT/'diagrams'/f'{b[1]}.png'),width=Inches(6.65))
