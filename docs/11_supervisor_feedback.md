@@ -10,24 +10,24 @@ On 24 October 2026 at 03:00 Asia/Almaty, the supervisor responded after reviewin
 | Decision and resulting changes | Retain substantive content; synchronize dates, task status, report and submission version. |
 | Evidence source | Response, date and coverage relayed by Kaisar in the project conversation; original correspondence remains private. |
 
-The feedback and decision log is docs/supervisor_feedback_log.csv. PCA-13 was marked Done on 24 October 2026 after recording the response and resulting decision. This general response does not establish separate approval of every technical choice or a history of weekly meetings. Other participants’ personal review criteria remain recorded separately in PCA-1, PCA-3, PCA-6 and PCA-14.
+The feedback and decision log is docs/supervisor_feedback_log.csv. PCA-13 is Done after recording the dated response and resulting decision. The original correspondence remains private. Team acceptance of the proposal, literature, requirements and consolidated package is recorded separately in completed PCA-1, PCA-3, PCA-6 and PCA-14.
 
 ## Project artifacts
 
 The following links use the immutable revision supplied to the report builder.
 
-Prototype: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/prototype/index.html
+Prototype: https://github.com/sajltaha/paper-compliance-assistant/blob/prob-period-1/prototype/index.html
 
 The prototype uses synthetic results; selected file contents are not parsed and no model is called.
 
-Context SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/01_context.svg
+Context SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/prob-period-1/diagrams/01_context.svg
 
-Use case SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/02_use_cases.svg
+Use case SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/prob-period-1/diagrams/02_use_cases.svg
 
-Component SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/diagrams/03_components.svg
+Component SVG: https://github.com/sajltaha/paper-compliance-assistant/blob/prob-period-1/diagrams/03_components.svg
 
-Relevance analysis: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/02_relevance.md
+Relevance analysis: https://github.com/sajltaha/paper-compliance-assistant/blob/prob-period-1/docs/02_relevance.md
 
-Task register: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/YOUTRACK_LIVE_TASKS.md
+Task register: https://github.com/sajltaha/paper-compliance-assistant/blob/prob-period-1/docs/YOUTRACK_LIVE_TASKS.md
 
-Task and PR traceability: https://github.com/sajltaha/paper-compliance-assistant/blob/{{REVISION}}/docs/TRACEABILITY.md
+Task and PR traceability: https://github.com/sajltaha/paper-compliance-assistant/blob/prob-period-1/docs/TRACEABILITY.md

@@ -1,10 +1,10 @@
 # 10 Project management and risks
 
-Repository: https://github.com/sajltaha/paper-compliance-assistant . Tasks: https://paper-compliance-assistant.youtrack.cloud/issues/PCA . Board: https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1 . The live task snapshot of 24 October 2026, 03:24 Asia/Almaty contains 22 issues: 12 Done, 4 Review, 2 Develop and 4 Backlog. Issue fields, target dates, descriptions and comments are reflected in docs/YOUTRACK_LIVE_TASKS.md.
+Repository: https://github.com/sajltaha/paper-compliance-assistant . Tasks: https://paper-compliance-assistant.youtrack.cloud/issues/PCA . Board: https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1 . The live task snapshot checked on 24 October 2026, 05:01 Asia/Almaty contains 22 issues: 16 Done, 0 Review, 2 Develop and 4 Backlog. Assigned students, priorities, target dates and deliverables are recorded in docs/YOUTRACK_LIVE_TASKS.md.
 
 Team members are responsible for project decisions, implementation, source verification and acceptance of changes. Contributions and reviews are recorded through linked tasks, commits and PRs.
 
-PRs #1–#4 were integrated at 86141520e74e46f433be94ae29639844ec4e3760, the original checkpoint revision now retained as prob-period-1-before-update. PRs #5–#7 were integrated on 24 October 2026 at deca7d761aa449f7f8223c8514707706fb44d034. Task-to-artifact and PR links are recorded in docs/TRACEABILITY.md. The recorded development history starts on 22 October 2026.
+PRs #1-#7 are merged into main. PRs #5-#7 integrated the checkpoint corrections, prototype verification, evaluation design and dated participant evidence. Task-to-artifact and PR links are recorded in docs/TRACEABILITY.md. The recorded development history starts on 22 October 2026.
 
 Public access was checked on 23 October 2026. Requests without Cookie or Authorization identified the YouTrack user as guest and returned HTTP 200 for project PCA, board 204-1 and the full PCA-2 description. Selected browser views of the board and PCA-18/PCA-16 were also readable with guest actions disabled. This confirms those read-only views, not unrestricted page coverage or editing rights. Private manuscripts, interview originals and supervisor correspondence are excluded from the public repository.
 
@@ -31,7 +31,7 @@ Dates after the checkpoint are provisional internal planning targets, not univer
 | Deadline and external dependencies | Incomplete evidence, supervisor feedback or access can block submission. | Prioritize live evidence and access today; track unresolved items explicitly. Both. |
 | Contribution traceability | Responsibilities and completed work become difficult to trace. | Task-linked commits, descriptive branches and linked PRs. Both. |
 
-Project changes and reviews are recorded through task-linked commits and PRs. Submission references and any authorized retargeting are recorded with their exact commit SHAs. Implementation status is determined by the corresponding acceptance criteria.
+Project changes and reviews are recorded through task-linked commits and PRs. The submission uses prob-period-1 and an exact source commit recorded in this report. Implementation status is determined by the corresponding acceptance criteria.
 
 ## Review and evidence records
 
@@ -39,26 +39,22 @@ The interview findings and consent record cover three participants and 15 observ
 
 Talgat (sajltaha) posted Approve with nits comments on 24 October 2026, Asia/Almaty, for PR #6 at f9282959be1045934c890afa465102fb2717f2cf and PR #7 at 8610bd5635ee25976e429915af1358d00dcc26b1:
 
-- PR #6: https://github.com/sajltaha/paper-compliance-assistant/pull/6#issuecomment-6373921286
-- PR #7: https://github.com/sajltaha/paper-compliance-assistant/pull/7#issuecomment-6373878035
+PR #6 review: https://github.com/sajltaha/paper-compliance-assistant/pull/6#issuecomment-6373921286 . PR #7 review: https://github.com/sajltaha/paper-compliance-assistant/pull/7#issuecomment-6373878035 .
 
-PCA-14 records those comments and completed merges, but remains Review for remaining package-level acceptance. PCA-1, PCA-3 and PCA-6 remain Review; the new comments do not establish personal reading or acceptance of every proposal/literature item. Earlier technical reviews remain available at https://github.com/sajltaha/paper-compliance-assistant/pull/5#pullrequestreview-5632920719 and https://github.com/sajltaha/paper-compliance-assistant/pull/6#pullrequestreview-5633430095 . Historical PRs #1/#3/#4 have no registered other-participant reviews. Later comments do not establish that those earlier merges had a team review beforehand. The supervisor’s positive response dated 24 October 2026, 03:00 Asia/Almaty is recorded in docs/11_supervisor_feedback.md and docs/supervisor_feedback_log.csv; PCA-13 is Done.
+PCA-1, PCA-3, PCA-6 and PCA-14 are Done. Kaisar relayed joint acceptance on behalf of himself and Talgat on 24 October 2026 for the proposal, literature, requirements and consolidated checkpoint package. The linked PR #6/#7 review comments and resulting corrections remain recorded. Historical PRs #1/#3/#4 have no registered other-participant review before merge; current package acceptance does not change those historical dates. The supervisor response dated 24 October 2026, 03:00 Asia/Almaty is recorded in docs/11_supervisor_feedback.md and docs/supervisor_feedback_log.csv; PCA-13 is Done.
 
-The committed prototype suite now checks JSON export, including preservation of the completed run’s filename and findings after selecting another manuscript. The 24 October handler run passed, closing PR #6’s export regression recommendation. The three PR #7 wording/link issues are resolved in current project documents. These corrections do not change the prototype’s synthetic scope.
+The committed prototype suite checks JSON export, including preservation of the completed run filename and findings after selecting another manuscript. The handler checks passed locally and in GitHub Actions. At checkpoint source 30a182266c6682a3f3c521b71b8c0ff60256623b, Prototype checks passed at https://github.com/sajltaha/paper-compliance-assistant/actions/runs/40037489875 and Backend checks passed at https://github.com/sajltaha/paper-compliance-assistant/actions/runs/40037489851 . PR #7 wording/link issues are resolved. These checks cover the existing mock and intake library; the complete application and AI benchmark remain future work.
 
 ## Submission version
 
-The assignment specifies pre-defense-1, while the inspected submission form specifies prob-period-1. The team explicitly selected the form’s prob-period-1 name and authorized updating its target to include the final documentation synchronization. The earlier targets are preserved for traceability. The report records its exact 40-character source commit; the active release identifies the corresponding tag target.
+The sole submission reference is prob-period-1. It identifies the final source revision printed in this report and used for its artifact links. After form submission, preserve the submitted tag target and continue development through subsequent commits.
 
-| Reference | Commit | Purpose |
+| Reference | Source commit | Purpose |
 | --- | --- | --- |
-| prob-period-1 | Exact source commit in the current release and report metadata | Final integrated checkpoint selected by the team |
-| prob-period-1-before-final-sync | deca7d761aa449f7f8223c8514707706fb44d034 | Integrated PR #5–#7 checkpoint before final documentation synchronization |
-| prob-period-1-before-update | 86141520e74e46f433be94ae29639844ec4e3760 | Original checkpoint tag target, retained as an archive |
-| archive/prob-period-1-before-update | 86141520e74e46f433be94ae29639844ec4e3760 | Archive branch retaining the original commit |
+| prob-period-1 | Exact commit recorded in the report metadata | First probationary-period submission |
 
-Submission link: https://github.com/sajltaha/paper-compliance-assistant/tree/prob-period-1 . Release: https://github.com/sajltaha/paper-compliance-assistant/releases/tag/prob-period-1 . No pre-defense-1 tag is present in the checked GitHub references. The team's recorded naming decision is not documented here as university approval of the assignment's different tag name.
+Submission source: https://github.com/sajltaha/paper-compliance-assistant/tree/prob-period-1 . The Git tag and exact source commit identify this submission; a separate GitHub Release is not required for access to the materials.
 
-The final report must be built from the same source commit selected by prob-period-1. PCA-16 remains Develop for remaining personal/package acceptance, final form uploads and a successful receipt. The dated supervisor response is now recorded under completed PCA-13. The task records inspection of form pages 1–2 and the mandatory board-PDF upload on page 3; no submission or receipt is claimed. Final documentation synchronization was explicitly authorized directly on main and does not retroactively establish earlier peer reviews.
+PCA-16 remains Develop for final uploads, form submission and a successful receipt. Proposal, literature, requirements and package acceptance are recorded in completed PCA-1, PCA-3, PCA-6 and PCA-14. Supervisor feedback is recorded in completed PCA-13. No successful form submission is claimed. Final documentation updates directly on main were authorized by the project representative; this does not change historical PR review dates.
 
-The submission includes the consolidated report and a PDF of the board and representative tasks. Report links use the exact source commit supplied to tools/build_report.py through --source-sha; source revisions and output checksums identify the corresponding package. The recorded board PDF is a dated snapshot, not a live view of task state.
+The submission includes this consolidated report and a dated PDF of the YouTrack board and representative tasks. The board PDF contains six pages and records 16 Done, 0 Review, 2 Develop and 4 Backlog. Report links use the exact source commit supplied to tools/build_report.py through --source-sha. A board PDF is a dated snapshot of task state.

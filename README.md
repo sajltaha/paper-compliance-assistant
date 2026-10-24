@@ -68,7 +68,7 @@ Technical specifications: [API contract](docs/API_CONTRACT.md), [findings schema
 
 Research evidence: [interview findings](docs/INTERVIEW_FINDINGS.md), [anonymized discussion log](docs/user_discussions_log.csv), [conference profiles](docs/conference_policy_data.csv), [CHI counts](docs/chi2025_screening_data.csv) and [analysis-to-requirement mapping](docs/data_requirement_mapping.csv). Three discussions dated 20 October 2026 provide 15 observations and are accepted under completed PCA-22; self-reported preparation times are not measured product improvements.
 
-Tracking: [task register](docs/YOUTRACK_LIVE_TASKS.md) and [task/PR traceability](docs/TRACEABILITY.md). The 24 October 2026, 03:24 Asia/Almaty snapshot contains 22 issues: 12 Done, 4 Review, 2 Develop and 4 Backlog. Live [YouTrack tasks](https://paper-compliance-assistant.youtrack.cloud/issues/PCA) and [board](https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1) record subsequent changes. Supervisor responses are recorded in [the feedback log](docs/supervisor_feedback_log.csv); the supervisor’s positive response dated 24 October 2026, 03:00 Asia/Almaty and the decision to retain the content are recorded under completed PCA-13.
+Tracking: [task register](docs/YOUTRACK_LIVE_TASKS.md) and [task/PR traceability](docs/TRACEABILITY.md). The 24 October 2026, 05:01 Asia/Almaty snapshot contains 22 issues: 16 Done, 0 Review, 2 Develop and 4 Backlog. Live [YouTrack tasks](https://paper-compliance-assistant.youtrack.cloud/issues/PCA) and [board](https://paper-compliance-assistant.youtrack.cloud/agiles/204-1/218-1) record subsequent changes. Supervisor responses are recorded in [the feedback log](docs/supervisor_feedback_log.csv); the supervisor’s positive response dated 24 October 2026, 03:00 Asia/Almaty and the decision to retain the content are recorded under completed PCA-13.
 
 ## Structure and report source
 
@@ -86,7 +86,7 @@ Report generation requires Python and python-docx:
 python3 tools/build_report.py --source-sha <40-character-source-commit> --output-dir <output-directory>
 ```
 
-The generated DOCX can be exported to PDF. The source commit identifies the matching report links and project snapshot. The team-selected `prob-period-1` identifies the final checkpoint source recorded in the current release and report metadata. The integrated `deca7d761aa449f7f8223c8514707706fb44d034` version is preserved as `prob-period-1-before-final-sync`. The original `86141520e74e46f433be94ae29639844ec4e3760` target is retained under `prob-period-1-before-update` and `archive/prob-period-1-before-update`. Further development after submission must preserve the submitted tag target. The assignment/form naming difference and outstanding submission records are described in [Management](docs/10_management.md#submission-version).
+The generated DOCX can be exported to PDF. Supply the exact source commit used by `prob-period-1`; the same commit identifies the report's artifact links and source metadata. `prob-period-1` is the sole submission reference. Preserve its submitted target after the form is sent. Current acceptance and submission records are described in [Management](docs/10_management.md#submission-version).
 
 ## Evaluation and privacy
 

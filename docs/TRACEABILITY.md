@@ -1,6 +1,6 @@
 # Task and deliverable traceability
 
-The table connects current project artifacts with task ownership and historical changes. Artifact links below refer to the current files. The original 86141520e74e46f433be94ae29639844ec4e3760 revision is archived as prob-period-1-before-update; PRs #5–#7 were integrated at deca7d761aa449f7f8223c8514707706fb44d034. Historical PR #2 uses a PCA-19 label for actual PCA-18 intake work.
+The table connects current project artifacts with task ownership and historical changes. Artifact links below refer to the current files. Historical PR #2 uses a PCA-19 label for actual PCA-18 intake work.
 
 | Task | Artifact or design target | Historical change | Current artifact or accepted addition |
 | --- | --- | --- | --- |
@@ -32,7 +32,7 @@ FR/NFR → component/data/API: ARCHITECTURE_TRACEABILITY.md. DA-R → FR/NFR →
 
 Historical local planning keys P01–P21 were not live issue IDs: P20 mapped to PCA-21 (Vue/Docker), and P21 to PCA-20 (evaluation). Current task links use actual PCA IDs.
 
-PR #6 links PCA-8/PCA-16 to prototype fixes, handler regression tests and API-envelope clarification. PR #7 links PCA-9/PCA-16/PCA-22 to the held-out corpus plan, retry/mapping updates and interview evidence. PCA-22 is Done; PCA-14 records Talgat's PR #6/#7 Approve with nits comments and remains Review for package-level acceptance. Current review and submission references are recorded in docs/10_management.md.
+PR #6 links PCA-8/PCA-16 to prototype fixes, handler regression tests and API-envelope clarification. PR #7 links PCA-9/PCA-16/PCA-22 to the held-out corpus plan, retry/mapping updates and interview evidence. PCA-22 is Done; PCA-14 is Done with Talgat's PR #6/#7 review comments, resulting corrections and the recorded joint package acceptance. PCA-1, PCA-3 and PCA-6 are also Done. Current review and submission references are recorded in docs/10_management.md.
 
 
-Review records: PR #6 at f9282959be1045934c890afa465102fb2717f2cf — https://github.com/sajltaha/paper-compliance-assistant/pull/6#issuecomment-6373921286 ; PR #7 at 8610bd5635ee25976e429915af1358d00dcc26b1 — https://github.com/sajltaha/paper-compliance-assistant/pull/7#issuecomment-6373878035 . The active prob-period-1 selects the final synchronized source identified in the release and report metadata. PCA-13 is Done after the supervisor response on 24 October 2026 at 03:00 Asia/Almaty.
+Review records: PR #6 at f9282959be1045934c890afa465102fb2717f2cf — https://github.com/sajltaha/paper-compliance-assistant/pull/6#issuecomment-6373921286 ; PR #7 at 8610bd5635ee25976e429915af1358d00dcc26b1 — https://github.com/sajltaha/paper-compliance-assistant/pull/7#issuecomment-6373878035 . The sole submission reference prob-period-1 selects the final synchronized source identified by the exact source commit in the report metadata. PCA-13 is Done after the supervisor response on 24 October 2026 at 03:00 Asia/Almaty.

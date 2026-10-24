@@ -1,10 +1,12 @@
 # 1 Project proposal
 
+Source revision: Exact commit recorded in the report metadata. Submission reference: prob-period-1. This report records the first checkpoint’s research/design materials and current implementation boundaries.
+
 Development of an Intelligent Web System for Analyzing Scientific Articles for Compliance with Scientific Conference Requirements and Generating Recommendations. This report prepares the first probationary-period submission due on 24 October 2026 at 18:00 Asia/Almaty. The project assists authors in checking a manuscript against explicitly supplied conference requirements and produces evidence-linked recommendations.
 
 The current deliverable includes an analysis and design package, an interactive mock prototype and an initial Go intake-validation module. The complete application, external AI integration and empirical benchmark are not implemented. The relevance analysis uses public conference policies and published screening data. Kaisar reports that the supervisor reviewed the complete checkpoint package and responded on 24 October 2026 at 03:00 Asia/Almaty that everything seemed fine and there were no concerns. No revisions were requested; the dated response and decision are recorded in Section 11. Measured system performance remains implementation-stage work.
 
-Research and design materials are prepared. Three participant discussions dated 20 October 2026, with consent, findings and requirement mappings, are accepted under completed PCA-22. Participant/package acceptance remains under Review in PCA-1, PCA-3, PCA-6 and PCA-14; the received supervisor response is recorded in completed PCA-13. Final package and submission records remain under Develop in PCA-16. Status synchronized on 24 October 2026, 03:24 Asia/Almaty.
+Research and design materials are prepared and accepted by the team. Three participant discussions dated 20 October 2026, with consent, findings and requirement mappings, are recorded in completed PCA-22. PCA-1, PCA-3, PCA-6 and PCA-14 are Done. Kaisar relayed joint acceptance on behalf of himself and Talgat on 24 October 2026 for the proposal, literature, requirements and consolidated checkpoint package. The supervisor response is recorded in completed PCA-13. PCA-16 remains Develop for final form uploads, submission and receipt. The live task snapshot checked on 24 October 2026, 05:01 Asia/Almaty contains 22 issues: 16 Done, 0 Review, 2 Develop and 4 Backlog.
 
 ## Problem and intended users
 
